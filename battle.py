@@ -8,7 +8,7 @@ def Step():
     ''' For all entities, apply step '''
     for entity in en.entities:
 
-        entity.data['hunger'] -= 1
+        entity.data['food'] -= 1
 
         ''' For each item on entity '''
         for item in entity.items:
@@ -121,7 +121,7 @@ def Fight(attacker = None, defenders = [], skill = None, physical = True, specia
 
 
     ''' Calculate Efficiency '''
-    eff = CalculateEfficiency(attacker.data['hunger'])
+    eff = CalculateEfficiency(attacker.data['food'])
 
 
     for defender in defenders:

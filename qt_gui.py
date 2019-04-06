@@ -1338,17 +1338,17 @@ class Ui_MainWindow(object):
         self.entity_stats_change_box.setMaximum(99999999)
         self.entity_stats_change_box.setProperty("value", 1)
         self.entity_stats_change_box.setObjectName("entity_stats_change_box")
-        self.change_status_gold = QtWidgets.QCheckBox(self.entity_change_frame)
-        self.change_status_gold.setGeometry(QtCore.QRect(20, 20, 220, 30))
+        self.entity_change_status_gold = QtWidgets.QCheckBox(self.entity_change_frame)
+        self.entity_change_status_gold.setGeometry(QtCore.QRect(20, 20, 220, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.change_status_gold.setFont(font)
-        self.change_status_gold.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.change_status_gold.setStyleSheet("QCheckBox {\n"
+        self.entity_change_status_gold.setFont(font)
+        self.entity_change_status_gold.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_change_status_gold.setStyleSheet("QCheckBox {\n"
 "    color: rgb(255,236,90);\n"
 "}\n"
 "QCheckBox::indicator {\n"
@@ -1364,18 +1364,18 @@ class Ui_MainWindow(object):
 "    image: url(:/bg/checkmark.png);\n"
 "}\n"
 "")
-        self.change_status_gold.setObjectName("change_status_gold")
-        self.change_status_jewels = QtWidgets.QCheckBox(self.entity_change_frame)
-        self.change_status_jewels.setGeometry(QtCore.QRect(20, 50, 220, 30))
+        self.entity_change_status_gold.setObjectName("entity_change_status_gold")
+        self.entity_change_status_jewels = QtWidgets.QCheckBox(self.entity_change_frame)
+        self.entity_change_status_jewels.setGeometry(QtCore.QRect(20, 50, 220, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.change_status_jewels.setFont(font)
-        self.change_status_jewels.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.change_status_jewels.setStyleSheet("#change_status_jewels {\n"
+        self.entity_change_status_jewels.setFont(font)
+        self.entity_change_status_jewels.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_change_status_jewels.setStyleSheet("#change_status_jewels {\n"
 "    color: rgb(224,96,255);\n"
 "}\n"
 "#change_status_jewels::indicator {\n"
@@ -1389,18 +1389,18 @@ class Ui_MainWindow(object):
 "#change_status_jewels::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}")
-        self.change_status_jewels.setObjectName("change_status_jewels")
-        self.change_status_exp = QtWidgets.QCheckBox(self.entity_change_frame)
-        self.change_status_exp.setGeometry(QtCore.QRect(20, 80, 220, 30))
+        self.entity_change_status_jewels.setObjectName("entity_change_status_jewels")
+        self.entity_change_status_exp = QtWidgets.QCheckBox(self.entity_change_frame)
+        self.entity_change_status_exp.setGeometry(QtCore.QRect(20, 80, 220, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.change_status_exp.setFont(font)
-        self.change_status_exp.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.change_status_exp.setStyleSheet("#change_status_exp {\n"
+        self.entity_change_status_exp.setFont(font)
+        self.entity_change_status_exp.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_change_status_exp.setStyleSheet("#change_status_exp {\n"
 "    color: rgb(192,255,255);\n"
 "}\n"
 "#change_status_exp::indicator {\n"
@@ -1415,18 +1415,18 @@ class Ui_MainWindow(object):
 "#change_status_exp::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}")
-        self.change_status_exp.setObjectName("change_status_exp")
-        self.change_status_hp = QtWidgets.QCheckBox(self.entity_change_frame)
-        self.change_status_hp.setGeometry(QtCore.QRect(20, 110, 220, 30))
+        self.entity_change_status_exp.setObjectName("entity_change_status_exp")
+        self.entity_change_status_hp = QtWidgets.QCheckBox(self.entity_change_frame)
+        self.entity_change_status_hp.setGeometry(QtCore.QRect(20, 110, 220, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.change_status_hp.setFont(font)
-        self.change_status_hp.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.change_status_hp.setStyleSheet("#change_status_hp {\n"
+        self.entity_change_status_hp.setFont(font)
+        self.entity_change_status_hp.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_change_status_hp.setStyleSheet("#change_status_hp {\n"
 "    color: rgb(255,160,128);\n"
 "}\n"
 "#change_status_hp::indicator {\n"
@@ -1440,18 +1440,18 @@ class Ui_MainWindow(object):
 "#change_status_hp::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}")
-        self.change_status_hp.setObjectName("change_status_hp")
-        self.change_status_sp = QtWidgets.QCheckBox(self.entity_change_frame)
-        self.change_status_sp.setGeometry(QtCore.QRect(20, 140, 220, 30))
+        self.entity_change_status_hp.setObjectName("entity_change_status_hp")
+        self.entity_change_status_sp = QtWidgets.QCheckBox(self.entity_change_frame)
+        self.entity_change_status_sp.setGeometry(QtCore.QRect(20, 140, 220, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.change_status_sp.setFont(font)
-        self.change_status_sp.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.change_status_sp.setStyleSheet("#change_status_sp {\n"
+        self.entity_change_status_sp.setFont(font)
+        self.entity_change_status_sp.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_change_status_sp.setStyleSheet("#change_status_sp {\n"
 "    color: rgb(160,255,128);\n"
 "}\n"
 "#change_status_sp::indicator {\n"
@@ -1465,18 +1465,18 @@ class Ui_MainWindow(object):
 "#change_status_sp::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}")
-        self.change_status_sp.setObjectName("change_status_sp")
-        self.change_status_food = QtWidgets.QCheckBox(self.entity_change_frame)
-        self.change_status_food.setGeometry(QtCore.QRect(20, 170, 220, 30))
+        self.entity_change_status_sp.setObjectName("entity_change_status_sp")
+        self.entity_change_status_food = QtWidgets.QCheckBox(self.entity_change_frame)
+        self.entity_change_status_food.setGeometry(QtCore.QRect(20, 170, 220, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.change_status_food.setFont(font)
-        self.change_status_food.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.change_status_food.setStyleSheet("#change_status_food {\n"
+        self.entity_change_status_food.setFont(font)
+        self.entity_change_status_food.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_change_status_food.setStyleSheet("#change_status_food {\n"
 "    color: rgb(255,255,128);\n"
 "}\n"
 "#change_status_food::indicator {\n"
@@ -1490,7 +1490,7 @@ class Ui_MainWindow(object):
 "#change_status_food::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}")
-        self.change_status_food.setObjectName("change_status_food")
+        self.entity_change_status_food.setObjectName("entity_change_status_food")
         self.entity_stats_change_add_button = QtWidgets.QPushButton(self.entity_change_frame)
         self.entity_stats_change_add_button.setGeometry(QtCore.QRect(20, 450, 100, 40))
         font = QtGui.QFont()
@@ -1535,17 +1535,17 @@ class Ui_MainWindow(object):
         self.entity_stats_change_set_button.setCheckable(False)
         self.entity_stats_change_set_button.setFlat(True)
         self.entity_stats_change_set_button.setObjectName("entity_stats_change_set_button")
-        self.change_status_strength = QtWidgets.QCheckBox(self.entity_change_frame)
-        self.change_status_strength.setGeometry(QtCore.QRect(20, 200, 220, 30))
+        self.entity_change_status_strength = QtWidgets.QCheckBox(self.entity_change_frame)
+        self.entity_change_status_strength.setGeometry(QtCore.QRect(20, 200, 220, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.change_status_strength.setFont(font)
-        self.change_status_strength.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.change_status_strength.setStyleSheet("#change_status_strength {\n"
+        self.entity_change_status_strength.setFont(font)
+        self.entity_change_status_strength.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_change_status_strength.setStyleSheet("#change_status_strength {\n"
 "    color: rgb(255, 170, 96);\n"
 "}\n"
 "#change_status_strength::indicator {\n"
@@ -1560,18 +1560,18 @@ class Ui_MainWindow(object):
 "    image: url(:/bg/checkmark.png);\n"
 "}\n"
 "")
-        self.change_status_strength.setObjectName("change_status_strength")
-        self.change_status_dexterity = QtWidgets.QCheckBox(self.entity_change_frame)
-        self.change_status_dexterity.setGeometry(QtCore.QRect(20, 230, 220, 30))
+        self.entity_change_status_strength.setObjectName("entity_change_status_strength")
+        self.entity_change_status_dexterity = QtWidgets.QCheckBox(self.entity_change_frame)
+        self.entity_change_status_dexterity.setGeometry(QtCore.QRect(20, 230, 220, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.change_status_dexterity.setFont(font)
-        self.change_status_dexterity.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.change_status_dexterity.setStyleSheet("#change_status_dexterity {\n"
+        self.entity_change_status_dexterity.setFont(font)
+        self.entity_change_status_dexterity.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_change_status_dexterity.setStyleSheet("#change_status_dexterity {\n"
 "    color: rgb(85, 255, 127);\n"
 "}\n"
 "#change_status_dexterity::indicator {\n"
@@ -1586,18 +1586,18 @@ class Ui_MainWindow(object):
 "    image: url(:/bg/checkmark.png);\n"
 "}\n"
 "")
-        self.change_status_dexterity.setObjectName("change_status_dexterity")
-        self.change_status_constitution = QtWidgets.QCheckBox(self.entity_change_frame)
-        self.change_status_constitution.setGeometry(QtCore.QRect(20, 260, 220, 30))
+        self.entity_change_status_dexterity.setObjectName("entity_change_status_dexterity")
+        self.entity_change_status_constitution = QtWidgets.QCheckBox(self.entity_change_frame)
+        self.entity_change_status_constitution.setGeometry(QtCore.QRect(20, 260, 220, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.change_status_constitution.setFont(font)
-        self.change_status_constitution.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.change_status_constitution.setStyleSheet("#change_status_constitution {    \n"
+        self.entity_change_status_constitution.setFont(font)
+        self.entity_change_status_constitution.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_change_status_constitution.setStyleSheet("#change_status_constitution {    \n"
 "    color: rgb(255, 224, 96);\n"
 "}\n"
 "#change_status_constitution::indicator {\n"
@@ -1612,18 +1612,18 @@ class Ui_MainWindow(object):
 "    image: url(:/bg/checkmark.png);\n"
 "}\n"
 "")
-        self.change_status_constitution.setObjectName("change_status_constitution")
-        self.change_status_intelligence = QtWidgets.QCheckBox(self.entity_change_frame)
-        self.change_status_intelligence.setGeometry(QtCore.QRect(20, 290, 220, 30))
+        self.entity_change_status_constitution.setObjectName("entity_change_status_constitution")
+        self.entity_change_status_intelligence = QtWidgets.QCheckBox(self.entity_change_frame)
+        self.entity_change_status_intelligence.setGeometry(QtCore.QRect(20, 290, 220, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.change_status_intelligence.setFont(font)
-        self.change_status_intelligence.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.change_status_intelligence.setStyleSheet("#change_status_intelligence {\n"
+        self.entity_change_status_intelligence.setFont(font)
+        self.entity_change_status_intelligence.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_change_status_intelligence.setStyleSheet("#change_status_intelligence {\n"
 "    color: rgb(64, 192, 255);\n"
 "}\n"
 "#change_status_intelligence::indicator {\n"
@@ -1638,18 +1638,18 @@ class Ui_MainWindow(object):
 "    image: url(:/bg/checkmark.png);\n"
 "}\n"
 "")
-        self.change_status_intelligence.setObjectName("change_status_intelligence")
-        self.change_status_integrity = QtWidgets.QCheckBox(self.entity_change_frame)
-        self.change_status_integrity.setGeometry(QtCore.QRect(20, 320, 220, 30))
+        self.entity_change_status_intelligence.setObjectName("entity_change_status_intelligence")
+        self.entity_change_status_integrity = QtWidgets.QCheckBox(self.entity_change_frame)
+        self.entity_change_status_integrity.setGeometry(QtCore.QRect(20, 320, 220, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.change_status_integrity.setFont(font)
-        self.change_status_integrity.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.change_status_integrity.setStyleSheet("#change_status_integrity {\n"
+        self.entity_change_status_integrity.setFont(font)
+        self.entity_change_status_integrity.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_change_status_integrity.setStyleSheet("#change_status_integrity {\n"
 "    color: white;\n"
 "}\n"
 "#change_status_integrity::indicator {\n"
@@ -1664,7 +1664,7 @@ class Ui_MainWindow(object):
 "    image: url(:/bg/checkmark.png);\n"
 "}\n"
 "")
-        self.change_status_integrity.setObjectName("change_status_integrity")
+        self.entity_change_status_integrity.setObjectName("entity_change_status_integrity")
         self.entity_stats_change_type_box = QtWidgets.QComboBox(self.entity_change_frame)
         self.entity_stats_change_type_box.setGeometry(QtCore.QRect(20, 360, 210, 40))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
@@ -2924,21 +2924,21 @@ class Ui_MainWindow(object):
         self.player_delete_button.setText(_translate("MainWindow", "Delete"))
         self.player_copy_button.setToolTip(_translate("MainWindow", "Duplicate a player"))
         self.player_copy_button.setText(_translate("MainWindow", "Copy"))
-        self.change_status_gold.setText(_translate("MainWindow", "Gold"))
-        self.change_status_jewels.setText(_translate("MainWindow", "Jewels"))
-        self.change_status_exp.setText(_translate("MainWindow", "XP"))
-        self.change_status_hp.setText(_translate("MainWindow", "HP"))
-        self.change_status_sp.setText(_translate("MainWindow", "SP"))
-        self.change_status_food.setText(_translate("MainWindow", "Food"))
+        self.entity_change_status_gold.setText(_translate("MainWindow", "Gold"))
+        self.entity_change_status_jewels.setText(_translate("MainWindow", "Jewels"))
+        self.entity_change_status_exp.setText(_translate("MainWindow", "XP"))
+        self.entity_change_status_hp.setText(_translate("MainWindow", "HP"))
+        self.entity_change_status_sp.setText(_translate("MainWindow", "SP"))
+        self.entity_change_status_food.setText(_translate("MainWindow", "Food"))
         self.entity_stats_change_add_button.setToolTip(_translate("MainWindow", "Add a player"))
         self.entity_stats_change_add_button.setText(_translate("MainWindow", "Add"))
         self.entity_stats_change_set_button.setToolTip(_translate("MainWindow", "Add a player"))
         self.entity_stats_change_set_button.setText(_translate("MainWindow", "Set"))
-        self.change_status_strength.setText(_translate("MainWindow", "Strength"))
-        self.change_status_dexterity.setText(_translate("MainWindow", "Dexterity"))
-        self.change_status_constitution.setText(_translate("MainWindow", "Constitution"))
-        self.change_status_intelligence.setText(_translate("MainWindow", "Intelligence"))
-        self.change_status_integrity.setText(_translate("MainWindow", "Integrity"))
+        self.entity_change_status_strength.setText(_translate("MainWindow", "Strength"))
+        self.entity_change_status_dexterity.setText(_translate("MainWindow", "Dexterity"))
+        self.entity_change_status_constitution.setText(_translate("MainWindow", "Constitution"))
+        self.entity_change_status_intelligence.setText(_translate("MainWindow", "Intelligence"))
+        self.entity_change_status_integrity.setText(_translate("MainWindow", "Integrity"))
         self.entity_stats_change_type_box.setItemText(0, _translate("MainWindow", "Fixed"))
         self.entity_stats_change_type_box.setItemText(1, _translate("MainWindow", "Percent"))
         self.entity_stats_change_type_box.setItemText(2, _translate("MainWindow", "Lost"))

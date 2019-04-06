@@ -21,7 +21,7 @@ class Entity:
             'sp': 10,
             'xp': 0,
             'lvl': 1,
-            'hunger': 100,
+            'food': 100,
             'gold': 0,
             'jewels': 0
         }
@@ -75,7 +75,7 @@ class Entity:
         for d, value in data_list.iteritems():
             if d == 'hp' or d == 'sp':
                 dmax = self.stats[d]
-            elif d == 'lvl' or d == 'hunger':
+            elif d == 'lvl' or d == 'food':
                 dmax = 100
             else:
                 dmax = 10**9 # Billion max
@@ -123,7 +123,7 @@ class Entity:
             max = d['max']
             miss = d['missing']
 
-            if res != 'hunger':
+            if res != 'food':
                 stat_max = 100
             else:
                 stat_max = self.stats[res]
@@ -148,7 +148,7 @@ class Entity:
     #         if v['type'] == 'DataChange':
     #             for d, dv in v['stats']:
     #                 max_val = self.stats[d]
-    #                 if d == 'hunger':
+    #                 if d == 'food':
     #                     max_val = 100
     #                 if abs(dv)>0 and abs(dv)<1: # If we use a percentage
     #                     self.data[d] = min( max(0,self.data[d]+self.stats[d]*dv), max_val)

@@ -51,11 +51,11 @@ class Effect:
                 'missing': 0,
                 'damage': 0
             }, # sp is changed upon use.
-            'hunger': {
+            'food': {
                 'max': 0,
                 'missing': 0,
                 'damage': 0
-            }, # hunger is changed upon use.
+            }, # food is changed upon use.
             'targets': None
         }
         if restoration:

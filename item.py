@@ -50,7 +50,7 @@ class Item:
             'hp': {},
             'sp': {},
             'xp': {},
-            'hunger': {},
+            'food': {},
             'targets': None
             # Targets is a string. Either 'self', 'team', or 'other'
         }

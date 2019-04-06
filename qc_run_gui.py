@@ -32,6 +32,19 @@ last_selected_entity = None
 delete_player_confirmation = False
 delete_enemy_confirmation = False
 entity_stat_change_type = "Fixed"
+entity_stats_check_boxes = {
+    "Gold": ui.entity_change_status_gold,
+    "Jewels": ui.entity_change_status_jewels,
+    "XP": ui.entity_change_status_exp,
+    "HP": ui.entity_change_status_hp,
+    "SP": ui.entity_change_status_sp,
+    "Food": ui.entity_change_status_food,
+    "Strength": ui.entity_change_status_strength,
+    "Dexterity": ui.entity_change_status_dexterity,
+    "Constitution": ui.entity_change_status_constitution,
+    "Intelligence": ui.entity_change_status_intelligence,
+    "Integrity": ui.entity_change_status_integrity,
+}
 
 last_selected_item = None
 delete_item_confirmation = False
@@ -98,7 +111,7 @@ def ChangeEntityLevel(object):
         return None
     last_selected_entity.data['lvl'] = int(object)
     ui.entity_level_box.setValue(int(last_selected_entity.data['lvl']))
-    ui.entity_exp_bar.setMaximum(entity.GetExpNeededForLevel(last_selected_entity.data['lvl']))
+    ui.entity_exp_bar.setMaximum(entity.GetExpNeededForLevel(int(last_selected_entity.data['lvl'])))
 
 def ChangeEntityGold(object):
     global last_selected_entity
@@ -113,6 +126,30 @@ def ChangeEntityJewels(object):
         return None
     last_selected_entity.data['jewels'] = int(object)
     ui.entity_jewels_box.setValue(int(last_selected_entity.data['jewels']))
+
+def ChangeEntityHP(object):
+    global last_selected_entity
+    if not last_selected_entity:
+        return None
+    last_selected_entity.data['hp'] = int(object)
+    ui.entity_hp_bar.setValue(int(last_selected_entity.data['hp']))
+    ui.entity_hp_bar.setMaximum(int(last_selected_entity.stats['hp']))
+
+def ChangeEntitySP(object):
+    global last_selected_entity
+    if not last_selected_entity:
+        return None
+    last_selected_entity.data['sp'] = int(object)
+    ui.entity_sp_bar.setValue(int(last_selected_entity.data['sp']))
+    ui.entity_sp_bar.setMaximum(int(last_selected_entity.stats['sp']))
+
+def ChangeEntityFood(object):
+    global last_selected_entity
+    if not last_selected_entity:
+        return None
+    last_selected_entity.data['food'] = int(object)
+    ui.entity_sp_bar.setValue(int(last_selected_entity.data['food']))
+    ui.entity_sp_bar.setMaximum(100)
 
 def ChangeSelectedData(add):
     global last_selected_entity
@@ -144,7 +181,7 @@ def ChangeSelectedData(add):
             last_selected_entity.data['xp']+=change_value
         else:
             last_selected_entity.data['xp']=floor(last_selected_entity.data['xp']*change_value)
-        ui.entity_gold_box.setValue(last_selected_entity.data['xp'])
+        ui.entity_exp_box.setValue(last_selected_entity.data['xp'])
 
 def AddEntityToList(ent):
     global last_selected_entity
@@ -282,6 +319,15 @@ def UpdateEntityChangeStatsBox(type):
     else:
         ui.entity_stats_change_box.setSuffix(" %")
     entity_stats_change_type = type
+
+def EntityChangeStats(type):
+    global entity_stats_check_boxes
+    stat_gui
+    if type == "Add":
+        for stat, box in entity_stats_check_boxes.iteritems():
+            if box.isChecked():
+                stat_gui[stat]
+
 
 def UpdateItemGui(item_list_item = None):
     global last_selected_item
@@ -480,7 +526,24 @@ ui.entity_level_box.valueChanged.connect(ChangeEntityLevel)
 ui.entity_name_box.textChanged.connect(ChangeEntityName)
 ui.entity_gold_box.valueChanged.connect(ChangeEntityGold)
 ui.entity_jewels_box.valueChanged.connect(ChangeEntityJewels)
+
+''' Entity Stats Buttons '''
+ui.entity_stats_change_add_button.clicked.connect(lambda: EntityChangeStats("Add"))
+ui.entity_stats_change_set_button.clicked.connect(lambda: EntityChangeStats("Set"))
+
+''' Entity Stats Check Boxes '''
 ui.entity_stats_change_type_box.currentIndexChanged.connect(UpdateEntityChangeStatsBox)
+ui.entity_change_status_gold.clicked.connect(ToggleEntityStatsCheckBoxes)
+ui.entity_change_status_jewels.clicked.connect(ToggleEntityStatsCheckBoxes)
+ui.entity_change_status_exp.clicked.connect(ToggleEntityStatsCheckBoxes)
+ui.entity_change_status_hp.clicked.connect(ToggleEntityStatsCheckBoxes)
+ui.entity_change_status_sp.clicked.connect(ToggleEntityStatsCheckBoxes)
+ui.entity_change_status_food.clicked.connect(ToggleEntityStatsCheckBoxes)
+ui.entity_change_status_strength.clicked.connect(ToggleEntityStatsCheckBoxes)
+ui.entity_change_status_dexterity.clicked.connect(ToggleEntityStatsCheckBoxes)
+ui.entity_change_status_constitution.clicked.connect(ToggleEntityStatsCheckBoxes)
+ui.entity_change_status_intelligence.clicked.connect(ToggleEntityStatsCheckBoxes)
+ui.entity_change_status_integrity.clicked.connect(ToggleEntityStatsCheckBoxes)
 
 '''
     ITEM TAB

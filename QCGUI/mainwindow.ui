@@ -3060,7 +3060,7 @@ color: white;
           <number>1</number>
          </property>
         </widget>
-        <widget class="QCheckBox" name="change_status_gold">
+        <widget class="QCheckBox" name="entity_change_status_gold">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -3103,7 +3103,7 @@ QCheckBox::indicator:checked {
           <string>Gold</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="change_status_jewels">
+        <widget class="QCheckBox" name="entity_change_status_jewels">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -3144,7 +3144,7 @@ QCheckBox::indicator:checked {
           <string>Jewels</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="change_status_exp">
+        <widget class="QCheckBox" name="entity_change_status_exp">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -3186,7 +3186,7 @@ QCheckBox::indicator:checked {
           <string>XP</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="change_status_hp">
+        <widget class="QCheckBox" name="entity_change_status_hp">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -3227,7 +3227,7 @@ QCheckBox::indicator:checked {
           <string>HP</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="change_status_sp">
+        <widget class="QCheckBox" name="entity_change_status_sp">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -3268,7 +3268,7 @@ QCheckBox::indicator:checked {
           <string>SP</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="change_status_food">
+        <widget class="QCheckBox" name="entity_change_status_food">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -3403,7 +3403,7 @@ color: white;
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QCheckBox" name="change_status_strength">
+        <widget class="QCheckBox" name="entity_change_status_strength">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -3445,7 +3445,7 @@ color: white;
           <string>Strength</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="change_status_dexterity">
+        <widget class="QCheckBox" name="entity_change_status_dexterity">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -3487,7 +3487,7 @@ color: white;
           <string>Dexterity</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="change_status_constitution">
+        <widget class="QCheckBox" name="entity_change_status_constitution">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -3529,7 +3529,7 @@ color: white;
           <string>Constitution</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="change_status_intelligence">
+        <widget class="QCheckBox" name="entity_change_status_intelligence">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -3571,7 +3571,7 @@ color: white;
           <string>Intelligence</string>
          </property>
         </widget>
-        <widget class="QCheckBox" name="change_status_integrity">
+        <widget class="QCheckBox" name="entity_change_status_integrity">
          <property name="geometry">
           <rect>
            <x>20</x>
