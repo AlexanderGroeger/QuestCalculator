@@ -18,10 +18,10 @@ import generator
 
 from pygame import mixer
 mixer.init()
-mixer.music.load('C:\\Users\\Alex\\Games_And_Tech\\QuestCalculatorClass\\QCGUI\\JourneysUntold.mid')
+mixer.music.load('.\\QCGUI\\JourneysUntold.mid')
 mixer.music.play(99)
 
-SELECT_SOUND = mixer.Sound('C:\\Users\\Alex\\Games_And_Tech\\QuestCalculatorClass\\QCGUI\\Select.wav')
+SELECT_SOUND = mixer.Sound('.\\QCGUI\\Select.wav')
 import sys
 app = QtWidgets.QApplication(sys.argv)
 MainWindow = QtWidgets.QMainWindow()
@@ -31,6 +31,7 @@ ui.setupUi(MainWindow)
 last_selected_entity = None
 delete_player_confirmation = False
 delete_enemy_confirmation = False
+entity_stat_change_type = "Fixed"
 
 last_selected_item = None
 delete_item_confirmation = False
@@ -274,6 +275,14 @@ def EntityCopyButtonPressed(team):
     else:
         CopyEntity(team)
 
+def UpdateEntityChangeStatsBox(type):
+    # If type is Fixed, then no suffix
+    if type == 0:
+        ui.entity_stats_change_box.setSuffix("")
+    else:
+        ui.entity_stats_change_box.setSuffix(" %")
+    entity_stats_change_type = type
+
 def UpdateItemGui(item_list_item = None):
     global last_selected_item
     if item_list_item:
@@ -471,6 +480,7 @@ ui.entity_level_box.valueChanged.connect(ChangeEntityLevel)
 ui.entity_name_box.textChanged.connect(ChangeEntityName)
 ui.entity_gold_box.valueChanged.connect(ChangeEntityGold)
 ui.entity_jewels_box.valueChanged.connect(ChangeEntityJewels)
+ui.entity_stats_change_type_box.currentIndexChanged.connect(UpdateEntityChangeStatsBox)
 
 '''
     ITEM TAB

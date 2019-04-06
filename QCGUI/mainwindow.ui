@@ -2985,7 +2985,7 @@ color: rgb(160,192,255);
           <x>780</x>
           <y>40</y>
           <width>250</width>
-          <height>500</height>
+          <height>510</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -3000,12 +3000,12 @@ border: 5px;
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QSpinBox" name="status_change_box">
+        <widget class="QSpinBox" name="entity_stats_change_box">
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>350</y>
-           <width>220</width>
+           <y>400</y>
+           <width>210</width>
            <height>40</height>
           </rect>
          </property>
@@ -3025,9 +3025,10 @@ border: 5px;
           <enum>Qt::NoContextMenu</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">#status_change_box {
-border: 0px;
+          <string notr="true">QSpinBox {
+border: 5px;
 background-color: rgba(255,255,255,0);
+	border-image: url(:/bg/pane_thin_yellow.png);
 color: white;
 }</string>
          </property>
@@ -3087,6 +3088,7 @@ color: white;
 QCheckBox::indicator {
 	background: rgba(0,0,0,0);
 	border: 5px;
+	
 	border-image: url(:/bg/pane_thin_yellow.png);
 	min-width: 25px;
 	min-height: 25px;
@@ -3307,12 +3309,12 @@ QCheckBox::indicator:checked {
           <string>Food</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="status_change_add_button">
+        <widget class="QPushButton" name="entity_stats_change_add_button">
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>400</y>
-           <width>60</width>
+           <y>450</y>
+           <width>100</width>
            <height>40</height>
           </rect>
          </property>
@@ -3335,12 +3337,12 @@ QCheckBox::indicator:checked {
           <number>1</number>
          </property>
          <property name="styleSheet">
-          <string notr="true">#status_change_add_button {
+          <string notr="true">QPushButton {
 border: 5px;
 	border-image: url(:/bg/pane_thin_yellow.png);
 color: white;
 }
-#status_change_add_button::hover {
+QPushButton::hover {
 color: white;
 }</string>
          </property>
@@ -3354,12 +3356,12 @@ color: white;
           <bool>true</bool>
          </property>
         </widget>
-        <widget class="QPushButton" name="status_change_set_button">
+        <widget class="QPushButton" name="entity_stats_change_set_button">
          <property name="geometry">
           <rect>
-           <x>170</x>
-           <y>400</y>
-           <width>60</width>
+           <x>130</x>
+           <y>450</y>
+           <width>100</width>
            <height>40</height>
           </rect>
          </property>
@@ -3382,13 +3384,13 @@ color: white;
           <number>1</number>
          </property>
          <property name="styleSheet">
-          <string notr="true">#status_change_set_button {
+          <string notr="true">QPushButton {
 border: 5px;
 	border-image: url(:/bg/pane_thin_yellow.png);
 color: white;
 }
-#status_change_set_button::hover {
-border-image: url(:/bg/border_thin_white.png);
+QPushButton::hover {
+color: white;
 }</string>
          </property>
          <property name="text">
@@ -3611,13 +3613,13 @@ border-image: url(:/bg/border_thin_white.png);
           <string>Integrity</string>
          </property>
         </widget>
-        <widget class="QComboBox" name="status_change_type_box">
+        <widget class="QComboBox" name="entity_stats_change_type_box">
          <property name="geometry">
           <rect>
-           <x>50</x>
-           <y>450</y>
-           <width>120</width>
-           <height>30</height>
+           <x>20</x>
+           <y>360</y>
+           <width>210</width>
+           <height>40</height>
           </rect>
          </property>
          <property name="sizePolicy">
@@ -3628,14 +3630,14 @@ border-image: url(:/bg/border_thin_white.png);
          </property>
          <property name="minimumSize">
           <size>
-           <width>120</width>
-           <height>30</height>
+           <width>210</width>
+           <height>40</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>150</width>
-           <height>30</height>
+           <width>210</width>
+           <height>40</height>
           </size>
          </property>
          <property name="font">
@@ -3677,8 +3679,8 @@ QComboBox::editable:indicator {
 
 QComboBox QAbstractItemView {
 	color: white;
-	background: rgba(255,224,64,128);
-	selection-background-color: rgba(255,224,64,128);
+	background: rgba(255,255,255,64);
+	selection-background-color: rgba(255,255,255,128);
 	border: 0px;
 	outline: 0px;
 }</string>
@@ -3690,7 +3692,7 @@ QComboBox QAbstractItemView {
           <number>10</number>
          </property>
          <property name="sizeAdjustPolicy">
-          <enum>QComboBox::AdjustToContents</enum>
+          <enum>QComboBox::AdjustToMinimumContentsLength</enum>
          </property>
          <property name="frame">
           <bool>false</bool>
@@ -3885,7 +3887,7 @@ color: rgb(160,192,255);
           <x>1040</x>
           <y>40</y>
           <width>340</width>
-          <height>500</height>
+          <height>400</height>
          </rect>
         </property>
         <property name="sizePolicy">

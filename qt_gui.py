@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\Alex\Games_And_Tech\QuestCalculatorClass\QCGUI\mainwindow.ui'
+# Form implementation generated from reading ui file 'C:\Users\Alex\Games_And_Tech\QuestCalculator\QCGUI\mainwindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
@@ -1303,7 +1303,7 @@ class Ui_MainWindow(object):
         self.player_copy_button.setFlat(True)
         self.player_copy_button.setObjectName("player_copy_button")
         self.entity_change_frame = QtWidgets.QFrame(self.entity_tab)
-        self.entity_change_frame.setGeometry(QtCore.QRect(780, 40, 250, 500))
+        self.entity_change_frame.setGeometry(QtCore.QRect(780, 40, 250, 510))
         self.entity_change_frame.setStyleSheet("#entity_change_frame {\n"
 "border: 5px;\n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
@@ -1311,32 +1311,33 @@ class Ui_MainWindow(object):
         self.entity_change_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.entity_change_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.entity_change_frame.setObjectName("entity_change_frame")
-        self.status_change_box = QtWidgets.QSpinBox(self.entity_change_frame)
-        self.status_change_box.setGeometry(QtCore.QRect(20, 350, 220, 40))
+        self.entity_stats_change_box = QtWidgets.QSpinBox(self.entity_change_frame)
+        self.entity_stats_change_box.setGeometry(QtCore.QRect(20, 400, 210, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.status_change_box.setFont(font)
-        self.status_change_box.setFocusPolicy(QtCore.Qt.WheelFocus)
-        self.status_change_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.status_change_box.setStyleSheet("#status_change_box {\n"
-"border: 0px;\n"
+        self.entity_stats_change_box.setFont(font)
+        self.entity_stats_change_box.setFocusPolicy(QtCore.Qt.WheelFocus)
+        self.entity_stats_change_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_stats_change_box.setStyleSheet("QSpinBox {\n"
+"border: 5px;\n"
 "background-color: rgba(255,255,255,0);\n"
+"    border-image: url(:/bg/pane_thin_yellow.png);\n"
 "color: white;\n"
 "}")
-        self.status_change_box.setWrapping(False)
-        self.status_change_box.setFrame(False)
-        self.status_change_box.setAlignment(QtCore.Qt.AlignCenter)
-        self.status_change_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
-        self.status_change_box.setSuffix("")
-        self.status_change_box.setPrefix("")
-        self.status_change_box.setMinimum(-99999999)
-        self.status_change_box.setMaximum(99999999)
-        self.status_change_box.setProperty("value", 1)
-        self.status_change_box.setObjectName("status_change_box")
+        self.entity_stats_change_box.setWrapping(False)
+        self.entity_stats_change_box.setFrame(False)
+        self.entity_stats_change_box.setAlignment(QtCore.Qt.AlignCenter)
+        self.entity_stats_change_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.entity_stats_change_box.setSuffix("")
+        self.entity_stats_change_box.setPrefix("")
+        self.entity_stats_change_box.setMinimum(-99999999)
+        self.entity_stats_change_box.setMaximum(99999999)
+        self.entity_stats_change_box.setProperty("value", 1)
+        self.entity_stats_change_box.setObjectName("entity_stats_change_box")
         self.change_status_gold = QtWidgets.QCheckBox(self.entity_change_frame)
         self.change_status_gold.setGeometry(QtCore.QRect(20, 20, 220, 30))
         font = QtGui.QFont()
@@ -1353,6 +1354,7 @@ class Ui_MainWindow(object):
 "QCheckBox::indicator {\n"
 "    background: rgba(0,0,0,0);\n"
 "    border: 5px;\n"
+"    \n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
 "    min-width: 25px;\n"
 "    min-height: 25px;\n"
@@ -1489,50 +1491,50 @@ class Ui_MainWindow(object):
 "    image: url(:/bg/checkmark.png);\n"
 "}")
         self.change_status_food.setObjectName("change_status_food")
-        self.status_change_add_button = QtWidgets.QPushButton(self.entity_change_frame)
-        self.status_change_add_button.setGeometry(QtCore.QRect(20, 400, 60, 40))
+        self.entity_stats_change_add_button = QtWidgets.QPushButton(self.entity_change_frame)
+        self.entity_stats_change_add_button.setGeometry(QtCore.QRect(20, 450, 100, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(18)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.status_change_add_button.setFont(font)
-        self.status_change_add_button.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.status_change_add_button.setToolTipDuration(1)
-        self.status_change_add_button.setStyleSheet("#status_change_add_button {\n"
+        self.entity_stats_change_add_button.setFont(font)
+        self.entity_stats_change_add_button.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_stats_change_add_button.setToolTipDuration(1)
+        self.entity_stats_change_add_button.setStyleSheet("QPushButton {\n"
 "border: 5px;\n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
 "color: white;\n"
 "}\n"
-"#status_change_add_button::hover {\n"
+"QPushButton::hover {\n"
 "color: white;\n"
 "}")
-        self.status_change_add_button.setCheckable(False)
-        self.status_change_add_button.setFlat(True)
-        self.status_change_add_button.setObjectName("status_change_add_button")
-        self.status_change_set_button = QtWidgets.QPushButton(self.entity_change_frame)
-        self.status_change_set_button.setGeometry(QtCore.QRect(170, 400, 60, 40))
+        self.entity_stats_change_add_button.setCheckable(False)
+        self.entity_stats_change_add_button.setFlat(True)
+        self.entity_stats_change_add_button.setObjectName("entity_stats_change_add_button")
+        self.entity_stats_change_set_button = QtWidgets.QPushButton(self.entity_change_frame)
+        self.entity_stats_change_set_button.setGeometry(QtCore.QRect(130, 450, 100, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(18)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.status_change_set_button.setFont(font)
-        self.status_change_set_button.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.status_change_set_button.setToolTipDuration(1)
-        self.status_change_set_button.setStyleSheet("#status_change_set_button {\n"
+        self.entity_stats_change_set_button.setFont(font)
+        self.entity_stats_change_set_button.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_stats_change_set_button.setToolTipDuration(1)
+        self.entity_stats_change_set_button.setStyleSheet("QPushButton {\n"
 "border: 5px;\n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
 "color: white;\n"
 "}\n"
-"#status_change_set_button::hover {\n"
-"border-image: url(:/bg/border_thin_white.png);\n"
+"QPushButton::hover {\n"
+"color: white;\n"
 "}")
-        self.status_change_set_button.setCheckable(False)
-        self.status_change_set_button.setFlat(True)
-        self.status_change_set_button.setObjectName("status_change_set_button")
+        self.entity_stats_change_set_button.setCheckable(False)
+        self.entity_stats_change_set_button.setFlat(True)
+        self.entity_stats_change_set_button.setObjectName("entity_stats_change_set_button")
         self.change_status_strength = QtWidgets.QCheckBox(self.entity_change_frame)
         self.change_status_strength.setGeometry(QtCore.QRect(20, 200, 220, 30))
         font = QtGui.QFont()
@@ -1663,23 +1665,23 @@ class Ui_MainWindow(object):
 "}\n"
 "")
         self.change_status_integrity.setObjectName("change_status_integrity")
-        self.status_change_type_box = QtWidgets.QComboBox(self.entity_change_frame)
-        self.status_change_type_box.setGeometry(QtCore.QRect(50, 450, 120, 30))
+        self.entity_stats_change_type_box = QtWidgets.QComboBox(self.entity_change_frame)
+        self.entity_stats_change_type_box.setGeometry(QtCore.QRect(20, 360, 210, 40))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.status_change_type_box.sizePolicy().hasHeightForWidth())
-        self.status_change_type_box.setSizePolicy(sizePolicy)
-        self.status_change_type_box.setMinimumSize(QtCore.QSize(120, 30))
-        self.status_change_type_box.setMaximumSize(QtCore.QSize(150, 30))
+        sizePolicy.setHeightForWidth(self.entity_stats_change_type_box.sizePolicy().hasHeightForWidth())
+        self.entity_stats_change_type_box.setSizePolicy(sizePolicy)
+        self.entity_stats_change_type_box.setMinimumSize(QtCore.QSize(210, 40))
+        self.entity_stats_change_type_box.setMaximumSize(QtCore.QSize(210, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setWeight(75)
-        self.status_change_type_box.setFont(font)
-        self.status_change_type_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.status_change_type_box.setStyleSheet("QComboBox {\n"
+        self.entity_stats_change_type_box.setFont(font)
+        self.entity_stats_change_type_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_stats_change_type_box.setStyleSheet("QComboBox {\n"
 "    color: white;\n"
 "    border: 0px;\n"
 "}\n"
@@ -1706,20 +1708,20 @@ class Ui_MainWindow(object):
 "\n"
 "QComboBox QAbstractItemView {\n"
 "    color: white;\n"
-"    background: rgba(255,224,64,128);\n"
-"    selection-background-color: rgba(255,224,64,128);\n"
+"    background: rgba(255,255,255,64);\n"
+"    selection-background-color: rgba(255,255,255,128);\n"
 "    border: 0px;\n"
 "    outline: 0px;\n"
 "}")
-        self.status_change_type_box.setEditable(False)
-        self.status_change_type_box.setMaxCount(10)
-        self.status_change_type_box.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContents)
-        self.status_change_type_box.setFrame(False)
-        self.status_change_type_box.setObjectName("status_change_type_box")
-        self.status_change_type_box.addItem("")
-        self.status_change_type_box.addItem("")
-        self.status_change_type_box.addItem("")
-        self.status_change_type_box.addItem("")
+        self.entity_stats_change_type_box.setEditable(False)
+        self.entity_stats_change_type_box.setMaxCount(10)
+        self.entity_stats_change_type_box.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToMinimumContentsLength)
+        self.entity_stats_change_type_box.setFrame(False)
+        self.entity_stats_change_type_box.setObjectName("entity_stats_change_type_box")
+        self.entity_stats_change_type_box.addItem("")
+        self.entity_stats_change_type_box.addItem("")
+        self.entity_stats_change_type_box.addItem("")
+        self.entity_stats_change_type_box.addItem("")
         self.change_label = QtWidgets.QLabel(self.entity_tab)
         self.change_label.setGeometry(QtCore.QRect(780, 0, 250, 40))
         font = QtGui.QFont()
@@ -1800,7 +1802,7 @@ class Ui_MainWindow(object):
         self.enemy_delete_button.setFlat(True)
         self.enemy_delete_button.setObjectName("enemy_delete_button")
         self.entity_item_list = QtWidgets.QListWidget(self.entity_tab)
-        self.entity_item_list.setGeometry(QtCore.QRect(1040, 40, 340, 500))
+        self.entity_item_list.setGeometry(QtCore.QRect(1040, 40, 340, 400))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -2928,19 +2930,19 @@ class Ui_MainWindow(object):
         self.change_status_hp.setText(_translate("MainWindow", "HP"))
         self.change_status_sp.setText(_translate("MainWindow", "SP"))
         self.change_status_food.setText(_translate("MainWindow", "Food"))
-        self.status_change_add_button.setToolTip(_translate("MainWindow", "Add a player"))
-        self.status_change_add_button.setText(_translate("MainWindow", "Add"))
-        self.status_change_set_button.setToolTip(_translate("MainWindow", "Add a player"))
-        self.status_change_set_button.setText(_translate("MainWindow", "Set"))
+        self.entity_stats_change_add_button.setToolTip(_translate("MainWindow", "Add a player"))
+        self.entity_stats_change_add_button.setText(_translate("MainWindow", "Add"))
+        self.entity_stats_change_set_button.setToolTip(_translate("MainWindow", "Add a player"))
+        self.entity_stats_change_set_button.setText(_translate("MainWindow", "Set"))
         self.change_status_strength.setText(_translate("MainWindow", "Strength"))
         self.change_status_dexterity.setText(_translate("MainWindow", "Dexterity"))
         self.change_status_constitution.setText(_translate("MainWindow", "Constitution"))
         self.change_status_intelligence.setText(_translate("MainWindow", "Intelligence"))
         self.change_status_integrity.setText(_translate("MainWindow", "Integrity"))
-        self.status_change_type_box.setItemText(0, _translate("MainWindow", "Fixed"))
-        self.status_change_type_box.setItemText(1, _translate("MainWindow", "Percent"))
-        self.status_change_type_box.setItemText(2, _translate("MainWindow", "Lost"))
-        self.status_change_type_box.setItemText(3, _translate("MainWindow", "Max"))
+        self.entity_stats_change_type_box.setItemText(0, _translate("MainWindow", "Fixed"))
+        self.entity_stats_change_type_box.setItemText(1, _translate("MainWindow", "Percent"))
+        self.entity_stats_change_type_box.setItemText(2, _translate("MainWindow", "Lost"))
+        self.entity_stats_change_type_box.setItemText(3, _translate("MainWindow", "Max"))
         self.change_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Change Status</span></p></body></html>"))
         self.enemy_add_button.setToolTip(_translate("MainWindow", "Add a player"))
         self.enemy_add_button.setText(_translate("MainWindow", "Add"))

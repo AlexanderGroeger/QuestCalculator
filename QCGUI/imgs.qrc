@@ -1,7 +1,5 @@
 <RCC>
     <qresource prefix="/bg">
-        <file>FileSelectWindowBackground.png</file>
-        <file>EntityWindowBackground.png</file>
         <file>border_thin_yellow.png</file>
         <file>border_thin_white.png</file>
         <file>border_thin_purple.png</file>
@@ -17,5 +15,6 @@
         <file>border_thin_grey.png</file>
         <file>LegacyBackground.png</file>
         <file>pane_thick_yellow.png</file>
+        <file>pane_light_white.png</file>
     </qresource>
 </RCC>
