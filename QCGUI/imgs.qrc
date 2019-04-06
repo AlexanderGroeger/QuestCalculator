@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/bg">
+        <file>FileSelectWindowBackground.png</file>
+        <file>EntityWindowBackground.png</file>
+        <file>border_thin_yellow.png</file>
+        <file>border_thin_white.png</file>
+        <file>border_thin_purple.png</file>
+        <file>border_thick_purple.png</file>
+        <file>pane_thin_yellow.png</file>
+        <file>pane_thick_blue.png</file>
+        <file>pane_thin_blue.png</file>
+        <file>pane_thin_red.png</file>
+        <file>pane_thin_green.png</file>
+        <file>border_selected_thick_purple.png</file>
+        <file>border_thick_yellow.png</file>
+        <file>checkmark.png</file>
+        <file>border_thin_grey.png</file>
+        <file>LegacyBackground.png</file>
+        <file>pane_thick_yellow.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,8 @@
+chestplate
+shirt
+pants
+gloves
+boots
+helmet
+shield
+back
