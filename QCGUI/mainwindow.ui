@@ -217,14 +217,13 @@ background: rgba(0,0,0,0);
            </property>
            <property name="styleSheet">
             <string notr="true">QPushButton {
-color: white;
+color: rgba(255,255,255,128);
 border: 5px;
-	border-image: url(:/bg/pane_thin_yellow.png);
+	border-image: url(:/bg/pane_thin_dim_yellow.png);
 }
 QPushButton::hover {
-color: rgb(255,255,255);
-border: 3px;
-	border-image: url(:/bg/border_thin_grey.png);
+color: white;
+border-image: url(:/bg/pane_thin_yellow.png);
 }</string>
            </property>
            <property name="text">
@@ -396,14 +395,13 @@ border: 3px;
            </property>
            <property name="styleSheet">
             <string notr="true">QPushButton {
-color: white;
+color: rgba(255,255,255,128);
 border: 5px;
-	border-image: url(:/bg/pane_thin_yellow.png);
+	border-image: url(:/bg/pane_thin_dim_yellow.png);
 }
 QPushButton::hover {
-color: rgb(255,255,255);
-border: 3px;
-	border-image: url(:/bg/border_thin_grey.png);
+color: white;
+border-image: url(:/bg/pane_thin_yellow.png);
 }</string>
            </property>
            <property name="text">
@@ -457,14 +455,13 @@ border: 3px;
            </property>
            <property name="styleSheet">
             <string notr="true">QPushButton {
-color: white;
+color: rgba(255,255,255,128);
 border: 5px;
-	border-image: url(:/bg/pane_thin_yellow.png);
+	border-image: url(:/bg/pane_thin_dim_yellow.png);
 }
 QPushButton::hover {
-color: rgb(255,255,255);
-border: 3px;
-	border-image: url(:/bg/border_thin_grey.png);
+color: white;
+border-image: url(:/bg/pane_thin_yellow.png);
 }</string>
            </property>
            <property name="text">
@@ -1154,7 +1151,7 @@ color: white;</string>
           <number>1</number>
          </property>
         </widget>
-        <widget class="QLabel" name="entity_hunger_label">
+        <widget class="QLabel" name="entity_food_label">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -1352,7 +1349,7 @@ color: white;
           <number>1</number>
          </property>
         </widget>
-        <widget class="QProgressBar" name="entity_hunger_bar">
+        <widget class="QProgressBar" name="entity_food_bar">
          <property name="geometry">
           <rect>
            <x>90</x>
@@ -2868,15 +2865,17 @@ QListWidget::item:!selected:!focus:hover {
          <number>1</number>
         </property>
         <property name="styleSheet">
-         <string notr="true">#player_add_button {
+         <string notr="true">QPushButton {
 border: 5px;
 border-image: url(:/bg/pane_thin_yellow.png);
-color: white;
-
+color: rgba(255,255,255,128);
 }
-#player_add_button::hover {
-border-image: url(:/bg/pane_thin_blue.png);
-color: rgb(160,192,255);
+QPushButton::hover {
+color: white;
+}
+QPushButton:checked {
+color: rgb(224,224,224);
+	border-image: url(:/bg/pane_thin_dark_yellow.png);
 }</string>
         </property>
         <property name="text">
@@ -2913,15 +2912,17 @@ color: rgb(160,192,255);
          <number>1</number>
         </property>
         <property name="styleSheet">
-         <string notr="true">#player_delete_button {
+         <string notr="true">QPushButton {
 border: 5px;
 border-image: url(:/bg/pane_thin_yellow.png);
-color:white;
-
+color: rgba(255,255,255,128);
 }
-#player_delete_button::hover {
-border-image: url(:/bg/pane_thin_blue.png);
-color: rgb(160,192,255);
+QPushButton::hover {
+color: white;
+}
+QPushButton:checked {
+color: rgb(224,224,224);
+	border-image: url(:/bg/pane_thin_dark_yellow.png);
 }</string>
         </property>
         <property name="text">
@@ -2958,15 +2959,17 @@ color: rgb(160,192,255);
          <number>1</number>
         </property>
         <property name="styleSheet">
-         <string notr="true">#player_copy_button {
+         <string notr="true">QPushButton {
 border: 5px;
 border-image: url(:/bg/pane_thin_yellow.png);
-color: white;
-
+color: rgba(255,255,255,128);
 }
-#player_copy_button::hover {
-border-image: url(:/bg/pane_thin_blue.png);
-color: rgb(160,192,255);
+QPushButton::hover {
+color: white;
+}
+QPushButton:checked {
+color: rgb(224,224,224);
+	border-image: url(:/bg/pane_thin_dark_yellow.png);
 }</string>
         </property>
         <property name="text">
@@ -3125,10 +3128,10 @@ QCheckBox::indicator:checked {
           <enum>Qt::NoContextMenu</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">#change_status_jewels {
+          <string notr="true">QCheckBox {
 	color: rgb(224,96,255);
 }
-#change_status_jewels::indicator {
+QCheckBox::indicator {
 	background: rgba(0,0,0,0);
 	border: 5px;
 	border-image: url(:/bg/pane_thin_yellow.png);
@@ -3136,7 +3139,7 @@ QCheckBox::indicator:checked {
 	min-height: 25px;
 }
 
-#change_status_jewels::indicator:checked {
+QCheckBox::indicator:checked {
 	image: url(:/bg/checkmark.png);
 }</string>
          </property>
@@ -3166,10 +3169,10 @@ QCheckBox::indicator:checked {
           <enum>Qt::NoContextMenu</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">#change_status_exp {
+          <string notr="true">QCheckBox {
 	color: rgb(192,255,255);
 }
-#change_status_exp::indicator {
+QCheckBox::indicator {
 	background: rgba(0,0,0,0);
 	border: 5px;
 	
@@ -3178,7 +3181,7 @@ QCheckBox::indicator:checked {
 	min-height: 25px;
 }
 
-#change_status_exp::indicator:checked {
+QCheckBox::indicator:checked {
 	image: url(:/bg/checkmark.png);
 }</string>
          </property>
@@ -3208,10 +3211,10 @@ QCheckBox::indicator:checked {
           <enum>Qt::NoContextMenu</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">#change_status_hp {
+          <string notr="true">QCheckBox {
 	color: rgb(255,160,128);
 }
-#change_status_hp::indicator {
+QCheckBox::indicator {
 	background: rgba(0,0,0,0);
 	border: 5px;
 	border-image: url(:/bg/pane_thin_yellow.png);
@@ -3219,7 +3222,7 @@ QCheckBox::indicator:checked {
 	min-height: 25px;
 }
 
-#change_status_hp::indicator:checked {
+QCheckBox::indicator:checked {
 	image: url(:/bg/checkmark.png);
 }</string>
          </property>
@@ -3249,10 +3252,10 @@ QCheckBox::indicator:checked {
           <enum>Qt::NoContextMenu</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">#change_status_sp {
+          <string notr="true">QCheckBox {
 	color: rgb(160,255,128);
 }
-#change_status_sp::indicator {
+QCheckBox::indicator {
 	background: rgba(0,0,0,0);
 	border: 5px;
 	border-image: url(:/bg/pane_thin_yellow.png);
@@ -3260,7 +3263,7 @@ QCheckBox::indicator:checked {
 	min-height: 25px;
 }
 
-#change_status_sp::indicator:checked {
+QCheckBox::indicator:checked {
 	image: url(:/bg/checkmark.png);
 }</string>
          </property>
@@ -3290,10 +3293,10 @@ QCheckBox::indicator:checked {
           <enum>Qt::NoContextMenu</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">#change_status_food {
+          <string notr="true">QCheckBox {
 	color: rgb(255,255,128);
 }
-#change_status_food::indicator {
+QCheckBox::indicator {
 	background: rgba(0,0,0,0);
 	border: 5px;
 	border-image: url(:/bg/pane_thin_yellow.png);
@@ -3301,7 +3304,7 @@ QCheckBox::indicator:checked {
 	min-height: 25px;
 }
 
-#change_status_food::indicator:checked {
+QCheckBox::indicator:checked {
 	image: url(:/bg/checkmark.png);
 }</string>
          </property>
@@ -3339,11 +3342,16 @@ QCheckBox::indicator:checked {
          <property name="styleSheet">
           <string notr="true">QPushButton {
 border: 5px;
-	border-image: url(:/bg/pane_thin_yellow.png);
-color: white;
+border-image: url(:/bg/pane_thin_dim_yellow.png);
+color: rgba(255,255,255,128);
 }
 QPushButton::hover {
 color: white;
+border-image: url(:/bg/pane_thin_yellow.png);
+}
+QPushButton:checked {
+color: rgb(224,224,224);
+	border-image: url(:/bg/pane_thin_dark_yellow.png);
 }</string>
          </property>
          <property name="text">
@@ -3386,11 +3394,16 @@ color: white;
          <property name="styleSheet">
           <string notr="true">QPushButton {
 border: 5px;
-	border-image: url(:/bg/pane_thin_yellow.png);
-color: white;
+border-image: url(:/bg/pane_thin_dim_yellow.png);
+color: rgba(255,255,255,128);
 }
 QPushButton::hover {
 color: white;
+border-image: url(:/bg/pane_thin_yellow.png);
+}
+QPushButton:checked {
+color: rgb(224,224,224);
+	border-image: url(:/bg/pane_thin_dark_yellow.png);
 }</string>
          </property>
          <property name="text">
@@ -3425,10 +3438,10 @@ color: white;
           <enum>Qt::NoContextMenu</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">#change_status_strength {
+          <string notr="true">QCheckBox {
 	color: rgb(255, 170, 96);
 }
-#change_status_strength::indicator {
+QCheckBox::indicator {
 	background: rgba(0,0,0,0);
 	border: 5px;
 	border-image: url(:/bg/pane_thin_yellow.png);
@@ -3436,7 +3449,7 @@ color: white;
 	min-height: 25px;
 }
 
-#change_status_strength::indicator:checked {
+QCheckBox::indicator:checked {
 	image: url(:/bg/checkmark.png);
 }
 </string>
@@ -3467,10 +3480,10 @@ color: white;
           <enum>Qt::NoContextMenu</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">#change_status_dexterity {
+          <string notr="true">QCheckBox {
 	color: rgb(85, 255, 127);
 }
-#change_status_dexterity::indicator {
+QCheckBox::indicator {
 	background: rgba(0,0,0,0);
 	border: 5px;
 	border-image: url(:/bg/pane_thin_yellow.png);
@@ -3478,7 +3491,7 @@ color: white;
 	min-height: 25px;
 }
 
-#change_status_dexterity::indicator:checked {
+QCheckBox::indicator:checked {
 	image: url(:/bg/checkmark.png);
 }
 </string>
@@ -3509,10 +3522,10 @@ color: white;
           <enum>Qt::NoContextMenu</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">#change_status_constitution {	
+          <string notr="true">QCheckBox {	
 	color: rgb(255, 224, 96);
 }
-#change_status_constitution::indicator {
+QCheckBox::indicator {
 	background: rgba(0,0,0,0);
 	border: 5px;
 	border-image: url(:/bg/pane_thin_yellow.png);
@@ -3520,7 +3533,7 @@ color: white;
 	min-height: 25px;
 }
 
-#change_status_constitution::indicator:checked {
+QCheckBox::indicator:checked {
 	image: url(:/bg/checkmark.png);
 }
 </string>
@@ -3551,10 +3564,10 @@ color: white;
           <enum>Qt::NoContextMenu</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">#change_status_intelligence {
+          <string notr="true">QCheckBox {
 	color: rgb(64, 192, 255);
 }
-#change_status_intelligence::indicator {
+QCheckBox::indicator {
 	background: rgba(0,0,0,0);
 	border: 5px;
 	border-image: url(:/bg/pane_thin_yellow.png);
@@ -3562,7 +3575,7 @@ color: white;
 	min-height: 25px;
 }
 
-#change_status_intelligence::indicator:checked {
+QCheckBox::indicator:checked {
 	image: url(:/bg/checkmark.png);
 }
 </string>
@@ -3593,10 +3606,10 @@ color: white;
           <enum>Qt::NoContextMenu</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">#change_status_integrity {
+          <string notr="true">QCheckBox {
 	color: white;
 }
-#change_status_integrity::indicator {
+QCheckBox::indicator {
 	background: rgba(0,0,0,0);
 	border: 5px;
 	border-image: url(:/bg/pane_thin_yellow.png);
@@ -3604,7 +3617,7 @@ color: white;
 	min-height: 25px;
 }
 
-#change_status_integrity::indicator:checked {
+QCheckBox::indicator:checked {
 	image: url(:/bg/checkmark.png);
 }
 </string>
@@ -3655,6 +3668,7 @@ color: white;
           <string notr="true">QComboBox {
 	color: white;
 	border: 0px;
+	background: rgba(255,255,255,128);
 }
 QComboBox::down-arrow {
 	background: rgba(0,0,0,0);
@@ -3667,12 +3681,12 @@ QComboBox::drop-down {
 	color: white;
 }
 QComboBox::editable {
-	background: rgba(255,224,64,128);
+	background: rgba(255,255,255,128);
 	border: 0px;
 	color: white;
 }
 QComboBox::editable:indicator {
-	background: rgba(255,224,64,0);
+	background: rgba(255,255,255,0);
 	border: 0px;
 	margin: 0px;
 }
@@ -4049,6 +4063,9 @@ border: 5px;
 background-color:  rgba(255,255,255,0);
 border-image: url(:/bg/pane_thin_yellow.png);
 color: rgb(255,255,255);
+}
+QLineEdit:hover {
+	color: white;
 }</string>
         </property>
         <property name="text">

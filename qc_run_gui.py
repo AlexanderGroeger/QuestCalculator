@@ -31,19 +31,19 @@ ui.setupUi(MainWindow)
 last_selected_entity = None
 delete_player_confirmation = False
 delete_enemy_confirmation = False
-entity_stat_change_type = "Fixed"
+entity_stats_change_type = 0
 entity_stats_check_boxes = {
-    "Gold": ui.entity_change_status_gold,
-    "Jewels": ui.entity_change_status_jewels,
-    "XP": ui.entity_change_status_exp,
-    "HP": ui.entity_change_status_hp,
-    "SP": ui.entity_change_status_sp,
-    "Food": ui.entity_change_status_food,
-    "Strength": ui.entity_change_status_strength,
-    "Dexterity": ui.entity_change_status_dexterity,
-    "Constitution": ui.entity_change_status_constitution,
-    "Intelligence": ui.entity_change_status_intelligence,
-    "Integrity": ui.entity_change_status_integrity,
+    "gold": ui.entity_change_status_gold,
+    "jewels": ui.entity_change_status_jewels,
+    "xp": ui.entity_change_status_exp,
+    "hp": ui.entity_change_status_hp,
+    "sp": ui.entity_change_status_sp,
+    "food": ui.entity_change_status_food,
+    "strength": ui.entity_change_status_strength,
+    "dexterity": ui.entity_change_status_dexterity,
+    "constitution": ui.entity_change_status_constitution,
+    "intelligence": ui.entity_change_status_intelligence,
+    "integrity": ui.entity_change_status_integrity,
 }
 
 last_selected_item = None
@@ -76,7 +76,7 @@ def UpdateEntityGui(player_list_item = None):
     ui.entity_hp_bar.setValue(last_selected_entity.data['hp'])
     ui.entity_sp_bar.setMaximum(last_selected_entity.stats['sp'])
     ui.entity_sp_bar.setValue(last_selected_entity.data['sp'])
-    ui.entity_hunger_bar.setValue(last_selected_entity.data['hunger'])
+    ui.entity_food_bar.setValue(last_selected_entity.data['food'])
     ui.entity_attack_box.setValue(last_selected_entity.stats['atk'])
     ui.entity_defense_box.setValue(last_selected_entity.stats['dfn'])
     ui.entity_special_attack_box.setValue(last_selected_entity.stats['spatk'])
@@ -113,6 +113,15 @@ def ChangeEntityLevel(object):
     ui.entity_level_box.setValue(int(last_selected_entity.data['lvl']))
     ui.entity_exp_bar.setMaximum(entity.GetExpNeededForLevel(int(last_selected_entity.data['lvl'])))
 
+def ChangeEntityXP(object):
+    global last_selected_entity
+    if not last_selected_entity:
+        return None
+    last_selected_entity.GiveExp(object)
+    ui.entity_exp_bar.setValue(int(last_selected_entity.data['xp']))
+    ui.entity_exp_bar.setMaximum(entity.GetExpNeededForLevel(int(last_selected_entity.data['lvl'])))
+    ui.entity_level_box.setValue(int(last_selected_entity.data['lvl']))
+
 def ChangeEntityGold(object):
     global last_selected_entity
     if not last_selected_entity:
@@ -131,25 +140,77 @@ def ChangeEntityHP(object):
     global last_selected_entity
     if not last_selected_entity:
         return None
-    last_selected_entity.data['hp'] = int(object)
-    ui.entity_hp_bar.setValue(int(last_selected_entity.data['hp']))
+    # object = max(min(int(last_selected_entity.data['hp']),int(last_selected_entity.stats['hp'])),0)
+    last_selected_entity.data['hp'] = object
+    ui.entity_hp_bar.setValue(object)
     ui.entity_hp_bar.setMaximum(int(last_selected_entity.stats['hp']))
 
 def ChangeEntitySP(object):
     global last_selected_entity
     if not last_selected_entity:
         return None
-    last_selected_entity.data['sp'] = int(object)
-    ui.entity_sp_bar.setValue(int(last_selected_entity.data['sp']))
+    # object = max(min( int(object), int(last_selected_entity.stats['sp']) ),0)
+    last_selected_entity.data['sp'] = object
+    ui.entity_sp_bar.setValue(object)
     ui.entity_sp_bar.setMaximum(int(last_selected_entity.stats['sp']))
 
 def ChangeEntityFood(object):
     global last_selected_entity
     if not last_selected_entity:
         return None
-    last_selected_entity.data['food'] = int(object)
-    ui.entity_sp_bar.setValue(int(last_selected_entity.data['food']))
-    ui.entity_sp_bar.setMaximum(100)
+    # object = max(min(int(last_selected_entity.data['food']),100),0)
+    last_selected_entity.data['food'] = object
+    ui.entity_sp_bar.setValue(object)
+    # ui.entity_sp_bar.setMaximum(100)
+
+def ChangeEntityStrength(object):
+    global last_selected_entity
+    if not last_selected_entity:
+        return None
+    last_selected_entity.big_stats['strength'] = int(object)
+    ui.entity_strength_box.setValue(int(last_selected_entity.big_stats['strength']))
+
+def ChangeEntityDexterity(object):
+    global last_selected_entity
+    if not last_selected_entity:
+        return None
+    last_selected_entity.big_stats['dexterity'] = int(object)
+    ui.entity_dexterity_box.setValue(int(last_selected_entity.big_stats['dexterity']))
+
+def ChangeEntityConstitution(object):
+    global last_selected_entity
+    if not last_selected_entity:
+        return None
+    last_selected_entity.big_stats['constitution'] = int(object)
+    ui.entity_constitution_box.setValue(int(last_selected_entity.big_stats['constitution']))
+
+def ChangeEntityIntelligence(object):
+    global last_selected_entity
+    if not last_selected_entity:
+        return None
+    last_selected_entity.big_stats['intelligence'] = int(object)
+    ui.entity_intelligence_box.setValue(int(last_selected_entity.big_stats['intelligence']))
+
+def ChangeEntityIntegrity(object):
+    global last_selected_entity
+    if not last_selected_entity:
+        return None
+    last_selected_entity.big_stats['integrity'] = int(object)
+    ui.entity_integrity_box.setValue(int(last_selected_entity.big_stats['integrity']))
+
+entity_stats_functions = {
+    "gold": ChangeEntityGold,
+    "jewels": ChangeEntityJewels,
+    "xp": ChangeEntityXP,
+    "hp": ChangeEntityHP,
+    "sp": ChangeEntitySP,
+    "food": ChangeEntityFood,
+    "strength": ChangeEntityStrength,
+    "dexterity": ChangeEntityDexterity,
+    "constitution": ChangeEntityConstitution,
+    "intelligence": ChangeEntityIntelligence,
+    "integrity": ChangeEntityIntegrity,
+}
 
 def ChangeSelectedData(add):
     global last_selected_entity
@@ -313,6 +374,7 @@ def EntityCopyButtonPressed(team):
         CopyEntity(team)
 
 def UpdateEntityChangeStatsBox(type):
+    global entity_stats_change_type
     # If type is Fixed, then no suffix
     if type == 0:
         ui.entity_stats_change_box.setSuffix("")
@@ -322,12 +384,73 @@ def UpdateEntityChangeStatsBox(type):
 
 def EntityChangeStats(type):
     global entity_stats_check_boxes
-    stat_gui
+    global entity_stats_change_type
+    global last_selected_entity
+
+    if not last_selected_entity:
+        return None
+    gui_val = int(ui.entity_stats_change_box.value())
+    stat_val = 0
     if type == "Add":
         for stat, box in entity_stats_check_boxes.iteritems():
             if box.isChecked():
-                stat_gui[stat]
+                if stat in entity.big_stats:
+                    stat_val = last_selected_entity.big_stats[stat]
+                elif stat in entity.data:
+                    stat_val = last_selected_entity.data[stat]
+                # If stats change type is fixed, just use raw value
+                if entity_stats_change_type == 0:
+                    entity_stats_functions[stat](stat_val+gui_val)
+                # Add Percentage of current value
+                elif entity_stats_change_type == 1:
+                    entity_stats_functions[stat](int(stat_val*(1.0+gui_val/100.0)))
 
+                elif stat in ['hp','sp','xp','food']:
+                    # Food can only be maxed at 100
+                    if stat == 'food':
+                        # Add Percentage of missing from max value
+                        if entity_stats_change_type == 2:
+                            entity_stats_functions[stat](int(stat_val+(100-stat_val)*(gui_val/100.0)))
+                        # Add Percentage of max value
+                        elif entity_stats_change_type == 3:
+                            entity_stats_functions[stat](int(stat_val+(100)*(gui_val/100.0)))
+                    else:
+                        # Add Percentage of missing from max value
+                        if entity_stats_change_type == 2:
+                            entity_stats_functions[stat](int(stat_val+(last_selected_entity.stat[stat]-stat_val)*(gui_val/100.0)))
+                        # Add Percentage of max value
+                        elif entity_stats_change_type == 3:
+                            entity_stats_functions[stat](int(stat_val+(last_selected_entity.stat[stat])*(gui_val/100.0)))
+    elif type == "Set":
+        for stat, box in entity_stats_check_boxes.iteritems():
+            if box.isChecked():
+                if stat in entity.big_stats:
+                    stat_val = last_selected_entity.big_stats[stat]
+                elif stat in entity.data:
+                    stat_val = last_selected_entity.data[stat]
+                # If stats change type is fixed, just use raw value
+                if entity_stats_change_type == 0:
+                    entity_stats_functions[stat](gui_val)
+                # Set Percentage of current value
+                elif entity_stats_change_type == 1:
+                    entity_stats_functions[stat](int(stat_val*(gui_val/100.0)))
+
+                elif stat in ['hp','sp','xp','food']:
+                    # Food can only be maxed at 100
+                    if stat == 'food':
+                        # Set Percentage of missing from max value
+                        if entity_stats_change_type == 2:
+                            entity_stats_functions[stat](int(100-(100-stat_val)*(gui_val/100.0)))
+                        # Set Percentage of max value
+                        elif entity_stats_change_type == 3:
+                            entity_stats_functions[stat](int((100)*(gui_val/100.0)))
+                    else:
+                        # Set Percentage of missing from max value
+                        if entity_stats_change_type == 2:
+                            entity_stats_functions[stat](int(last_selected_entity.stat[stat]+(last_selected_entity.stat[stat]-stat_val)*(gui_val/100.0)))
+                        # Set Percentage of max value
+                        elif entity_stats_change_type == 3:
+                            entity_stats_functions[stat](int((last_selected_entity.stat[stat])*(gui_val/100.0)))
 
 def UpdateItemGui(item_list_item = None):
     global last_selected_item
@@ -347,7 +470,7 @@ def UpdateItemGui(item_list_item = None):
     # ui.item_hp_bar.setValue(last_selected_entity.data['hp'])
     # ui.item_sp_bar.setMaximum(last_selected_entity.stats['sp'])
     # ui.item_sp_bar.setValue(last_selected_entity.data['sp'])
-    # ui.item_hunger_bar.setValue(last_selected_entity.data['hunger'])
+    # ui.item_food_bar.setValue(last_selected_entity.data['food'])
     # ui.item_attack_box.setValue(last_selected_entity.stats['atk'])
     # ui.item_defense_box.setValue(last_selected_entity.stats['dfn'])
     # ui.item_special_attack_box.setValue(last_selected_entity.stats['spatk'])
@@ -531,19 +654,8 @@ ui.entity_jewels_box.valueChanged.connect(ChangeEntityJewels)
 ui.entity_stats_change_add_button.clicked.connect(lambda: EntityChangeStats("Add"))
 ui.entity_stats_change_set_button.clicked.connect(lambda: EntityChangeStats("Set"))
 
-''' Entity Stats Check Boxes '''
+''' Entity Stats Change Type '''
 ui.entity_stats_change_type_box.currentIndexChanged.connect(UpdateEntityChangeStatsBox)
-ui.entity_change_status_gold.clicked.connect(ToggleEntityStatsCheckBoxes)
-ui.entity_change_status_jewels.clicked.connect(ToggleEntityStatsCheckBoxes)
-ui.entity_change_status_exp.clicked.connect(ToggleEntityStatsCheckBoxes)
-ui.entity_change_status_hp.clicked.connect(ToggleEntityStatsCheckBoxes)
-ui.entity_change_status_sp.clicked.connect(ToggleEntityStatsCheckBoxes)
-ui.entity_change_status_food.clicked.connect(ToggleEntityStatsCheckBoxes)
-ui.entity_change_status_strength.clicked.connect(ToggleEntityStatsCheckBoxes)
-ui.entity_change_status_dexterity.clicked.connect(ToggleEntityStatsCheckBoxes)
-ui.entity_change_status_constitution.clicked.connect(ToggleEntityStatsCheckBoxes)
-ui.entity_change_status_intelligence.clicked.connect(ToggleEntityStatsCheckBoxes)
-ui.entity_change_status_integrity.clicked.connect(ToggleEntityStatsCheckBoxes)
 
 '''
     ITEM TAB

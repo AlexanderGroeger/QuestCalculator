@@ -16,5 +16,7 @@
         <file>LegacyBackground.png</file>
         <file>pane_thick_yellow.png</file>
         <file>pane_light_white.png</file>
+        <file>pane_thin_dark_yellow.png</file>
+        <file>pane_thin_dim_yellow.png</file>
     </qresource>
 </RCC>

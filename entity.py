@@ -2,6 +2,24 @@ import item as it
 import effect as ef
 import random
 
+data = [
+'lvl',
+'xp',
+'hp',
+'sp',
+'food',
+'gold',
+'jewels'
+]
+
+big_stats = [
+    'strength',
+    'dexterity',
+    'constitution',
+    'intelligence',
+    'integrity'
+]
+
 entities = {}
 class Entity:
     def __init__(self, name = "Untitled", import_file = 'standard', player = None, data = None, stats = None,
@@ -106,7 +124,7 @@ class Entity:
         while curxp + newxp >= int(5*((lvl+1)/2+2)**2+5*lvl):
             newxp -= int(5*((lvl+1)/2+2)**2+5*lvl)
             lvl += 1
-        self.data['lvl'] = int(min(max(0,lvl),100))
+        self.data['lvl'] = int(min(max(0,lvl),999))
         self.data['xp'] = int(max(0,curxp+newxp))
 
     def GiveEffects(effects = None):

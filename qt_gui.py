@@ -82,14 +82,13 @@ class Ui_MainWindow(object):
         self.file_select_button2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.file_select_button2.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.file_select_button2.setStyleSheet("QPushButton {\n"
-"color: white;\n"
+"color: rgba(255,255,255,128);\n"
 "border: 5px;\n"
-"    border-image: url(:/bg/pane_thin_yellow.png);\n"
+"    border-image: url(:/bg/pane_thin_dim_yellow.png);\n"
 "}\n"
 "QPushButton::hover {\n"
-"color: rgb(255,255,255);\n"
-"border: 3px;\n"
-"    border-image: url(:/bg/border_thin_grey.png);\n"
+"color: white;\n"
+"border-image: url(:/bg/pane_thin_yellow.png);\n"
 "}")
         self.file_select_button2.setFlat(True)
         self.file_select_button2.setObjectName("file_select_button2")
@@ -157,14 +156,13 @@ class Ui_MainWindow(object):
         self.file_select_button3.setFont(font)
         self.file_select_button3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.file_select_button3.setStyleSheet("QPushButton {\n"
-"color: white;\n"
+"color: rgba(255,255,255,128);\n"
 "border: 5px;\n"
-"    border-image: url(:/bg/pane_thin_yellow.png);\n"
+"    border-image: url(:/bg/pane_thin_dim_yellow.png);\n"
 "}\n"
 "QPushButton::hover {\n"
-"color: rgb(255,255,255);\n"
-"border: 3px;\n"
-"    border-image: url(:/bg/border_thin_grey.png);\n"
+"color: white;\n"
+"border-image: url(:/bg/pane_thin_yellow.png);\n"
 "}")
         self.file_select_button3.setFlat(True)
         self.file_select_button3.setObjectName("file_select_button3")
@@ -188,14 +186,13 @@ class Ui_MainWindow(object):
         self.file_select_button1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.file_select_button1.setAutoFillBackground(False)
         self.file_select_button1.setStyleSheet("QPushButton {\n"
-"color: white;\n"
+"color: rgba(255,255,255,128);\n"
 "border: 5px;\n"
-"    border-image: url(:/bg/pane_thin_yellow.png);\n"
+"    border-image: url(:/bg/pane_thin_dim_yellow.png);\n"
 "}\n"
 "QPushButton::hover {\n"
-"color: rgb(255,255,255);\n"
-"border: 3px;\n"
-"    border-image: url(:/bg/border_thin_grey.png);\n"
+"color: white;\n"
+"border-image: url(:/bg/pane_thin_yellow.png);\n"
 "}")
         self.file_select_button1.setDefault(False)
         self.file_select_button1.setFlat(True)
@@ -511,17 +508,17 @@ class Ui_MainWindow(object):
         self.entity_accuracy_box.setSingleStep(1)
         self.entity_accuracy_box.setProperty("value", 1)
         self.entity_accuracy_box.setObjectName("entity_accuracy_box")
-        self.entity_hunger_label = QtWidgets.QLabel(self.entity_general_frame)
-        self.entity_hunger_label.setGeometry(QtCore.QRect(10, 260, 70, 30))
+        self.entity_food_label = QtWidgets.QLabel(self.entity_general_frame)
+        self.entity_food_label.setGeometry(QtCore.QRect(10, 260, 70, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setWeight(75)
-        self.entity_hunger_label.setFont(font)
-        self.entity_hunger_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.entity_hunger_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.entity_hunger_label.setObjectName("entity_hunger_label")
+        self.entity_food_label.setFont(font)
+        self.entity_food_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_food_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.entity_food_label.setObjectName("entity_food_label")
         self.entity_special_defense_box = QtWidgets.QSpinBox(self.entity_general_frame)
         self.entity_special_defense_box.setGeometry(QtCore.QRect(200, 620, 100, 40))
         font = QtGui.QFont()
@@ -597,16 +594,16 @@ class Ui_MainWindow(object):
         self.entity_blessing_box.setSingleStep(1)
         self.entity_blessing_box.setProperty("value", 1)
         self.entity_blessing_box.setObjectName("entity_blessing_box")
-        self.entity_hunger_bar = QtWidgets.QProgressBar(self.entity_general_frame)
-        self.entity_hunger_bar.setGeometry(QtCore.QRect(90, 260, 300, 30))
+        self.entity_food_bar = QtWidgets.QProgressBar(self.entity_general_frame)
+        self.entity_food_bar.setGeometry(QtCore.QRect(90, 260, 300, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(16)
         font.setBold(True)
         font.setWeight(75)
-        self.entity_hunger_bar.setFont(font)
-        self.entity_hunger_bar.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.entity_hunger_bar.setStyleSheet("QProgressBar {\n"
+        self.entity_food_bar.setFont(font)
+        self.entity_food_bar.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.entity_food_bar.setStyleSheet("QProgressBar {\n"
 "color: rgb(255,255,192);\n"
 "border: 5px;\n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
@@ -614,12 +611,12 @@ class Ui_MainWindow(object):
 "QProgressBar::chunk:horizontal {\n"
 "background: qlineargradient(x1: 0, y1: 0.5, x2: 1, y2: 0.5, stop: 0 rgb(192,192,32), stop: 1 rgb(255,224,128));\n"
 "}")
-        self.entity_hunger_bar.setMaximum(100)
-        self.entity_hunger_bar.setProperty("value", 100)
-        self.entity_hunger_bar.setAlignment(QtCore.Qt.AlignCenter)
-        self.entity_hunger_bar.setTextVisible(True)
-        self.entity_hunger_bar.setInvertedAppearance(False)
-        self.entity_hunger_bar.setObjectName("entity_hunger_bar")
+        self.entity_food_bar.setMaximum(100)
+        self.entity_food_bar.setProperty("value", 100)
+        self.entity_food_bar.setAlignment(QtCore.Qt.AlignCenter)
+        self.entity_food_bar.setTextVisible(True)
+        self.entity_food_bar.setInvertedAppearance(False)
+        self.entity_food_bar.setObjectName("entity_food_bar")
         self.entity_sp_label = QtWidgets.QLabel(self.entity_general_frame)
         self.entity_sp_label.setGeometry(QtCore.QRect(10, 220, 70, 30))
         font = QtGui.QFont()
@@ -1245,15 +1242,17 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.player_add_button.setFont(font)
         self.player_add_button.setToolTipDuration(1)
-        self.player_add_button.setStyleSheet("#player_add_button {\n"
+        self.player_add_button.setStyleSheet("QPushButton {\n"
 "border: 5px;\n"
 "border-image: url(:/bg/pane_thin_yellow.png);\n"
-"color: white;\n"
-"\n"
+"color: rgba(255,255,255,128);\n"
 "}\n"
-"#player_add_button::hover {\n"
-"border-image: url(:/bg/pane_thin_blue.png);\n"
-"color: rgb(160,192,255);\n"
+"QPushButton::hover {\n"
+"color: white;\n"
+"}\n"
+"QPushButton:checked {\n"
+"color: rgb(224,224,224);\n"
+"    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
         self.player_add_button.setCheckable(False)
         self.player_add_button.setFlat(True)
@@ -1267,15 +1266,17 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.player_delete_button.setFont(font)
         self.player_delete_button.setToolTipDuration(1)
-        self.player_delete_button.setStyleSheet("#player_delete_button {\n"
+        self.player_delete_button.setStyleSheet("QPushButton {\n"
 "border: 5px;\n"
 "border-image: url(:/bg/pane_thin_yellow.png);\n"
-"color:white;\n"
-"\n"
+"color: rgba(255,255,255,128);\n"
 "}\n"
-"#player_delete_button::hover {\n"
-"border-image: url(:/bg/pane_thin_blue.png);\n"
-"color: rgb(160,192,255);\n"
+"QPushButton::hover {\n"
+"color: white;\n"
+"}\n"
+"QPushButton:checked {\n"
+"color: rgb(224,224,224);\n"
+"    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
         self.player_delete_button.setCheckable(False)
         self.player_delete_button.setFlat(True)
@@ -1289,15 +1290,17 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.player_copy_button.setFont(font)
         self.player_copy_button.setToolTipDuration(1)
-        self.player_copy_button.setStyleSheet("#player_copy_button {\n"
+        self.player_copy_button.setStyleSheet("QPushButton {\n"
 "border: 5px;\n"
 "border-image: url(:/bg/pane_thin_yellow.png);\n"
-"color: white;\n"
-"\n"
+"color: rgba(255,255,255,128);\n"
 "}\n"
-"#player_copy_button::hover {\n"
-"border-image: url(:/bg/pane_thin_blue.png);\n"
-"color: rgb(160,192,255);\n"
+"QPushButton::hover {\n"
+"color: white;\n"
+"}\n"
+"QPushButton:checked {\n"
+"color: rgb(224,224,224);\n"
+"    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
         self.player_copy_button.setCheckable(False)
         self.player_copy_button.setFlat(True)
@@ -1375,10 +1378,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.entity_change_status_jewels.setFont(font)
         self.entity_change_status_jewels.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.entity_change_status_jewels.setStyleSheet("#change_status_jewels {\n"
+        self.entity_change_status_jewels.setStyleSheet("QCheckBox {\n"
 "    color: rgb(224,96,255);\n"
 "}\n"
-"#change_status_jewels::indicator {\n"
+"QCheckBox::indicator {\n"
 "    background: rgba(0,0,0,0);\n"
 "    border: 5px;\n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
@@ -1386,7 +1389,7 @@ class Ui_MainWindow(object):
 "    min-height: 25px;\n"
 "}\n"
 "\n"
-"#change_status_jewels::indicator:checked {\n"
+"QCheckBox::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}")
         self.entity_change_status_jewels.setObjectName("entity_change_status_jewels")
@@ -1400,10 +1403,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.entity_change_status_exp.setFont(font)
         self.entity_change_status_exp.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.entity_change_status_exp.setStyleSheet("#change_status_exp {\n"
+        self.entity_change_status_exp.setStyleSheet("QCheckBox {\n"
 "    color: rgb(192,255,255);\n"
 "}\n"
-"#change_status_exp::indicator {\n"
+"QCheckBox::indicator {\n"
 "    background: rgba(0,0,0,0);\n"
 "    border: 5px;\n"
 "    \n"
@@ -1412,7 +1415,7 @@ class Ui_MainWindow(object):
 "    min-height: 25px;\n"
 "}\n"
 "\n"
-"#change_status_exp::indicator:checked {\n"
+"QCheckBox::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}")
         self.entity_change_status_exp.setObjectName("entity_change_status_exp")
@@ -1426,10 +1429,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.entity_change_status_hp.setFont(font)
         self.entity_change_status_hp.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.entity_change_status_hp.setStyleSheet("#change_status_hp {\n"
+        self.entity_change_status_hp.setStyleSheet("QCheckBox {\n"
 "    color: rgb(255,160,128);\n"
 "}\n"
-"#change_status_hp::indicator {\n"
+"QCheckBox::indicator {\n"
 "    background: rgba(0,0,0,0);\n"
 "    border: 5px;\n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
@@ -1437,7 +1440,7 @@ class Ui_MainWindow(object):
 "    min-height: 25px;\n"
 "}\n"
 "\n"
-"#change_status_hp::indicator:checked {\n"
+"QCheckBox::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}")
         self.entity_change_status_hp.setObjectName("entity_change_status_hp")
@@ -1451,10 +1454,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.entity_change_status_sp.setFont(font)
         self.entity_change_status_sp.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.entity_change_status_sp.setStyleSheet("#change_status_sp {\n"
+        self.entity_change_status_sp.setStyleSheet("QCheckBox {\n"
 "    color: rgb(160,255,128);\n"
 "}\n"
-"#change_status_sp::indicator {\n"
+"QCheckBox::indicator {\n"
 "    background: rgba(0,0,0,0);\n"
 "    border: 5px;\n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
@@ -1462,7 +1465,7 @@ class Ui_MainWindow(object):
 "    min-height: 25px;\n"
 "}\n"
 "\n"
-"#change_status_sp::indicator:checked {\n"
+"QCheckBox::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}")
         self.entity_change_status_sp.setObjectName("entity_change_status_sp")
@@ -1476,10 +1479,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.entity_change_status_food.setFont(font)
         self.entity_change_status_food.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.entity_change_status_food.setStyleSheet("#change_status_food {\n"
+        self.entity_change_status_food.setStyleSheet("QCheckBox {\n"
 "    color: rgb(255,255,128);\n"
 "}\n"
-"#change_status_food::indicator {\n"
+"QCheckBox::indicator {\n"
 "    background: rgba(0,0,0,0);\n"
 "    border: 5px;\n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
@@ -1487,7 +1490,7 @@ class Ui_MainWindow(object):
 "    min-height: 25px;\n"
 "}\n"
 "\n"
-"#change_status_food::indicator:checked {\n"
+"QCheckBox::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}")
         self.entity_change_status_food.setObjectName("entity_change_status_food")
@@ -1504,11 +1507,16 @@ class Ui_MainWindow(object):
         self.entity_stats_change_add_button.setToolTipDuration(1)
         self.entity_stats_change_add_button.setStyleSheet("QPushButton {\n"
 "border: 5px;\n"
-"    border-image: url(:/bg/pane_thin_yellow.png);\n"
-"color: white;\n"
+"border-image: url(:/bg/pane_thin_dim_yellow.png);\n"
+"color: rgba(255,255,255,128);\n"
 "}\n"
 "QPushButton::hover {\n"
 "color: white;\n"
+"border-image: url(:/bg/pane_thin_yellow.png);\n"
+"}\n"
+"QPushButton:checked {\n"
+"color: rgb(224,224,224);\n"
+"    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
         self.entity_stats_change_add_button.setCheckable(False)
         self.entity_stats_change_add_button.setFlat(True)
@@ -1526,11 +1534,16 @@ class Ui_MainWindow(object):
         self.entity_stats_change_set_button.setToolTipDuration(1)
         self.entity_stats_change_set_button.setStyleSheet("QPushButton {\n"
 "border: 5px;\n"
-"    border-image: url(:/bg/pane_thin_yellow.png);\n"
-"color: white;\n"
+"border-image: url(:/bg/pane_thin_dim_yellow.png);\n"
+"color: rgba(255,255,255,128);\n"
 "}\n"
 "QPushButton::hover {\n"
 "color: white;\n"
+"border-image: url(:/bg/pane_thin_yellow.png);\n"
+"}\n"
+"QPushButton:checked {\n"
+"color: rgb(224,224,224);\n"
+"    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
         self.entity_stats_change_set_button.setCheckable(False)
         self.entity_stats_change_set_button.setFlat(True)
@@ -1545,10 +1558,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.entity_change_status_strength.setFont(font)
         self.entity_change_status_strength.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.entity_change_status_strength.setStyleSheet("#change_status_strength {\n"
+        self.entity_change_status_strength.setStyleSheet("QCheckBox {\n"
 "    color: rgb(255, 170, 96);\n"
 "}\n"
-"#change_status_strength::indicator {\n"
+"QCheckBox::indicator {\n"
 "    background: rgba(0,0,0,0);\n"
 "    border: 5px;\n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
@@ -1556,7 +1569,7 @@ class Ui_MainWindow(object):
 "    min-height: 25px;\n"
 "}\n"
 "\n"
-"#change_status_strength::indicator:checked {\n"
+"QCheckBox::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}\n"
 "")
@@ -1571,10 +1584,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.entity_change_status_dexterity.setFont(font)
         self.entity_change_status_dexterity.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.entity_change_status_dexterity.setStyleSheet("#change_status_dexterity {\n"
+        self.entity_change_status_dexterity.setStyleSheet("QCheckBox {\n"
 "    color: rgb(85, 255, 127);\n"
 "}\n"
-"#change_status_dexterity::indicator {\n"
+"QCheckBox::indicator {\n"
 "    background: rgba(0,0,0,0);\n"
 "    border: 5px;\n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
@@ -1582,7 +1595,7 @@ class Ui_MainWindow(object):
 "    min-height: 25px;\n"
 "}\n"
 "\n"
-"#change_status_dexterity::indicator:checked {\n"
+"QCheckBox::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}\n"
 "")
@@ -1597,10 +1610,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.entity_change_status_constitution.setFont(font)
         self.entity_change_status_constitution.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.entity_change_status_constitution.setStyleSheet("#change_status_constitution {    \n"
+        self.entity_change_status_constitution.setStyleSheet("QCheckBox {    \n"
 "    color: rgb(255, 224, 96);\n"
 "}\n"
-"#change_status_constitution::indicator {\n"
+"QCheckBox::indicator {\n"
 "    background: rgba(0,0,0,0);\n"
 "    border: 5px;\n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
@@ -1608,7 +1621,7 @@ class Ui_MainWindow(object):
 "    min-height: 25px;\n"
 "}\n"
 "\n"
-"#change_status_constitution::indicator:checked {\n"
+"QCheckBox::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}\n"
 "")
@@ -1623,10 +1636,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.entity_change_status_intelligence.setFont(font)
         self.entity_change_status_intelligence.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.entity_change_status_intelligence.setStyleSheet("#change_status_intelligence {\n"
+        self.entity_change_status_intelligence.setStyleSheet("QCheckBox {\n"
 "    color: rgb(64, 192, 255);\n"
 "}\n"
-"#change_status_intelligence::indicator {\n"
+"QCheckBox::indicator {\n"
 "    background: rgba(0,0,0,0);\n"
 "    border: 5px;\n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
@@ -1634,7 +1647,7 @@ class Ui_MainWindow(object):
 "    min-height: 25px;\n"
 "}\n"
 "\n"
-"#change_status_intelligence::indicator:checked {\n"
+"QCheckBox::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}\n"
 "")
@@ -1649,10 +1662,10 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.entity_change_status_integrity.setFont(font)
         self.entity_change_status_integrity.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
-        self.entity_change_status_integrity.setStyleSheet("#change_status_integrity {\n"
+        self.entity_change_status_integrity.setStyleSheet("QCheckBox {\n"
 "    color: white;\n"
 "}\n"
-"#change_status_integrity::indicator {\n"
+"QCheckBox::indicator {\n"
 "    background: rgba(0,0,0,0);\n"
 "    border: 5px;\n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
@@ -1660,7 +1673,7 @@ class Ui_MainWindow(object):
 "    min-height: 25px;\n"
 "}\n"
 "\n"
-"#change_status_integrity::indicator:checked {\n"
+"QCheckBox::indicator:checked {\n"
 "    image: url(:/bg/checkmark.png);\n"
 "}\n"
 "")
@@ -1684,6 +1697,7 @@ class Ui_MainWindow(object):
         self.entity_stats_change_type_box.setStyleSheet("QComboBox {\n"
 "    color: white;\n"
 "    border: 0px;\n"
+"    background: rgba(255,255,255,128);\n"
 "}\n"
 "QComboBox::down-arrow {\n"
 "    background: rgba(0,0,0,0);\n"
@@ -1696,12 +1710,12 @@ class Ui_MainWindow(object):
 "    color: white;\n"
 "}\n"
 "QComboBox::editable {\n"
-"    background: rgba(255,224,64,128);\n"
+"    background: rgba(255,255,255,128);\n"
 "    border: 0px;\n"
 "    color: white;\n"
 "}\n"
 "QComboBox::editable:indicator {\n"
-"    background: rgba(255,224,64,0);\n"
+"    background: rgba(255,255,255,0);\n"
 "    border: 0px;\n"
 "    margin: 0px;\n"
 "}\n"
@@ -1891,6 +1905,9 @@ class Ui_MainWindow(object):
 "background-color:  rgba(255,255,255,0);\n"
 "border-image: url(:/bg/pane_thin_yellow.png);\n"
 "color: rgb(255,255,255);\n"
+"}\n"
+"QLineEdit:hover {\n"
+"    color: white;\n"
 "}")
         self.enemy_search_box.setText("")
         self.enemy_search_box.setMaxLength(22)
@@ -2887,9 +2904,9 @@ class Ui_MainWindow(object):
         self.player_attack_change_label.setText(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
         self.player_critical_change_label.setText(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
         self.entity_hp_bar.setFormat(_translate("MainWindow", "%v/%m"))
-        self.entity_hunger_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffff7f;\">Food</span></p></body></html>"))
+        self.entity_food_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffff7f;\">Food</span></p></body></html>"))
         self.entity_sp_bar.setFormat(_translate("MainWindow", "%v/%m"))
-        self.entity_hunger_bar.setFormat(_translate("MainWindow", "%v/%m"))
+        self.entity_food_bar.setFormat(_translate("MainWindow", "%v/%m"))
         self.entity_sp_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#aaff7f;\">SP</span></p></body></html>"))
         self.entity_hp_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffaa7f;\">HP</span></p></body></html>"))
         self.player_special_defense_change_label.setText(_translate("MainWindow", "<html><head/><body><p><br/></p></body></html>"))
