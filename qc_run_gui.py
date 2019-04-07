@@ -212,38 +212,6 @@ entity_stats_functions = {
     "integrity": ChangeEntityIntegrity,
 }
 
-def ChangeSelectedData(add):
-    global last_selected_entity
-    if not last_selected_entity:
-        return None
-    change_value = int(ui.status_change_box.value())
-    mode_percent = False
-    if ui.change_status_gold.isChecked():
-        if add:
-            if mode_percent:
-                last_selected_entity.data['gold']+=floor(last_selected_entity.data['gold']*change_value)
-            else:
-                last_selected_entity.data['gold']+=change_value
-        else:
-            if mode_percent:
-                last_selected_entity.data['gold']=floor(last_selected_entity.data['gold']*change_value)
-            else:
-                last_selected_entity.data['gold']=change_value
-
-        ui.entity_gold_box.setValue(last_selected_entity.data['gold'])
-    if ui.change_status_jewels.isChecked():
-        if add:
-            last_selected_entity.data['jewels']+=change_value
-        else:
-            last_selected_entity.data['jewels']=floor(last_selected_entity.data['jewels']*change_value)
-        ui.entity_jewels_box.setValue(last_selected_entity.data['jewels'])
-    if ui.change_status_exp.isChecked():
-        if add:
-            last_selected_entity.data['xp']+=change_value
-        else:
-            last_selected_entity.data['xp']=floor(last_selected_entity.data['xp']*change_value)
-        ui.entity_exp_box.setValue(last_selected_entity.data['xp'])
-
 def AddEntityToList(ent):
     global last_selected_entity
     if isinstance(ent,entity.Entity):
@@ -485,7 +453,8 @@ def UpdateItemGui(item_list_item = None):
         return None
 
     ui.item_name_box.setText(last_selected_item.name)
-    # ui.item_level_box.setValue(last_selected_entity.data['lvl'])
+    ui.item_level_box.setValue(last_selected_item.requirements['lvl'][0])
+    ui.item_max_level_box.setValue(last_selected_item.requirements['lvl'][1]%1000)
     # ui.item_element_label.setText(str(last_selected_entity.player['element']))
     # ui.item_exp_bar.setMaximum(entity.GetExpNeededForLevel(last_selected_entity.data['lvl']))
     # ui.item_exp_bar.setValue(last_selected_entity.data['xp'])
@@ -511,7 +480,7 @@ def UpdateItemGui(item_list_item = None):
     # ui.item_integrity_box.setValue(last_selected_entity.big_stats['integrity'])
 
 def SortItemList(object):
-    ui.item_list.items()
+    print(5)
 
 def ChangeItemName(object):
     global last_selected_item
@@ -521,6 +490,22 @@ def ChangeItemName(object):
     # ui.item_name_box.setText(last_selected_item.name)
     if ui.item_list.currentItem():
         ui.item_list.currentItem().setText(last_selected_item.name)
+
+def ChangeItemLevel(object):
+    global last_selected_item
+    if not last_selected_item:
+        return None
+    last_selected_item.requirements['lvl'][0] = int(object)
+    if last_selected_item.requirements['lvl'][0] > last_selected_item.requirements['lvl'][1]%1000:
+        last_selected_item.requirements['lvl'][1] = int(object)
+
+def ChangeItemMaxLevel(object):
+    global last_selected_item
+    if not last_selected_item:
+        return None
+    last_selected_item.requirements['lvl'][1] = int(object)
+    if last_selected_item.requirements['lvl'][1] < last_selected_item.requirements['lvl'][0]:
+        last_selected_item.requirements['lvl'][0] = int(object)
 
 def AddItemToList(itm):
     global last_selected_item
@@ -696,6 +681,8 @@ ui.item_list.selectionModel().currentChanged.connect(UpdateItemGui)
 ''' Item Box Value Change Events '''
 ui.item_name_box.textChanged.connect(ChangeItemName)
 ui.item_search_box.textChanged.connect(SortItemList)
+ui.item_level_box.valueChanged.connect(ChangeItemLevel)
+ui.item_max_level_box.valueChanged.connect(ChangeItemMaxLevel)
 
 def PlaySelectSound():
     SELECT_SOUND.play()

@@ -576,7 +576,7 @@ margin-top: 0px;
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <property name="iconSize">
        <size>
@@ -4004,7 +4004,7 @@ border-image: url(:/bg/pane_thin_yellow.png);
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">#item_hp_box {
+          <string notr="true">QSpinBox {
 border: 0px;
 background-color: rgba(255,255,255,0);
 color: rgb(255,170,128);
@@ -4050,7 +4050,7 @@ color: rgb(255,170,128);
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">#item_sp_box {
+          <string notr="true">QSpinBox {
 border: 0px;
 background-color: rgba(255,255,255,0);
 color: rgb(170,255,128);
@@ -4083,7 +4083,7 @@ color: rgb(170,255,128);
           <rect>
            <x>10</x>
            <y>170</y>
-           <width>250</width>
+           <width>270</width>
            <height>40</height>
           </rect>
          </property>
@@ -4110,7 +4110,7 @@ color: rgb(170,255,128);
          <property name="geometry">
           <rect>
            <x>270</x>
-           <y>40</y>
+           <y>50</y>
            <width>250</width>
            <height>40</height>
           </rect>
@@ -4134,7 +4134,7 @@ color: rgb(170,255,128);
          <property name="geometry">
           <rect>
            <x>370</x>
-           <y>80</y>
+           <y>90</y>
            <width>150</width>
            <height>40</height>
           </rect>
@@ -4148,7 +4148,7 @@ color: rgb(170,255,128);
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">#item_gold_box {
+          <string notr="true">QSpinBox {
 border: 0px;
 background-color: rgba(255,255,255,0);
 color: rgb(255,236,90);
@@ -4180,7 +4180,7 @@ color: rgb(255,236,90);
          <property name="geometry">
           <rect>
            <x>370</x>
-           <y>120</y>
+           <y>130</y>
            <width>150</width>
            <height>40</height>
           </rect>
@@ -4194,7 +4194,7 @@ color: rgb(255,236,90);
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">#item_jewels_box {
+          <string notr="true">QSpinBox {
 border: 0px;
 background-color: rgba(255,255,255,0);
 color: rgb(224,128,255);
@@ -4225,8 +4225,8 @@ color: rgb(224,128,255);
         <widget class="QLabel" name="item_properties_misc_label">
          <property name="geometry">
           <rect>
-           <x>300</x>
-           <y>400</y>
+           <x>530</x>
+           <y>250</y>
            <width>250</width>
            <height>40</height>
           </rect>
@@ -4252,8 +4252,8 @@ color: rgb(224,128,255);
         <widget class="QLineEdit" name="item_import_file_box">
          <property name="geometry">
           <rect>
-           <x>570</x>
-           <y>440</y>
+           <x>560</x>
+           <y>50</y>
            <width>201</width>
            <height>30</height>
           </rect>
@@ -4267,7 +4267,7 @@ color: rgb(224,128,255);
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">#item_import_file_box {
+          <string notr="true">QLineEdit {
 	color: white;
 	border: 0px;
 	background: rgba(0,0,0,0);
@@ -4286,9 +4286,9 @@ color: rgb(224,128,255);
         <widget class="QCheckBox" name="item_toggle_consumable_button">
          <property name="geometry">
           <rect>
-           <x>320</x>
+           <x>310</x>
            <y>250</y>
-           <width>250</width>
+           <width>210</width>
            <height>40</height>
           </rect>
          </property>
@@ -4326,7 +4326,7 @@ QCheckBox::indicator:checked {
          <property name="geometry">
           <rect>
            <x>540</x>
-           <y>120</y>
+           <y>200</y>
            <width>250</width>
            <height>40</height>
           </rect>
@@ -4364,9 +4364,9 @@ QCheckBox::indicator:checked {
         <widget class="QCheckBox" name="item_toggle_stackable_button">
          <property name="geometry">
           <rect>
-           <x>320</x>
+           <x>310</x>
            <y>210</y>
-           <width>250</width>
+           <width>210</width>
            <height>40</height>
           </rect>
          </property>
@@ -4403,9 +4403,9 @@ QCheckBox::indicator:checked {
         <widget class="QSpinBox" name="item_quantity_box">
          <property name="geometry">
           <rect>
-           <x>470</x>
+           <x>440</x>
            <y>300</y>
-           <width>100</width>
+           <width>80</width>
            <height>40</height>
           </rect>
          </property>
@@ -4455,9 +4455,9 @@ color: white;
         <widget class="QSpinBox" name="item_max_quantity_box">
          <property name="geometry">
           <rect>
-           <x>470</x>
+           <x>440</x>
            <y>340</y>
-           <width>100</width>
+           <width>80</width>
            <height>40</height>
           </rect>
          </property>
@@ -4507,10 +4507,10 @@ color: white;
         <widget class="QComboBox" name="item_type_box">
          <property name="geometry">
           <rect>
-           <x>620</x>
-           <y>50</y>
+           <x>570</x>
+           <y>120</y>
            <width>170</width>
-           <height>30</height>
+           <height>40</height>
           </rect>
          </property>
          <property name="sizePolicy">
@@ -4522,13 +4522,13 @@ color: white;
          <property name="minimumSize">
           <size>
            <width>170</width>
-           <height>30</height>
+           <height>40</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>170</width>
-           <height>30</height>
+           <height>40</height>
           </size>
          </property>
          <property name="font">
@@ -4637,15 +4637,15 @@ QComboBox QAbstractItemView {
          <property name="geometry">
           <rect>
            <x>540</x>
-           <y>50</y>
-           <width>70</width>
-           <height>30</height>
+           <y>80</y>
+           <width>240</width>
+           <height>40</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Maiandra GD</family>
-           <pointsize>18</pointsize>
+           <pointsize>20</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -4657,14 +4657,14 @@ QComboBox QAbstractItemView {
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic; color:#ffffff;&quot;&gt;Type&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
         <widget class="QLabel" name="item_properties_requirements_label">
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>40</y>
+           <y>50</y>
            <width>250</width>
            <height>40</height>
           </rect>
@@ -4687,11 +4687,11 @@ QComboBox QAbstractItemView {
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QSpinBox" name="item_lvl_box">
+        <widget class="QSpinBox" name="item_level_box">
          <property name="geometry">
           <rect>
            <x>150</x>
-           <y>80</y>
+           <y>90</y>
            <width>80</width>
            <height>40</height>
           </rect>
@@ -4737,7 +4737,7 @@ color: white;
          <property name="geometry">
           <rect>
            <x>150</x>
-           <y>120</y>
+           <y>130</y>
            <width>80</width>
            <height>40</height>
           </rect>
@@ -4783,7 +4783,7 @@ color: white;
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>5</y>
+           <y>10</y>
            <width>80</width>
            <height>40</height>
           </rect>
@@ -4810,8 +4810,8 @@ color: white;
          <property name="geometry">
           <rect>
            <x>100</x>
-           <y>5</y>
-           <width>680</width>
+           <y>10</y>
+           <width>430</width>
            <height>40</height>
           </rect>
          </property>
@@ -4835,7 +4835,7 @@ color: rgb(255,255,225);
           <string/>
          </property>
          <property name="maxLength">
-          <number>25</number>
+          <number>30</number>
          </property>
          <property name="echoMode">
           <enum>QLineEdit::Normal</enum>
@@ -4848,7 +4848,7 @@ color: rgb(255,255,225);
          <property name="geometry">
           <rect>
            <x>540</x>
-           <y>90</y>
+           <y>170</y>
            <width>250</width>
            <height>30</height>
           </rect>
@@ -4880,15 +4880,15 @@ QCheckBox::indicator:checked {
 </string>
          </property>
          <property name="text">
-          <string>Requires Ammo</string>
+          <string>Uses Ammo</string>
          </property>
         </widget>
         <widget class="QLabel" name="item_properties_carry_label">
          <property name="geometry">
           <rect>
-           <x>320</x>
+           <x>300</x>
            <y>170</y>
-           <width>250</width>
+           <width>220</width>
            <height>40</height>
           </rect>
          </property>
@@ -4911,7 +4911,7 @@ QCheckBox::indicator:checked {
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>80</y>
+           <y>90</y>
            <width>140</width>
            <height>40</height>
           </rect>
@@ -4938,7 +4938,7 @@ QCheckBox::indicator:checked {
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>120</y>
+           <y>130</y>
            <width>140</width>
            <height>40</height>
           </rect>
@@ -4965,7 +4965,7 @@ QCheckBox::indicator:checked {
          <property name="geometry">
           <rect>
            <x>270</x>
-           <y>120</y>
+           <y>130</y>
            <width>90</width>
            <height>40</height>
           </rect>
@@ -4992,7 +4992,7 @@ QCheckBox::indicator:checked {
          <property name="geometry">
           <rect>
            <x>270</x>
-           <y>80</y>
+           <y>90</y>
            <width>90</width>
            <height>40</height>
           </rect>
@@ -5018,7 +5018,7 @@ QCheckBox::indicator:checked {
         <widget class="QLabel" name="item_max_quantity_label">
          <property name="geometry">
           <rect>
-           <x>320</x>
+           <x>310</x>
            <y>340</y>
            <width>120</width>
            <height>40</height>
@@ -5045,7 +5045,7 @@ QCheckBox::indicator:checked {
         <widget class="QLabel" name="item_quantity_label">
          <property name="geometry">
           <rect>
-           <x>320</x>
+           <x>310</x>
            <y>300</y>
            <width>120</width>
            <height>40</height>
@@ -5867,9 +5867,9 @@ color: white;</string>
         <widget class="QLabel" name="item_pack_label">
          <property name="geometry">
           <rect>
-           <x>590</x>
-           <y>400</y>
-           <width>170</width>
+           <x>540</x>
+           <y>10</y>
+           <width>240</width>
            <height>40</height>
           </rect>
          </property>
@@ -5888,7 +5888,7 @@ color: white;</string>
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic; color:#ffffff;&quot;&gt;Import Pack&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </widget>
@@ -6043,12 +6043,14 @@ QListWidget::item:!selected:!focus:hover {
          <string notr="true">QPushButton {
 border: 5px;
 border-image: url(:/bg/pane_thin_yellow.png);
-color: white;
-
+color: rgba(255,255,255,128);
 }
 QPushButton::hover {
-border-image: url(:/bg/pane_thin_blue.png);
-color: rgb(160,192,255);
+color: white;
+}
+QPushButton:checked {
+color: rgb(224,224,224);
+	border-image: url(:/bg/pane_thin_dark_yellow.png);
 }</string>
         </property>
         <property name="text">
@@ -6088,12 +6090,14 @@ color: rgb(160,192,255);
          <string notr="true">QPushButton {
 border: 5px;
 border-image: url(:/bg/pane_thin_yellow.png);
-color: white;
-
+color: rgba(255,255,255,128);
 }
 QPushButton::hover {
-border-image: url(:/bg/pane_thin_blue.png);
-color: rgb(160,192,255);
+color: white;
+}
+QPushButton:checked {
+color: rgb(224,224,224);
+	border-image: url(:/bg/pane_thin_dark_yellow.png);
 }</string>
         </property>
         <property name="text">
@@ -6134,12 +6138,14 @@ color: rgb(160,192,255);
          <string notr="true">QPushButton {
 border: 5px;
 border-image: url(:/bg/pane_thin_yellow.png);
-color: white;
-
+color: rgba(255,255,255,128);
 }
 QPushButton::hover {
-border-image: url(:/bg/pane_thin_blue.png);
-color: rgb(160,192,255);
+color: white;
+}
+QPushButton:checked {
+color: rgb(224,224,224);
+	border-image: url(:/bg/pane_thin_dark_yellow.png);
 }</string>
         </property>
         <property name="text">
@@ -6185,7 +6191,7 @@ color: rgb(255,255,255);
          <string/>
         </property>
         <property name="maxLength">
-         <number>25</number>
+         <number>30</number>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -6340,7 +6346,7 @@ color: rgb(255,255,255);
          <string/>
         </property>
         <property name="maxLength">
-         <number>25</number>
+         <number>30</number>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -6350,6 +6356,1712 @@ color: rgb(255,255,255);
         </property>
         <property name="placeholderText">
          <string>Search For Skill</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="skill_properties_frame">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>40</y>
+          <width>800</width>
+          <height>975</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#skill_properties_frame {
+border: 5px;
+border-image: url(:/bg/pane_thin_yellow.png);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <widget class="QSpinBox" name="skill_sp_box">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>170</y>
+           <width>120</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSpinBox {
+border: 0px;
+background-color: rgba(255,255,255,0);
+color: rgb(170,255,128);
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="showGroupSeparator" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>-999999</number>
+         </property>
+         <property name="maximum">
+          <number>999999</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_properties_equip_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>210</y>
+           <width>270</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic; color:#ffffff;&quot;&gt;Usage Bonuses&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="item_properties_misc_label_2">
+         <property name="geometry">
+          <rect>
+           <x>530</x>
+           <y>250</y>
+           <width>250</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt; font-style:italic; color:#ffffff;&quot;&gt;Miscellaneous&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="item_import_file_box_2">
+         <property name="geometry">
+          <rect>
+           <x>560</x>
+           <y>50</y>
+           <width>201</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>18</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	color: white;
+	border: 0px;
+	background: rgba(0,0,0,0);
+}</string>
+         </property>
+         <property name="maxLength">
+          <number>16</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>default standard</string>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="item_toggle_dual_wield_button_2">
+         <property name="geometry">
+          <rect>
+           <x>540</x>
+           <y>200</y>
+           <width>250</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox {
+	color: white;
+}
+QCheckBox::indicator {
+	background: rgba(0,0,0,0);
+	border: 5px;
+	border-image: url(:/bg/pane_thin_yellow.png);
+	min-width: 20px;
+	min-height: 20px;
+}
+
+QCheckBox::indicator:checked {
+	image: url(:/bg/checkmark.png);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Dual Wield</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="item_type_box_2">
+         <property name="geometry">
+          <rect>
+           <x>570</x>
+           <y>120</y>
+           <width>170</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>170</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>170</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>18</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+	color: white;
+	border: 0px;
+}
+QComboBox::down-arrow {
+	background: rgba(0,0,0,0);
+	max-width: 0px;
+}
+QComboBox::drop-down {
+	background: rgba(0,0,0,0);
+	border: 0px;
+	max-width: 0px;
+	color: white;
+}
+QComboBox::editable {
+	background: rgba(255,224,255,64);
+	border: 0px;
+	color: white;
+}
+QComboBox::editable:indicator {
+	background: rgba(255,224,255,0);
+	border: 0px;
+	margin: 0px;
+}
+
+QComboBox QAbstractItemView {
+	color: white;
+	background: rgba(255,224,255,96);
+	selection-background-color: rgba(255,224,255,128);
+	border: 0px;
+	outline: 0px;
+}</string>
+         </property>
+         <property name="maxCount">
+          <number>10</number>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QComboBox::AdjustToMinimumContentsLength</enum>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string>Weapon</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ammo</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Head</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Chest</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Back</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Hands</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Legs</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Feet</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Accessory</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Item</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLabel" name="item_properties_type_label_2">
+         <property name="geometry">
+          <rect>
+           <x>540</x>
+           <y>80</y>
+           <width>240</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic; color:#ffffff;&quot;&gt;Type&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_properties_requirements_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>250</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic; color:#ffffff;&quot;&gt;Requirements&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="skill_level_box">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>90</y>
+           <width>80</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSpinBox {
+border: 0px;
+background-color: rgba(255,255,255,0);
+color: white;
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="showGroupSeparator" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>999</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="skill_max_level_box">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>130</y>
+           <width>80</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QSpinBox {
+border: 0px;
+background-color: rgba(255,255,255,0);
+color: white;
+}</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="showGroupSeparator" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>999</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_name_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>80</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="skill_name_box">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>10</y>
+           <width>430</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+border: 0px;
+background-color:  rgba(255,255,255,0);
+color: rgb(255,255,225);
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="maxLength">
+          <number>30</number>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Normal</enum>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="item_toggle_consumable_button_4">
+         <property name="geometry">
+          <rect>
+           <x>540</x>
+           <y>170</y>
+           <width>250</width>
+           <height>30</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>18</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QCheckBox {
+	color: white;
+}
+QCheckBox::indicator {
+	background: rgba(0,0,0,0);
+	border: 5px;
+	border-image: url(:/bg/pane_thin_yellow.png);
+	min-width: 20px;
+	min-height: 20px;
+}
+
+QCheckBox::indicator:checked {
+	image: url(:/bg/checkmark.png);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Uses Ammo</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_properties_customization_label">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>50</y>
+           <width>220</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>18</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt; font-style:italic; color:#ffffff;&quot;&gt;Customization&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_level_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>90</y>
+           <width>140</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Level&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_max_level_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>130</y>
+           <width>140</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Max Level&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="skill_special_attack_box">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>330</y>
+           <width>120</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0px;
+background-color: rgba(255,255,255,0);
+color: white;
+</string>
+         </property>
+         <property name="wrapping">
+          <bool>false</bool>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_accuracy_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>410</y>
+           <width>150</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Accuracy&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_special_attack_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>330</y>
+           <width>150</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;SP Attack&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="skill_critical_box">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>490</y>
+           <width>120</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0px;
+background-color: rgba(255,255,255,0);
+color: white;
+</string>
+         </property>
+         <property name="wrapping">
+          <bool>false</bool>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_attack_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>250</y>
+           <width>150</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Attack&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="skill_defense_box">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>290</y>
+           <width>120</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0px;
+background-color: rgba(255,255,255,0);
+color: white;</string>
+         </property>
+         <property name="wrapping">
+          <bool>false</bool>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_blessing_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>530</y>
+           <width>150</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Blessing&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="skill_evasion_box">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>450</y>
+           <width>120</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0px;
+background-color: rgba(255,255,255,0);
+color: white;
+</string>
+         </property>
+         <property name="wrapping">
+          <bool>false</bool>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="skill_accuracy_box">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>410</y>
+           <width>120</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0px;
+background-color: rgba(255,255,255,0);
+color: white;</string>
+         </property>
+         <property name="wrapping">
+          <bool>false</bool>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_critical_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>490</y>
+           <width>150</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Critical&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_defense_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>290</y>
+           <width>150</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Defense&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_evasion_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>450</y>
+           <width>150</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Evasion&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="skill_special_defense_box">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>370</y>
+           <width>120</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0px;
+background-color: rgba(255,255,255,0);
+color: white;
+</string>
+         </property>
+         <property name="wrapping">
+          <bool>false</bool>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="skill_blessing_box">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>530</y>
+           <width>120</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0px;
+background-color: rgba(255,255,255,0);
+color: white;
+</string>
+         </property>
+         <property name="wrapping">
+          <bool>false</bool>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_special_defense_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>370</y>
+           <width>150</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;SP Defense&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="skill_attack_box">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>250</y>
+           <width>120</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0px;
+background-color: rgba(255,255,255,0);
+color: white;</string>
+         </property>
+         <property name="wrapping">
+          <bool>false</bool>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="item_sp_label_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>100</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aaff7f;&quot;&gt;SP Cost&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="item_pack_label_2">
+         <property name="geometry">
+          <rect>
+           <x>540</x>
+           <y>10</y>
+           <width>240</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic; color:#ffffff;&quot;&gt;Import Pack&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="skill_power_label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>570</y>
+           <width>150</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Power&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="skill_power_box">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>570</y>
+           <width>120</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Maiandra GD</family>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 0px;
+background-color: rgba(255,255,255,0);
+color: white;
+</string>
+         </property>
+         <property name="wrapping">
+          <bool>false</bool>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="buttonSymbols">
+          <enum>QAbstractSpinBox::NoButtons</enum>
+         </property>
+         <property name="suffix">
+          <string> %</string>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>9999</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>100</number>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="item_properties_label_2">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>0</y>
+          <width>800</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Maiandra GD</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;Properties&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="skill_add_button">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>970</y>
+          <width>110</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Maiandra GD</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Add a player</string>
+        </property>
+        <property name="toolTipDuration">
+         <number>1</number>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+border: 5px;
+border-image: url(:/bg/pane_thin_yellow.png);
+color: rgba(255,255,255,128);
+}
+QPushButton::hover {
+color: white;
+}
+QPushButton:checked {
+color: rgb(224,224,224);
+	border-image: url(:/bg/pane_thin_dark_yellow.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="skill_copy_button">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>970</y>
+          <width>110</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Maiandra GD</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Duplicate a player</string>
+        </property>
+        <property name="toolTipDuration">
+         <number>1</number>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+border: 5px;
+border-image: url(:/bg/pane_thin_yellow.png);
+color: rgba(255,255,255,128);
+}
+QPushButton::hover {
+color: white;
+}
+QPushButton:checked {
+color: rgb(224,224,224);
+	border-image: url(:/bg/pane_thin_dark_yellow.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>Copy</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="skill_delete_button">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>970</y>
+          <width>110</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Maiandra GD</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Add a player</string>
+        </property>
+        <property name="toolTipDuration">
+         <number>1</number>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+border: 5px;
+border-image: url(:/bg/pane_thin_yellow.png);
+color: rgba(255,255,255,128);
+}
+QPushButton::hover {
+color: white;
+}
+QPushButton:checked {
+color: rgb(224,224,224);
+	border-image: url(:/bg/pane_thin_dark_yellow.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
         </property>
        </widget>
       </widget>
@@ -6363,6 +8075,293 @@ border: 0px;
        <attribute name="title">
         <string>Effect</string>
        </attribute>
+       <widget class="QLabel" name="effects_label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>350</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Maiandra GD</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;Effects&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="effect_search_box">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>350</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Maiandra GD</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+border: 5px;
+background-color:  rgba(255,255,255,0);
+border-image: url(:/bg/pane_thin_yellow.png);
+color: rgb(255,255,255);
+}</string>
+        </property>
+        <property name="inputMask">
+         <string/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="maxLength">
+         <number>30</number>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="dragEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="placeholderText">
+         <string>Search For Effect</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="effect_add_button">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>970</y>
+          <width>110</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Maiandra GD</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Add a player</string>
+        </property>
+        <property name="toolTipDuration">
+         <number>1</number>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+border: 5px;
+border-image: url(:/bg/pane_thin_yellow.png);
+color: rgba(255,255,255,128);
+}
+QPushButton::hover {
+color: white;
+}
+QPushButton:checked {
+color: rgb(224,224,224);
+	border-image: url(:/bg/pane_thin_dark_yellow.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="effect_delete_button">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>970</y>
+          <width>110</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Maiandra GD</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Add a player</string>
+        </property>
+        <property name="toolTipDuration">
+         <number>1</number>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+border: 5px;
+border-image: url(:/bg/pane_thin_yellow.png);
+color: rgba(255,255,255,128);
+}
+QPushButton::hover {
+color: white;
+}
+QPushButton:checked {
+color: rgb(224,224,224);
+	border-image: url(:/bg/pane_thin_dark_yellow.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="effect_list">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>350</width>
+          <height>870</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Maiandra GD</family>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QListWidget {
+	border: 5px;
+	border-image: url(:/bg/pane_thin_yellow.png);
+	outline: 0px;
+}
+QListWidget::item {
+	color: rgba(255,255,255,128);
+	background: rgba(0,0,0,0);
+}
+QListWidget::item:selected {
+	color: white;
+	background: rgba(255,255,255,64);
+	image: url(:/bg/checkmark.png);
+	image-position: left;
+}
+QListWidget::item:focus {
+	color: white;
+	background: rgba(255,255,255,128);
+}
+QListWidget::item:!selected:!focus:hover {
+	color: white;
+}</string>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+        <property name="textElideMode">
+         <enum>Qt::ElideMiddle</enum>
+        </property>
+        <property name="uniformItemSizes">
+         <bool>true</bool>
+        </property>
+        <property name="batchSize">
+         <number>15</number>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="effect_copy_button">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>970</y>
+          <width>110</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Maiandra GD</family>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Duplicate a player</string>
+        </property>
+        <property name="toolTipDuration">
+         <number>1</number>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+border: 5px;
+border-image: url(:/bg/pane_thin_yellow.png);
+color: rgba(255,255,255,128);
+}
+QPushButton::hover {
+color: white;
+}
+QPushButton:checked {
+color: rgb(224,224,224);
+	border-image: url(:/bg/pane_thin_dark_yellow.png);
+}</string>
+        </property>
+        <property name="text">
+         <string>Copy</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="battle_tab">
        <property name="styleSheet">

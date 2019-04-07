@@ -42,16 +42,19 @@ class Effect:
                 self.stats[n] = v
         self.restoration = {
             'hp': {
+                'fixed': 0,
                 'max': 0,
                 'missing': 0,
                 'damage': 0
             }, # hp is changed upon use. Integer if > 1 < else Percent if >0 and <1
             'sp': {
+                'fixed': 0,
                 'max': 0,
                 'missing': 0,
                 'damage': 0
             }, # sp is changed upon use.
             'food': {
+                'fixed': 0,
                 'max': 0,
                 'missing': 0,
                 'damage': 0
