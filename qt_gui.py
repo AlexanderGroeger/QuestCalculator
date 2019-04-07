@@ -1883,6 +1883,8 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_hp_box.setFont(font)
+        self.item_hp_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.item_hp_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_hp_box.setStyleSheet("QSpinBox {\n"
 "border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -1904,6 +1906,8 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_sp_box.setFont(font)
+        self.item_sp_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.item_sp_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_sp_box.setStyleSheet("QSpinBox {\n"
 "border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -1926,6 +1930,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.item_properties_equip_label.setFont(font)
+        self.item_properties_equip_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_properties_equip_label.setStyleSheet("")
         self.item_properties_equip_label.setAlignment(QtCore.Qt.AlignCenter)
         self.item_properties_equip_label.setObjectName("item_properties_equip_label")
@@ -1937,6 +1942,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_properties_value_label.setFont(font)
+        self.item_properties_value_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_properties_value_label.setAlignment(QtCore.Qt.AlignCenter)
         self.item_properties_value_label.setObjectName("item_properties_value_label")
         self.item_gold_box = QtWidgets.QSpinBox(self.item_properties_frame)
@@ -1947,6 +1953,8 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_gold_box.setFont(font)
+        self.item_gold_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.item_gold_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_gold_box.setStyleSheet("QSpinBox {\n"
 "border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -1968,6 +1976,8 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_jewels_box.setFont(font)
+        self.item_jewels_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.item_jewels_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_jewels_box.setStyleSheet("QSpinBox {\n"
 "border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -1982,13 +1992,14 @@ class Ui_MainWindow(object):
         self.item_jewels_box.setProperty("value", 0)
         self.item_jewels_box.setObjectName("item_jewels_box")
         self.item_properties_misc_label = QtWidgets.QLabel(self.item_properties_frame)
-        self.item_properties_misc_label.setGeometry(QtCore.QRect(530, 250, 250, 40))
+        self.item_properties_misc_label.setGeometry(QtCore.QRect(530, 280, 250, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.item_properties_misc_label.setFont(font)
+        self.item_properties_misc_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_properties_misc_label.setStyleSheet("")
         self.item_properties_misc_label.setAlignment(QtCore.Qt.AlignCenter)
         self.item_properties_misc_label.setObjectName("item_properties_misc_label")
@@ -2000,6 +2011,8 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_import_file_box.setFont(font)
+        self.item_import_file_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.item_import_file_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_import_file_box.setStyleSheet("QLineEdit {\n"
 "    color: white;\n"
 "    border: 0px;\n"
@@ -2017,6 +2030,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.item_toggle_consumable_button.setFont(font)
+        self.item_toggle_consumable_button.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.item_toggle_consumable_button.setStyleSheet("QCheckBox {\n"
 "    color: white;\n"
 "}\n"
@@ -2042,6 +2056,8 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.item_toggle_dual_wield_button.setFont(font)
+        self.item_toggle_dual_wield_button.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.item_toggle_dual_wield_button.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_toggle_dual_wield_button.setStyleSheet("QCheckBox {\n"
 "    color: white;\n"
 "}\n"
@@ -2067,6 +2083,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.item_toggle_stackable_button.setFont(font)
+        self.item_toggle_stackable_button.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.item_toggle_stackable_button.setStyleSheet("QCheckBox {\n"
 "    color: white;\n"
 "}\n"
@@ -2084,7 +2101,7 @@ class Ui_MainWindow(object):
 "")
         self.item_toggle_stackable_button.setObjectName("item_toggle_stackable_button")
         self.item_quantity_box = QtWidgets.QSpinBox(self.item_properties_frame)
-        self.item_quantity_box.setGeometry(QtCore.QRect(440, 300, 80, 40))
+        self.item_quantity_box.setGeometry(QtCore.QRect(440, 290, 80, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
@@ -2107,7 +2124,7 @@ class Ui_MainWindow(object):
         self.item_quantity_box.setProperty("value", 1)
         self.item_quantity_box.setObjectName("item_quantity_box")
         self.item_max_quantity_box = QtWidgets.QSpinBox(self.item_properties_frame)
-        self.item_max_quantity_box.setGeometry(QtCore.QRect(440, 340, 80, 40))
+        self.item_max_quantity_box.setGeometry(QtCore.QRect(440, 330, 80, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
@@ -2144,6 +2161,8 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_type_box.setFont(font)
+        self.item_type_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.item_type_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_type_box.setStyleSheet("QComboBox {\n"
 "    color: white;\n"
 "    border: 0px;\n"
@@ -2198,6 +2217,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_properties_type_label.setFont(font)
+        self.item_properties_type_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_properties_type_label.setStyleSheet("")
         self.item_properties_type_label.setAlignment(QtCore.Qt.AlignCenter)
         self.item_properties_type_label.setObjectName("item_properties_type_label")
@@ -2209,6 +2229,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_properties_requirements_label.setFont(font)
+        self.item_properties_requirements_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_properties_requirements_label.setStyleSheet("")
         self.item_properties_requirements_label.setAlignment(QtCore.Qt.AlignCenter)
         self.item_properties_requirements_label.setObjectName("item_properties_requirements_label")
@@ -2220,6 +2241,8 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_level_box.setFont(font)
+        self.item_level_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.item_level_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_level_box.setStyleSheet("QSpinBox {\n"
 "border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -2241,6 +2264,8 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_max_level_box.setFont(font)
+        self.item_max_level_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.item_max_level_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_max_level_box.setStyleSheet("QSpinBox {\n"
 "border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -2262,6 +2287,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_name_label.setFont(font)
+        self.item_name_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_name_label.setStyleSheet("")
         self.item_name_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.item_name_label.setObjectName("item_name_label")
@@ -2274,6 +2300,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.item_name_box.setFont(font)
+        self.item_name_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_name_box.setStyleSheet("QLineEdit {\n"
 "border: 0px;\n"
 "background-color:  rgba(255,255,255,0);\n"
@@ -2288,11 +2315,13 @@ class Ui_MainWindow(object):
         self.item_toggle_consumable_button_2.setGeometry(QtCore.QRect(540, 170, 250, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
-        font.setPointSize(18)
+        font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
         self.item_toggle_consumable_button_2.setFont(font)
+        self.item_toggle_consumable_button_2.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.item_toggle_consumable_button_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_toggle_consumable_button_2.setStyleSheet("QCheckBox {\n"
 "    color: white;\n"
 "}\n"
@@ -2317,6 +2346,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_properties_carry_label.setFont(font)
+        self.item_properties_carry_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_properties_carry_label.setAlignment(QtCore.Qt.AlignCenter)
         self.item_properties_carry_label.setObjectName("item_properties_carry_label")
         self.item_level_label = QtWidgets.QLabel(self.item_properties_frame)
@@ -2327,6 +2357,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_level_label.setFont(font)
+        self.item_level_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_level_label.setStyleSheet("")
         self.item_level_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.item_level_label.setObjectName("item_level_label")
@@ -2338,6 +2369,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_max_level_label.setFont(font)
+        self.item_max_level_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_max_level_label.setStyleSheet("")
         self.item_max_level_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.item_max_level_label.setObjectName("item_max_level_label")
@@ -2349,6 +2381,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_jewels_label.setFont(font)
+        self.item_jewels_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_jewels_label.setStyleSheet("")
         self.item_jewels_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.item_jewels_label.setObjectName("item_jewels_label")
@@ -2360,11 +2393,12 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_gold_label.setFont(font)
+        self.item_gold_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_gold_label.setStyleSheet("")
         self.item_gold_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.item_gold_label.setObjectName("item_gold_label")
         self.item_max_quantity_label = QtWidgets.QLabel(self.item_properties_frame)
-        self.item_max_quantity_label.setGeometry(QtCore.QRect(310, 340, 120, 40))
+        self.item_max_quantity_label.setGeometry(QtCore.QRect(310, 330, 120, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
@@ -2375,7 +2409,7 @@ class Ui_MainWindow(object):
         self.item_max_quantity_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.item_max_quantity_label.setObjectName("item_max_quantity_label")
         self.item_quantity_label = QtWidgets.QLabel(self.item_properties_frame)
-        self.item_quantity_label.setGeometry(QtCore.QRect(310, 300, 120, 40))
+        self.item_quantity_label.setGeometry(QtCore.QRect(310, 290, 120, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
@@ -2394,7 +2428,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.item_special_attack_box.setFont(font)
-        self.item_special_attack_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.item_special_attack_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.item_special_attack_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_special_attack_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -2403,7 +2437,7 @@ class Ui_MainWindow(object):
         self.item_special_attack_box.setWrapping(False)
         self.item_special_attack_box.setFrame(False)
         self.item_special_attack_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.item_special_attack_box.setReadOnly(True)
+        self.item_special_attack_box.setReadOnly(False)
         self.item_special_attack_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.item_special_attack_box.setPrefix("")
         self.item_special_attack_box.setMinimum(1)
@@ -2446,7 +2480,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.item_critical_box.setFont(font)
-        self.item_critical_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.item_critical_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.item_critical_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_critical_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -2455,7 +2489,7 @@ class Ui_MainWindow(object):
         self.item_critical_box.setWrapping(False)
         self.item_critical_box.setFrame(False)
         self.item_critical_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.item_critical_box.setReadOnly(True)
+        self.item_critical_box.setReadOnly(False)
         self.item_critical_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.item_critical_box.setPrefix("")
         self.item_critical_box.setMinimum(1)
@@ -2485,7 +2519,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.item_defense_box.setFont(font)
-        self.item_defense_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.item_defense_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.item_defense_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_defense_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -2493,7 +2527,7 @@ class Ui_MainWindow(object):
         self.item_defense_box.setWrapping(False)
         self.item_defense_box.setFrame(False)
         self.item_defense_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.item_defense_box.setReadOnly(True)
+        self.item_defense_box.setReadOnly(False)
         self.item_defense_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.item_defense_box.setPrefix("")
         self.item_defense_box.setMinimum(1)
@@ -2523,7 +2557,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.item_evasion_box.setFont(font)
-        self.item_evasion_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.item_evasion_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.item_evasion_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_evasion_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -2532,7 +2566,7 @@ class Ui_MainWindow(object):
         self.item_evasion_box.setWrapping(False)
         self.item_evasion_box.setFrame(False)
         self.item_evasion_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.item_evasion_box.setReadOnly(True)
+        self.item_evasion_box.setReadOnly(False)
         self.item_evasion_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.item_evasion_box.setPrefix("")
         self.item_evasion_box.setMinimum(1)
@@ -2549,7 +2583,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.item_accuracy_box.setFont(font)
-        self.item_accuracy_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.item_accuracy_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.item_accuracy_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_accuracy_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -2557,7 +2591,7 @@ class Ui_MainWindow(object):
         self.item_accuracy_box.setWrapping(False)
         self.item_accuracy_box.setFrame(False)
         self.item_accuracy_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.item_accuracy_box.setReadOnly(True)
+        self.item_accuracy_box.setReadOnly(False)
         self.item_accuracy_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.item_accuracy_box.setPrefix("")
         self.item_accuracy_box.setMinimum(1)
@@ -2613,7 +2647,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.item_special_defense_box.setFont(font)
-        self.item_special_defense_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.item_special_defense_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.item_special_defense_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_special_defense_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -2622,7 +2656,7 @@ class Ui_MainWindow(object):
         self.item_special_defense_box.setWrapping(False)
         self.item_special_defense_box.setFrame(False)
         self.item_special_defense_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.item_special_defense_box.setReadOnly(True)
+        self.item_special_defense_box.setReadOnly(False)
         self.item_special_defense_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.item_special_defense_box.setPrefix("")
         self.item_special_defense_box.setMinimum(1)
@@ -2639,7 +2673,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.item_blessing_box.setFont(font)
-        self.item_blessing_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.item_blessing_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.item_blessing_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_blessing_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -2648,7 +2682,7 @@ class Ui_MainWindow(object):
         self.item_blessing_box.setWrapping(False)
         self.item_blessing_box.setFrame(False)
         self.item_blessing_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.item_blessing_box.setReadOnly(True)
+        self.item_blessing_box.setReadOnly(False)
         self.item_blessing_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.item_blessing_box.setPrefix("")
         self.item_blessing_box.setMinimum(1)
@@ -2678,7 +2712,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.item_attack_box.setFont(font)
-        self.item_attack_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.item_attack_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.item_attack_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_attack_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -2686,7 +2720,7 @@ class Ui_MainWindow(object):
         self.item_attack_box.setWrapping(False)
         self.item_attack_box.setFrame(False)
         self.item_attack_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.item_attack_box.setReadOnly(True)
+        self.item_attack_box.setReadOnly(False)
         self.item_attack_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.item_attack_box.setPrefix("")
         self.item_attack_box.setMinimum(1)
@@ -2728,9 +2762,46 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.item_pack_label.setFont(font)
+        self.item_pack_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.item_pack_label.setStyleSheet("")
         self.item_pack_label.setAlignment(QtCore.Qt.AlignCenter)
         self.item_pack_label.setObjectName("item_pack_label")
+        self.item_durability_label = QtWidgets.QLabel(self.item_properties_frame)
+        self.item_durability_label.setGeometry(QtCore.QRect(540, 240, 140, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.item_durability_label.setFont(font)
+        self.item_durability_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.item_durability_label.setStyleSheet("")
+        self.item_durability_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.item_durability_label.setObjectName("item_durability_label")
+        self.item_durability_box = QtWidgets.QSpinBox(self.item_properties_frame)
+        self.item_durability_box.setGeometry(QtCore.QRect(700, 240, 80, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.item_durability_box.setFont(font)
+        self.item_durability_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.item_durability_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.item_durability_box.setStyleSheet("QSpinBox {\n"
+"border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: white;\n"
+"}")
+        self.item_durability_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.item_durability_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.item_durability_box.setProperty("showGroupSeparator", False)
+        self.item_durability_box.setSuffix("")
+        self.item_durability_box.setPrefix("")
+        self.item_durability_box.setMinimum(1)
+        self.item_durability_box.setMaximum(9999)
+        self.item_durability_box.setProperty("value", 1)
+        self.item_durability_box.setObjectName("item_durability_box")
         self.item_list = QtWidgets.QListWidget(self.item_tab)
         self.item_list.setGeometry(QtCore.QRect(10, 90, 350, 870))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
@@ -4040,7 +4111,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralWidget)
 
         self.retranslateUi(MainWindow)
-        self.qc_tabs.setCurrentIndex(0)
+        self.qc_tabs.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -4158,6 +4229,7 @@ class Ui_MainWindow(object):
         self.item_hp_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffaa7f;\">HP</span></p></body></html>"))
         self.item_sp_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#aaff7f;\">SP</span></p></body></html>"))
         self.item_pack_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-style:italic; color:#ffffff;\">Import Pack</span></p></body></html>"))
+        self.item_durability_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Durability</span></p></body></html>"))
         self.item_list.setSortingEnabled(True)
         self.items_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:24pt; color:#ffffff;\">Items</span></p></body></html>"))
         self.item_properties_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:24pt; color:#ffffff;\">Properties</span></p></body></html>"))

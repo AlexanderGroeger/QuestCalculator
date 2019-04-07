@@ -456,28 +456,18 @@ def UpdateItemGui(item_list_item = None):
     ui.item_level_box.setValue(last_selected_item.requirements['lvl'][0])
     ui.item_max_level_box.setValue(last_selected_item.requirements['lvl'][1]%1000)
     # ui.item_element_label.setText(str(last_selected_entity.player['element']))
-    # ui.item_exp_bar.setMaximum(entity.GetExpNeededForLevel(last_selected_entity.data['lvl']))
-    # ui.item_exp_bar.setValue(last_selected_entity.data['xp'])
-    # ui.item_gold_box.setValue(last_selected_entity.data['gold'])
-    # ui.item_jewels_box.setValue(last_selected_entity.data['jewels'])
-    # ui.item_hp_bar.setMaximum(last_selected_entity.stats['hp'])
-    # ui.item_hp_bar.setValue(last_selected_entity.data['hp'])
-    # ui.item_sp_bar.setMaximum(last_selected_entity.stats['sp'])
-    # ui.item_sp_bar.setValue(last_selected_entity.data['sp'])
-    # ui.item_food_bar.setValue(last_selected_entity.data['food'])
-    # ui.item_attack_box.setValue(last_selected_entity.stats['atk'])
-    # ui.item_defense_box.setValue(last_selected_entity.stats['dfn'])
-    # ui.item_special_attack_box.setValue(last_selected_entity.stats['spatk'])
-    # ui.item_special_defense_box.setValue(last_selected_entity.stats['spdfn'])
-    # ui.item_accuracy_box.setValue(last_selected_entity.stats['acc'])
-    # ui.item_evasion_box.setValue(last_selected_entity.stats['eva'])
-    # ui.item_critical_box.setValue(last_selected_entity.stats['crit'])
-    # ui.item_blessing_box.setValue(last_selected_entity.stats['bless'])
-    # ui.item_strength_box.setValue(last_selected_entity.big_stats['strength'])
-    # ui.item_dexterity_box.setValue(last_selected_entity.big_stats['dexterity'])
-    # ui.item_constitution_box.setValue(last_selected_entity.big_stats['constitution'])
-    # ui.item_intelligence_box.setValue(last_selected_entity.big_stats['intelligence'])
-    # ui.item_integrity_box.setValue(last_selected_entity.big_stats['integrity'])
+    ui.item_gold_box.setValue(last_selected_item.value['gold'])
+    ui.item_jewels_box.setValue(last_selected_item.value['jewels'])
+    ui.item_hp_box.setValue(last_selected_item.stats['hp'])
+    ui.item_sp_box.setValue(last_selected_item.stats['sp'])
+    ui.item_attack_box.setValue(last_selected_item.stats['atk'])
+    ui.item_defense_box.setValue(last_selected_item.stats['dfn'])
+    ui.item_special_attack_box.setValue(last_selected_item.stats['spatk'])
+    ui.item_special_defense_box.setValue(last_selected_item.stats['spdfn'])
+    ui.item_accuracy_box.setValue(last_selected_item.stats['acc'])
+    ui.item_evasion_box.setValue(last_selected_item.stats['eva'])
+    ui.item_critical_box.setValue(last_selected_item.stats['crit'])
+    ui.item_blessing_box.setValue(last_selected_item.stats['bless'])
 
 def SortItemList(object):
     print(5)
@@ -487,7 +477,6 @@ def ChangeItemName(object):
     if not last_selected_item:
         return None
     last_selected_item.name = object
-    # ui.item_name_box.setText(last_selected_item.name)
     if ui.item_list.currentItem():
         ui.item_list.currentItem().setText(last_selected_item.name)
 
@@ -506,6 +495,20 @@ def ChangeItemMaxLevel(object):
     last_selected_item.requirements['lvl'][1] = int(object)
     if last_selected_item.requirements['lvl'][1] < last_selected_item.requirements['lvl'][0]:
         last_selected_item.requirements['lvl'][0] = int(object)
+
+def ChangeItemStat(val,stat):
+    global last_selected_item
+    if not last_selected_item:
+        return None
+    val = max(int(val),0)
+    last_selected_item.stats[stat] = val
+
+def ChangeItemValue(val,stat):
+    global last_selected_item
+    if not last_selected_item:
+        return None
+    val = max(int(val),0)
+    last_selected_item.value[stat] = val
 
 def AddItemToList(itm):
     global last_selected_item
@@ -683,6 +686,18 @@ ui.item_name_box.textChanged.connect(ChangeItemName)
 ui.item_search_box.textChanged.connect(SortItemList)
 ui.item_level_box.valueChanged.connect(ChangeItemLevel)
 ui.item_max_level_box.valueChanged.connect(ChangeItemMaxLevel)
+ui.item_hp_box.valueChanged.connect(lambda: ChangeItemStat(ui.item_hp_box.value(),'hp'))
+ui.item_sp_box.valueChanged.connect(lambda: ChangeItemStat(ui.item_sp_box.value(),'sp'))
+ui.item_attack_box.valueChanged.connect(lambda: ChangeItemStat(ui.item_attack_box.value(),'atk'))
+ui.item_defense_box.valueChanged.connect(lambda: ChangeItemStat(ui.item_defense_box.value(),'dfn'))
+ui.item_special_attack_box.valueChanged.connect(lambda: ChangeItemStat(ui.item_special_attack_box.value(),'spatk'))
+ui.item_special_defense_box.valueChanged.connect(lambda: ChangeItemStat(ui.item_special_defense_box.value(),'spdfn'))
+ui.item_accuracy_box.valueChanged.connect(lambda: ChangeItemStat(ui.item_accuracy_box.value(),'acc'))
+ui.item_evasion_box.valueChanged.connect(lambda: ChangeItemStat(ui.item_evasion_box.value(),'eva'))
+ui.item_critical_box.valueChanged.connect(lambda: ChangeItemStat(ui.item_critical_box.value(),'crit'))
+ui.item_blessing_box.valueChanged.connect(lambda: ChangeItemStat(ui.item_blessing_box.value(),'bless'))
+ui.item_gold_box.valueChanged.connect(lambda: ChangeItemValue(ui.item_gold_box.value(),'gold'))
+ui.item_jewels_box.valueChanged.connect(lambda: ChangeItemValue(ui.item_jewels_box.value(),'jewels'))
 
 def PlaySelectSound():
     SELECT_SOUND.play()

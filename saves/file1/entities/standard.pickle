@@ -56,7 +56,7 @@ p21
 I1
 ssS'name'
 p22
-VAlex
+VOrc Minion
 p23
 sS'skills'
 p24
@@ -77,7 +77,7 @@ NsS'class'
 p33
 NsS'team'
 p34
-S'player'
+S'enemy'
 p35
 ssS'effects'
 p36
@@ -87,7 +87,7 @@ p38
 (dp39
 S'gold'
 p40
-I4
+I100
 sS'hunger'
 p41
 I100
@@ -100,10 +100,10 @@ sg19
 I10
 sS'jewels'
 p43
-I66
+I120
 sS'lvl'
 p44
-I12
+I10
 sS'xp'
 p45
 I0
@@ -221,7 +221,7 @@ I1
 sg21
 I1
 ssg22
-VScrooge McDuck
+VLauren
 p62
 sg24
 (lp63
@@ -242,7 +242,7 @@ ssg36
 sg38
 (dp69
 g40
-I0
+I323
 sg41
 I100
 sg42
@@ -252,9 +252,9 @@ I10
 sg19
 I10
 sg43
-I0
+I420
 sg44
-I1
+I100
 sg45
 I0
 ssba(ientity
@@ -371,7 +371,7 @@ I1
 sg21
 I1
 ssg22
-VThe Bruckstone
+VBlack Orc
 p86
 sg24
 (lp87
@@ -385,7 +385,7 @@ sg30
 g32
 Nsg33
 Nsg34
-S'player'
+S'enemy'
 p91
 ssg36
 (lp92
@@ -404,7 +404,7 @@ I10
 sg43
 I0
 sg44
-I1
+I150
 sg45
 I0
 ssba(ientity
@@ -521,7 +521,7 @@ I1
 sg21
 I1
 ssg22
-VOrc Minion
+VAlex
 p110
 sg24
 (lp111
@@ -535,14 +535,14 @@ sg30
 g32
 Nsg33
 Nsg34
-S'enemy'
+S'player'
 p115
 ssg36
 (lp116
 sg38
 (dp117
 g40
-I100
+I4
 sg41
 I100
 sg42
@@ -552,9 +552,9 @@ I10
 sg19
 I10
 sg43
-I120
+I66
 sg44
-I10
+I12
 sg45
 I0
 ssba(ientity
@@ -610,12 +610,11 @@ sg30
 g32
 Nsg33
 Nsg34
-S'player'
-p127
+g67
 ssg36
-(lp128
+(lp127
 sg38
-(dp129
+(dp128
 g40
 I500
 sg41
@@ -634,10 +633,10 @@ sg45
 I0
 ssba(ientity
 Entity
-p130
-(dp131
+p129
+(dp130
 g3
-(dp132
+(dp131
 g5
 I0
 sg6
@@ -649,7 +648,7 @@ I0
 sg9
 I0
 ssg10
-(dp133
+(dp132
 g12
 I1
 sg13
@@ -671,27 +670,28 @@ I1
 sg21
 I1
 ssg22
-VLauren
-p134
+VScrooge McDuck
+p133
 sg24
-(lp135
+(lp134
 sg26
-(lp136
+(lp135
 sg28
 S'standard'
-p137
+p136
 sg30
-(dp138
+(dp137
 g32
 Nsg33
 Nsg34
-g127
+S'player'
+p138
 ssg36
 (lp139
 sg38
 (dp140
 g40
-I323
+I0
 sg41
 I100
 sg42
@@ -701,9 +701,9 @@ I10
 sg19
 I10
 sg43
-I420
+I0
 sg44
-I100
+I1
 sg45
 I0
 ssba(ientity
@@ -759,7 +759,7 @@ sg30
 g32
 Nsg33
 Nsg34
-g115
+g35
 ssg36
 (lp150
 sg38
@@ -819,7 +819,7 @@ I1
 sg21
 I1
 ssg22
-VBlack Orc
+VThe Bruckstone
 p156
 sg24
 (lp157
@@ -833,7 +833,7 @@ sg30
 g32
 Nsg33
 Nsg34
-S'enemy'
+S'player'
 p161
 ssg36
 (lp162
@@ -852,7 +852,7 @@ I10
 sg43
 I0
 sg44
-I150
+I1
 sg45
 I0
 ssba.
