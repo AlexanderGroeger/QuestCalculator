@@ -69,7 +69,6 @@ class Effect:
                 else:
                     self.restoration[n] = v
         effects.append(self)
-        return self
 
     def Apply(self):
         # Decrement rounds in necessary

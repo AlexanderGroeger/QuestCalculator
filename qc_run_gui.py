@@ -21,7 +21,8 @@ mixer.init()
 mixer.music.load('.\\QCGUI\\JourneysUntold.mid')
 mixer.music.play(99)
 
-SELECT_SOUND = mixer.Sound('.\\QCGUI\\Select.wav')
+SELECT_SOUND = mixer.Sound('.\\QCGUI\\Click.wav')
+
 import sys
 app = QtWidgets.QApplication(sys.argv)
 MainWindow = QtWidgets.QMainWindow()
@@ -48,6 +49,9 @@ entity_stats_check_boxes = {
 
 last_selected_item = None
 delete_item_confirmation = False
+
+last_selected_skill = None
+delete_skill_confirmation = False
 
 save_file = None
 
@@ -453,6 +457,7 @@ def UpdateItemGui(item_list_item = None):
         return None
 
     ui.item_name_box.setText(last_selected_item.name)
+    ui.item_import_file_box.setText(last_selected_item.import_file)
     ui.item_level_box.setValue(last_selected_item.requirements['lvl'][0])
     ui.item_max_level_box.setValue(last_selected_item.requirements['lvl'][1]%1000)
     # ui.item_element_label.setText(str(last_selected_entity.player['element']))
@@ -612,6 +617,142 @@ def ItemCopyButtonPressed():
     else:
         CopyItem()
 
+
+
+def UpdateSkillGui(skill_list_item = None):
+    global last_selected_skill
+    if skill_list_item:
+        last_selected_skill = skill_list_item.data(DATACHANNEL)
+    if not last_selected_skill:
+        return None
+
+    ui.skill_name_box.setText(last_selected_skill.name)
+    ui.skill_import_file_box.setText(last_selected_skill.import_file)
+    ui.skill_level_box.setValue(last_selected_skill.requirements['lvl'][0])
+    ui.skill_max_level_box.setValue(last_selected_skill.requirements['lvl'][1]%1000)
+    # ui.skill_element_label.setText(str(last_selected_entity.player['element']))
+    ui.skill_sp_box.setValue(last_selected_skill.spcost)
+    ui.skill_attack_box.setValue(last_selected_skill.stats['atk'])
+    ui.skill_defense_box.setValue(last_selected_skill.stats['dfn'])
+    ui.skill_special_attack_box.setValue(last_selected_skill.stats['spatk'])
+    ui.skill_special_defense_box.setValue(last_selected_skill.stats['spdfn'])
+    ui.skill_accuracy_box.setValue(last_selected_skill.stats['acc'])
+    ui.skill_evasion_box.setValue(last_selected_skill.stats['eva'])
+    ui.skill_critical_box.setValue(last_selected_skill.stats['crit'])
+    ui.skill_blessing_box.setValue(last_selected_skill.stats['bless'])
+    ui.skill_power_box.setValue(last_selected_skill.stats['pow'])
+
+def AddSkillToList(skl):
+    global last_selected_item
+    if isinstance(skl,skill.Skill):
+        last_selected_skill = skl
+        new_list_skill = QtWidgets.QListWidgetItem()
+        new_list_skill.setData(DATACHANNEL,skl)
+        new_list_skill.setText(skl.name)
+        new_list_skill.setTextAlignment(4)
+        ui.skill_list.clearSelection()
+        ui.skill_list.clearFocus()
+        ui.skill_list.addItem(new_list_skill)
+        ui.skill_list.setCurrentItem(new_list_skill)
+        UpdateSkillGui(new_list_skill)
+
+def ChangeSkillName(object):
+    global last_selected_skill
+    if not last_selected_skill:
+        return None
+    last_selected_skill.name = object
+    if ui.skill_list.currentItem():
+        ui.skill_list.currentItem().setText(last_selected_skill.name)
+
+
+def MakeSkill():
+    new_skill = skill.Skill()
+    OutputPrint("Created new skill")
+    AddSkillToList(new_skill)
+
+def CopySkill():
+    new_skill = None
+    new_skill = ui.skill_list.currentItem()
+    if new_skill:
+        new_skill = copy.deepcopy(new_skill.data(DATACHANNEL))
+        skill.skills[skill.GetNewId()] = new_skill
+        OutputPrint("Copied " + new_skill.name + " to skill list")
+    else:
+        return None
+    AddSkillToList(new_skill)
+
+def ToggleSkillDeleteMode():
+    global delete_skill_confirmation
+    if delete_skill_confirmation:
+        ui.skill_add_button.setText("Add")
+        ui.skill_copy_button.setText("Copy")
+        ui.skill_delete_button.setText("Delete")
+    else:
+        ui.skill_add_button.setText("Yes")
+        ui.skill_copy_button.setText("No")
+        ui.skill_delete_button.setText("Del?")
+    delete_skill_confirmation = not delete_skill_confirmation
+
+def DeleteSkill():
+    # Update gui buttons
+    ToggleSkillDeleteMode()
+
+    # Retireve the skill in the list
+    old_skill = ui.skill_list.currentItem()
+    if old_skill:
+        # Get the skill data that is being pointed to
+        old_skill = old_skill.data(DATACHANNEL)
+        OutputPrint("Deleting " + old_skill.name + " from memory")
+        # Find the id of the skill
+        skill_id = None
+        for key, value in skill.skills.iteritems():
+            if value is old_skill:
+                skill_id = key
+                break
+        # if we can delete the skill then do so
+        if skill_id in skill.skills.keys():
+            del skill.skills[skill_id]
+            OutputPrint("Deleted " + old_skill.name + " from memory")
+        else:
+            OutputPrint("Can't delete " + old_skill.name + " from memory")
+    else:
+        return None
+
+    # Now we need to destroy the skill from the GUI
+    row = ui.skill_list.currentRow()
+    if row is None:
+        OutputPrint("Can't delete " + old_skill.name + " from skill list")
+        return None
+    destroyed_skill = ui.skill_list.takeItem(row)
+    del destroyed_skill
+
+    if row > 0:
+        # Put the focus on the previous skill
+        ui.skill_list.setCurrentRow(row-1)
+
+        # Update the last selected skill and the stats GUI
+        old_skill = ui.skill_list.item(ui.skill_list.currentRow())
+        global last_selected_skill
+        if old_skill:
+            last_selected_skill = old_skill.data(DATACHANNEL)
+        else:
+            last_selected_skill = None
+        UpdateSkillGui()
+
+def SkillAddButtonPressed():
+    global delete_skill_confirmation
+    if delete_skill_confirmation:
+        DeleteSkill()
+    else:
+        MakeSkill()
+
+def SkillCopyButtonPressed():
+    global delete_skill_confirmation
+    if delete_skill_confirmation:
+        ToggleSkillDeleteMode()
+    else:
+        CopySkill()
+
 def LoadFile(fn):
     MainWindow.hide()
     global save_file
@@ -625,6 +766,8 @@ def LoadFile(fn):
         AddEntityToList(entity)
     for id, item in manage.data['items'].iteritems():
         AddItemToList(item)
+    for id, skill in manage.data['skills'].iteritems():
+        AddSkillToList(skill)
     MainWindow.show()
     # UpdatePlayerGui(ui.player_list.currentItem())
 def Shutdown():
@@ -698,6 +841,19 @@ ui.item_critical_box.valueChanged.connect(lambda: ChangeItemStat(ui.item_critica
 ui.item_blessing_box.valueChanged.connect(lambda: ChangeItemStat(ui.item_blessing_box.value(),'bless'))
 ui.item_gold_box.valueChanged.connect(lambda: ChangeItemValue(ui.item_gold_box.value(),'gold'))
 ui.item_jewels_box.valueChanged.connect(lambda: ChangeItemValue(ui.item_jewels_box.value(),'jewels'))
+
+'''
+    SKILL TAB
+'''
+
+''' Skill List Buttons '''
+ui.skill_add_button.clicked.connect(SkillAddButtonPressed)
+ui.skill_copy_button.clicked.connect(SkillCopyButtonPressed)
+ui.skill_delete_button.clicked.connect(ToggleSkillDeleteMode)
+
+''' Skill Box Value Change Events '''
+ui.skill_name_box.textChanged.connect(ChangeSkillName)
+
 
 def PlaySelectSound():
     SELECT_SOUND.play()

@@ -1,4 +1,4 @@
-skills = []
+skills = {}
 class Skill:
     def __init__(self, name = 'Untitled', import_file = 'standard', parent = None, spcost = 0,
                 stats = None, restoration = None, effects = []):
@@ -27,6 +27,9 @@ class Skill:
         if stats:
             for n, v in stats.items():
                 self.stats[n] = v
+        self.requirements = {
+            'lvl': [1,-1],
+        }
         self.restoration = {
             # max is a percentage of the entity's max stat
             # missing is a percentage of how much stat is missing from its max
@@ -56,8 +59,7 @@ class Skill:
                 else:
                     self.restoration[n] = v
         self.effects = [e for e in effects]
-        skills.append(self)
-        return self
+        skills[GetNewId()] = self
 
     def ChangeInfo(self, parent, name, spcost, stats, restoration, effects):
         self.parent = parent
@@ -73,3 +75,13 @@ class Skill:
             skills.remove(self)
         self.parent.skills.remove(self)
         del self
+
+def GetNewId():
+    ids = skills.keys()
+    print(ids)
+    if ids == []:
+        print(0)
+        return '0'
+    else:
+        ids = [str(a) for a in range(len(ids)+1) if str(a) not in ids]
+        return ids[0]

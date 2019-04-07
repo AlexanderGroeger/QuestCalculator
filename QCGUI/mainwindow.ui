@@ -544,6 +544,9 @@ border-image: url(:/bg/pane_thin_yellow.png);
       <property name="cursor">
        <cursorShape>ArrowCursor</cursorShape>
       </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
       <property name="styleSheet">
        <string notr="true">#qc_tabs::pane
 {
@@ -4256,7 +4259,7 @@ color: rgb(224,128,255);
          <property name="geometry">
           <rect>
            <x>530</x>
-           <y>280</y>
+           <y>290</y>
            <width>250</width>
            <height>40</height>
           </rect>
@@ -4285,16 +4288,16 @@ color: rgb(224,128,255);
         <widget class="QLineEdit" name="item_import_file_box">
          <property name="geometry">
           <rect>
-           <x>560</x>
+           <x>540</x>
            <y>50</y>
-           <width>201</width>
-           <height>30</height>
+           <width>240</width>
+           <height>40</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Maiandra GD</family>
-           <pointsize>18</pointsize>
+           <pointsize>20</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -4368,7 +4371,7 @@ QCheckBox::indicator:checked {
          <property name="geometry">
           <rect>
            <x>540</x>
-           <y>200</y>
+           <y>210</y>
            <width>250</width>
            <height>40</height>
           </rect>
@@ -4559,7 +4562,7 @@ color: white;
          <property name="geometry">
           <rect>
            <x>570</x>
-           <y>120</y>
+           <y>130</y>
            <width>170</width>
            <height>40</height>
           </rect>
@@ -4585,7 +4588,7 @@ color: white;
          <property name="font">
           <font>
            <family>Maiandra GD</family>
-           <pointsize>18</pointsize>
+           <pointsize>20</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -4694,7 +4697,7 @@ QComboBox QAbstractItemView {
          <property name="geometry">
           <rect>
            <x>540</x>
-           <y>80</y>
+           <y>90</y>
            <width>240</width>
            <height>40</height>
           </rect>
@@ -4929,7 +4932,7 @@ color: rgb(255,255,225);
          <property name="geometry">
           <rect>
            <x>540</x>
-           <y>170</y>
+           <y>180</y>
            <width>250</width>
            <height>30</height>
           </rect>
@@ -6000,7 +6003,7 @@ color: white;</string>
          <property name="geometry">
           <rect>
            <x>540</x>
-           <y>240</y>
+           <y>250</y>
            <width>140</width>
            <height>40</height>
           </rect>
@@ -6030,7 +6033,7 @@ color: white;</string>
          <property name="geometry">
           <rect>
            <x>700</x>
-           <y>240</y>
+           <y>250</y>
            <width>80</width>
            <height>40</height>
           </rect>
@@ -6586,6 +6589,9 @@ border-image: url(:/bg/pane_thin_yellow.png);
            <bold>true</bold>
           </font>
          </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
          <property name="styleSheet">
           <string notr="true">QSpinBox {
 border: 0px;
@@ -6670,19 +6676,19 @@ color: rgb(170,255,128);
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
-        <widget class="QLineEdit" name="item_import_file_box_2">
+        <widget class="QLineEdit" name="skill_import_file_box">
          <property name="geometry">
           <rect>
-           <x>560</x>
+           <x>540</x>
            <y>50</y>
-           <width>201</width>
-           <height>30</height>
+           <width>240</width>
+           <height>40</height>
           </rect>
          </property>
          <property name="font">
           <font>
            <family>Maiandra GD</family>
-           <pointsize>18</pointsize>
+           <pointsize>20</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
@@ -6708,7 +6714,7 @@ color: rgb(170,255,128);
          <property name="geometry">
           <rect>
            <x>540</x>
-           <y>200</y>
+           <y>210</y>
            <width>250</width>
            <height>40</height>
           </rect>
@@ -6721,6 +6727,9 @@ color: rgb(170,255,128);
            <italic>false</italic>
            <bold>true</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="styleSheet">
           <string notr="true">QCheckBox {
@@ -6747,7 +6756,7 @@ QCheckBox::indicator:checked {
          <property name="geometry">
           <rect>
            <x>570</x>
-           <y>120</y>
+           <y>130</y>
            <width>170</width>
            <height>40</height>
           </rect>
@@ -6773,10 +6782,13 @@ QCheckBox::indicator:checked {
          <property name="font">
           <font>
            <family>Maiandra GD</family>
-           <pointsize>18</pointsize>
+           <pointsize>20</pointsize>
            <weight>75</weight>
            <bold>true</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="styleSheet">
           <string notr="true">QComboBox {
@@ -6876,7 +6888,7 @@ QComboBox QAbstractItemView {
          <property name="geometry">
           <rect>
            <x>540</x>
-           <y>80</y>
+           <y>90</y>
            <width>240</width>
            <height>40</height>
           </rect>
@@ -6943,6 +6955,9 @@ QComboBox QAbstractItemView {
            <bold>true</bold>
           </font>
          </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
          <property name="styleSheet">
           <string notr="true">QSpinBox {
 border: 0px;
@@ -6952,6 +6967,9 @@ color: white;
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
@@ -6989,6 +7007,9 @@ color: white;
            <bold>true</bold>
           </font>
          </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
+         </property>
          <property name="styleSheet">
           <string notr="true">QSpinBox {
 border: 0px;
@@ -6998,6 +7019,9 @@ color: white;
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
@@ -7087,7 +7111,7 @@ color: rgb(255,255,225);
          <property name="geometry">
           <rect>
            <x>540</x>
-           <y>170</y>
+           <y>180</y>
            <width>250</width>
            <height>30</height>
           </rect>
@@ -7095,11 +7119,14 @@ color: rgb(255,255,225);
          <property name="font">
           <font>
            <family>Maiandra GD</family>
-           <pointsize>18</pointsize>
+           <pointsize>20</pointsize>
            <weight>75</weight>
            <italic>false</italic>
            <bold>true</bold>
           </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="styleSheet">
           <string notr="true">QCheckBox {
@@ -7219,7 +7246,7 @@ QCheckBox::indicator:checked {
           </font>
          </property>
          <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::NoContextMenu</enum>
@@ -7240,7 +7267,7 @@ color: white;
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
          <property name="readOnly">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
@@ -7342,7 +7369,7 @@ color: white;
           </font>
          </property>
          <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::NoContextMenu</enum>
@@ -7363,7 +7390,7 @@ color: white;
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
          <property name="readOnly">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
@@ -7434,7 +7461,7 @@ color: white;
           </font>
          </property>
          <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::NoContextMenu</enum>
@@ -7454,7 +7481,7 @@ color: white;</string>
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
          <property name="readOnly">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
@@ -7525,7 +7552,7 @@ color: white;</string>
           </font>
          </property>
          <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::NoContextMenu</enum>
@@ -7546,7 +7573,7 @@ color: white;
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
          <property name="readOnly">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
@@ -7586,7 +7613,7 @@ color: white;
           </font>
          </property>
          <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::NoContextMenu</enum>
@@ -7606,7 +7633,7 @@ color: white;</string>
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
          <property name="readOnly">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
@@ -7739,7 +7766,7 @@ color: white;</string>
           </font>
          </property>
          <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::NoContextMenu</enum>
@@ -7760,7 +7787,7 @@ color: white;
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
          <property name="readOnly">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
@@ -7800,7 +7827,7 @@ color: white;
           </font>
          </property>
          <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::NoContextMenu</enum>
@@ -7821,7 +7848,7 @@ color: white;
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
          <property name="readOnly">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
@@ -7892,7 +7919,7 @@ color: white;
           </font>
          </property>
          <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::NoContextMenu</enum>
@@ -7912,7 +7939,7 @@ color: white;</string>
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
          <property name="readOnly">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>
@@ -7964,7 +7991,7 @@ color: white;</string>
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
         </widget>
-        <widget class="QLabel" name="item_pack_label_2">
+        <widget class="QLabel" name="skill_pack_label">
          <property name="geometry">
           <rect>
            <x>540</x>
@@ -8041,7 +8068,7 @@ color: white;</string>
           </font>
          </property>
          <property name="focusPolicy">
-          <enum>Qt::NoFocus</enum>
+          <enum>Qt::ClickFocus</enum>
          </property>
          <property name="contextMenuPolicy">
           <enum>Qt::NoContextMenu</enum>
@@ -8062,7 +8089,7 @@ color: white;
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
          <property name="readOnly">
-          <bool>true</bool>
+          <bool>false</bool>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::NoButtons</enum>

@@ -221,6 +221,7 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.qc_tabs.setFont(font)
         self.qc_tabs.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.qc_tabs.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.qc_tabs.setStyleSheet("#qc_tabs::pane\n"
 "{\n"
 "    border: 0px;\n"
@@ -1992,7 +1993,7 @@ class Ui_MainWindow(object):
         self.item_jewels_box.setProperty("value", 0)
         self.item_jewels_box.setObjectName("item_jewels_box")
         self.item_properties_misc_label = QtWidgets.QLabel(self.item_properties_frame)
-        self.item_properties_misc_label.setGeometry(QtCore.QRect(530, 280, 250, 40))
+        self.item_properties_misc_label.setGeometry(QtCore.QRect(530, 290, 250, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(10)
@@ -2004,10 +2005,10 @@ class Ui_MainWindow(object):
         self.item_properties_misc_label.setAlignment(QtCore.Qt.AlignCenter)
         self.item_properties_misc_label.setObjectName("item_properties_misc_label")
         self.item_import_file_box = QtWidgets.QLineEdit(self.item_properties_frame)
-        self.item_import_file_box.setGeometry(QtCore.QRect(560, 50, 201, 30))
+        self.item_import_file_box.setGeometry(QtCore.QRect(540, 50, 240, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
-        font.setPointSize(18)
+        font.setPointSize(20)
         font.setBold(True)
         font.setWeight(75)
         self.item_import_file_box.setFont(font)
@@ -2048,7 +2049,7 @@ class Ui_MainWindow(object):
 "")
         self.item_toggle_consumable_button.setObjectName("item_toggle_consumable_button")
         self.item_toggle_dual_wield_button = QtWidgets.QCheckBox(self.item_properties_frame)
-        self.item_toggle_dual_wield_button.setGeometry(QtCore.QRect(540, 200, 250, 40))
+        self.item_toggle_dual_wield_button.setGeometry(QtCore.QRect(540, 210, 250, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
@@ -2147,7 +2148,7 @@ class Ui_MainWindow(object):
         self.item_max_quantity_box.setProperty("value", 1)
         self.item_max_quantity_box.setObjectName("item_max_quantity_box")
         self.item_type_box = QtWidgets.QComboBox(self.item_properties_frame)
-        self.item_type_box.setGeometry(QtCore.QRect(570, 120, 170, 40))
+        self.item_type_box.setGeometry(QtCore.QRect(570, 130, 170, 40))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -2157,7 +2158,7 @@ class Ui_MainWindow(object):
         self.item_type_box.setMaximumSize(QtCore.QSize(170, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
-        font.setPointSize(18)
+        font.setPointSize(20)
         font.setBold(True)
         font.setWeight(75)
         self.item_type_box.setFont(font)
@@ -2210,7 +2211,7 @@ class Ui_MainWindow(object):
         self.item_type_box.addItem("")
         self.item_type_box.addItem("")
         self.item_properties_type_label = QtWidgets.QLabel(self.item_properties_frame)
-        self.item_properties_type_label.setGeometry(QtCore.QRect(540, 80, 240, 40))
+        self.item_properties_type_label.setGeometry(QtCore.QRect(540, 90, 240, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
@@ -2312,7 +2313,7 @@ class Ui_MainWindow(object):
         self.item_name_box.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.item_name_box.setObjectName("item_name_box")
         self.item_toggle_consumable_button_2 = QtWidgets.QCheckBox(self.item_properties_frame)
-        self.item_toggle_consumable_button_2.setGeometry(QtCore.QRect(540, 170, 250, 30))
+        self.item_toggle_consumable_button_2.setGeometry(QtCore.QRect(540, 180, 250, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
@@ -2767,7 +2768,7 @@ class Ui_MainWindow(object):
         self.item_pack_label.setAlignment(QtCore.Qt.AlignCenter)
         self.item_pack_label.setObjectName("item_pack_label")
         self.item_durability_label = QtWidgets.QLabel(self.item_properties_frame)
-        self.item_durability_label.setGeometry(QtCore.QRect(540, 240, 140, 40))
+        self.item_durability_label.setGeometry(QtCore.QRect(540, 250, 140, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
@@ -2779,7 +2780,7 @@ class Ui_MainWindow(object):
         self.item_durability_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.item_durability_label.setObjectName("item_durability_label")
         self.item_durability_box = QtWidgets.QSpinBox(self.item_properties_frame)
-        self.item_durability_box.setGeometry(QtCore.QRect(700, 240, 80, 40))
+        self.item_durability_box.setGeometry(QtCore.QRect(700, 250, 80, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
@@ -3060,6 +3061,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.skill_sp_box.setFont(font)
+        self.skill_sp_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.skill_sp_box.setStyleSheet("QSpinBox {\n"
 "border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -3096,24 +3098,24 @@ class Ui_MainWindow(object):
         self.item_properties_misc_label_2.setStyleSheet("")
         self.item_properties_misc_label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.item_properties_misc_label_2.setObjectName("item_properties_misc_label_2")
-        self.item_import_file_box_2 = QtWidgets.QLineEdit(self.skill_properties_frame)
-        self.item_import_file_box_2.setGeometry(QtCore.QRect(560, 50, 201, 30))
+        self.skill_import_file_box = QtWidgets.QLineEdit(self.skill_properties_frame)
+        self.skill_import_file_box.setGeometry(QtCore.QRect(540, 50, 240, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
-        font.setPointSize(18)
+        font.setPointSize(20)
         font.setBold(True)
         font.setWeight(75)
-        self.item_import_file_box_2.setFont(font)
-        self.item_import_file_box_2.setStyleSheet("QLineEdit {\n"
+        self.skill_import_file_box.setFont(font)
+        self.skill_import_file_box.setStyleSheet("QLineEdit {\n"
 "    color: white;\n"
 "    border: 0px;\n"
 "    background: rgba(0,0,0,0);\n"
 "}")
-        self.item_import_file_box_2.setMaxLength(16)
-        self.item_import_file_box_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.item_import_file_box_2.setObjectName("item_import_file_box_2")
+        self.skill_import_file_box.setMaxLength(16)
+        self.skill_import_file_box.setAlignment(QtCore.Qt.AlignCenter)
+        self.skill_import_file_box.setObjectName("skill_import_file_box")
         self.item_toggle_dual_wield_button_2 = QtWidgets.QCheckBox(self.skill_properties_frame)
-        self.item_toggle_dual_wield_button_2.setGeometry(QtCore.QRect(540, 200, 250, 40))
+        self.item_toggle_dual_wield_button_2.setGeometry(QtCore.QRect(540, 210, 250, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
@@ -3121,6 +3123,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.item_toggle_dual_wield_button_2.setFont(font)
+        self.item_toggle_dual_wield_button_2.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.item_toggle_dual_wield_button_2.setStyleSheet("QCheckBox {\n"
 "    color: white;\n"
 "}\n"
@@ -3138,7 +3141,7 @@ class Ui_MainWindow(object):
 "")
         self.item_toggle_dual_wield_button_2.setObjectName("item_toggle_dual_wield_button_2")
         self.item_type_box_2 = QtWidgets.QComboBox(self.skill_properties_frame)
-        self.item_type_box_2.setGeometry(QtCore.QRect(570, 120, 170, 40))
+        self.item_type_box_2.setGeometry(QtCore.QRect(570, 130, 170, 40))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -3148,10 +3151,11 @@ class Ui_MainWindow(object):
         self.item_type_box_2.setMaximumSize(QtCore.QSize(170, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
-        font.setPointSize(18)
+        font.setPointSize(20)
         font.setBold(True)
         font.setWeight(75)
         self.item_type_box_2.setFont(font)
+        self.item_type_box_2.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.item_type_box_2.setStyleSheet("QComboBox {\n"
 "    color: white;\n"
 "    border: 0px;\n"
@@ -3199,7 +3203,7 @@ class Ui_MainWindow(object):
         self.item_type_box_2.addItem("")
         self.item_type_box_2.addItem("")
         self.item_properties_type_label_2 = QtWidgets.QLabel(self.skill_properties_frame)
-        self.item_properties_type_label_2.setGeometry(QtCore.QRect(540, 80, 240, 40))
+        self.item_properties_type_label_2.setGeometry(QtCore.QRect(540, 90, 240, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
@@ -3228,12 +3232,14 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.skill_level_box.setFont(font)
+        self.skill_level_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.skill_level_box.setStyleSheet("QSpinBox {\n"
 "border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
 "color: white;\n"
 "}")
         self.skill_level_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.skill_level_box.setReadOnly(False)
         self.skill_level_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_level_box.setProperty("showGroupSeparator", False)
         self.skill_level_box.setPrefix("")
@@ -3249,12 +3255,14 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.skill_max_level_box.setFont(font)
+        self.skill_max_level_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.skill_max_level_box.setStyleSheet("QSpinBox {\n"
 "border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
 "color: white;\n"
 "}")
         self.skill_max_level_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.skill_max_level_box.setReadOnly(False)
         self.skill_max_level_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_max_level_box.setProperty("showGroupSeparator", False)
         self.skill_max_level_box.setPrefix("")
@@ -3293,14 +3301,15 @@ class Ui_MainWindow(object):
         self.skill_name_box.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.skill_name_box.setObjectName("skill_name_box")
         self.item_toggle_consumable_button_4 = QtWidgets.QCheckBox(self.skill_properties_frame)
-        self.item_toggle_consumable_button_4.setGeometry(QtCore.QRect(540, 170, 250, 30))
+        self.item_toggle_consumable_button_4.setGeometry(QtCore.QRect(540, 180, 250, 30))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
-        font.setPointSize(18)
+        font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
         self.item_toggle_consumable_button_4.setFont(font)
+        self.item_toggle_consumable_button_4.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.item_toggle_consumable_button_4.setStyleSheet("QCheckBox {\n"
 "    color: white;\n"
 "}\n"
@@ -3358,7 +3367,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.skill_special_attack_box.setFont(font)
-        self.skill_special_attack_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.skill_special_attack_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.skill_special_attack_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.skill_special_attack_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -3367,7 +3376,7 @@ class Ui_MainWindow(object):
         self.skill_special_attack_box.setWrapping(False)
         self.skill_special_attack_box.setFrame(False)
         self.skill_special_attack_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.skill_special_attack_box.setReadOnly(True)
+        self.skill_special_attack_box.setReadOnly(False)
         self.skill_special_attack_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_special_attack_box.setPrefix("")
         self.skill_special_attack_box.setMinimum(1)
@@ -3410,7 +3419,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.skill_critical_box.setFont(font)
-        self.skill_critical_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.skill_critical_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.skill_critical_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.skill_critical_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -3419,7 +3428,7 @@ class Ui_MainWindow(object):
         self.skill_critical_box.setWrapping(False)
         self.skill_critical_box.setFrame(False)
         self.skill_critical_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.skill_critical_box.setReadOnly(True)
+        self.skill_critical_box.setReadOnly(False)
         self.skill_critical_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_critical_box.setPrefix("")
         self.skill_critical_box.setMinimum(1)
@@ -3449,7 +3458,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.skill_defense_box.setFont(font)
-        self.skill_defense_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.skill_defense_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.skill_defense_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.skill_defense_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -3457,7 +3466,7 @@ class Ui_MainWindow(object):
         self.skill_defense_box.setWrapping(False)
         self.skill_defense_box.setFrame(False)
         self.skill_defense_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.skill_defense_box.setReadOnly(True)
+        self.skill_defense_box.setReadOnly(False)
         self.skill_defense_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_defense_box.setPrefix("")
         self.skill_defense_box.setMinimum(1)
@@ -3487,7 +3496,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.skill_evasion_box.setFont(font)
-        self.skill_evasion_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.skill_evasion_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.skill_evasion_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.skill_evasion_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -3496,7 +3505,7 @@ class Ui_MainWindow(object):
         self.skill_evasion_box.setWrapping(False)
         self.skill_evasion_box.setFrame(False)
         self.skill_evasion_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.skill_evasion_box.setReadOnly(True)
+        self.skill_evasion_box.setReadOnly(False)
         self.skill_evasion_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_evasion_box.setPrefix("")
         self.skill_evasion_box.setMinimum(1)
@@ -3513,7 +3522,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.skill_accuracy_box.setFont(font)
-        self.skill_accuracy_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.skill_accuracy_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.skill_accuracy_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.skill_accuracy_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -3521,7 +3530,7 @@ class Ui_MainWindow(object):
         self.skill_accuracy_box.setWrapping(False)
         self.skill_accuracy_box.setFrame(False)
         self.skill_accuracy_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.skill_accuracy_box.setReadOnly(True)
+        self.skill_accuracy_box.setReadOnly(False)
         self.skill_accuracy_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_accuracy_box.setPrefix("")
         self.skill_accuracy_box.setMinimum(1)
@@ -3577,7 +3586,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.skill_special_defense_box.setFont(font)
-        self.skill_special_defense_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.skill_special_defense_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.skill_special_defense_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.skill_special_defense_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -3586,7 +3595,7 @@ class Ui_MainWindow(object):
         self.skill_special_defense_box.setWrapping(False)
         self.skill_special_defense_box.setFrame(False)
         self.skill_special_defense_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.skill_special_defense_box.setReadOnly(True)
+        self.skill_special_defense_box.setReadOnly(False)
         self.skill_special_defense_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_special_defense_box.setPrefix("")
         self.skill_special_defense_box.setMinimum(1)
@@ -3603,7 +3612,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.skill_blessing_box.setFont(font)
-        self.skill_blessing_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.skill_blessing_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.skill_blessing_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.skill_blessing_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -3612,7 +3621,7 @@ class Ui_MainWindow(object):
         self.skill_blessing_box.setWrapping(False)
         self.skill_blessing_box.setFrame(False)
         self.skill_blessing_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.skill_blessing_box.setReadOnly(True)
+        self.skill_blessing_box.setReadOnly(False)
         self.skill_blessing_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_blessing_box.setPrefix("")
         self.skill_blessing_box.setMinimum(1)
@@ -3642,7 +3651,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.skill_attack_box.setFont(font)
-        self.skill_attack_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.skill_attack_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.skill_attack_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.skill_attack_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -3650,7 +3659,7 @@ class Ui_MainWindow(object):
         self.skill_attack_box.setWrapping(False)
         self.skill_attack_box.setFrame(False)
         self.skill_attack_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.skill_attack_box.setReadOnly(True)
+        self.skill_attack_box.setReadOnly(False)
         self.skill_attack_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_attack_box.setPrefix("")
         self.skill_attack_box.setMinimum(1)
@@ -3671,17 +3680,17 @@ class Ui_MainWindow(object):
         self.item_sp_label_2.setStyleSheet("")
         self.item_sp_label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.item_sp_label_2.setObjectName("item_sp_label_2")
-        self.item_pack_label_2 = QtWidgets.QLabel(self.skill_properties_frame)
-        self.item_pack_label_2.setGeometry(QtCore.QRect(540, 10, 240, 40))
+        self.skill_pack_label = QtWidgets.QLabel(self.skill_properties_frame)
+        self.skill_pack_label.setGeometry(QtCore.QRect(540, 10, 240, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(20)
         font.setBold(True)
         font.setWeight(75)
-        self.item_pack_label_2.setFont(font)
-        self.item_pack_label_2.setStyleSheet("")
-        self.item_pack_label_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.item_pack_label_2.setObjectName("item_pack_label_2")
+        self.skill_pack_label.setFont(font)
+        self.skill_pack_label.setStyleSheet("")
+        self.skill_pack_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.skill_pack_label.setObjectName("skill_pack_label")
         self.skill_power_label = QtWidgets.QLabel(self.skill_properties_frame)
         self.skill_power_label.setGeometry(QtCore.QRect(10, 570, 150, 40))
         font = QtGui.QFont()
@@ -3704,7 +3713,7 @@ class Ui_MainWindow(object):
         font.setItalic(False)
         font.setWeight(75)
         self.skill_power_box.setFont(font)
-        self.skill_power_box.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.skill_power_box.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.skill_power_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.skill_power_box.setStyleSheet("border: 0px;\n"
 "background-color: rgba(255,255,255,0);\n"
@@ -3713,7 +3722,7 @@ class Ui_MainWindow(object):
         self.skill_power_box.setWrapping(False)
         self.skill_power_box.setFrame(False)
         self.skill_power_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.skill_power_box.setReadOnly(True)
+        self.skill_power_box.setReadOnly(False)
         self.skill_power_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_power_box.setPrefix("")
         self.skill_power_box.setMinimum(0)
@@ -4246,7 +4255,7 @@ class Ui_MainWindow(object):
         self.skill_search_box.setPlaceholderText(_translate("MainWindow", "Search For Skill"))
         self.skill_properties_equip_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-style:italic; color:#ffffff;\">Usage Bonuses</span></p></body></html>"))
         self.item_properties_misc_label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:20pt; font-style:italic; color:#ffffff;\">Miscellaneous</span></p></body></html>"))
-        self.item_import_file_box_2.setPlaceholderText(_translate("MainWindow", "default standard"))
+        self.skill_import_file_box.setPlaceholderText(_translate("MainWindow", "default standard"))
         self.item_toggle_dual_wield_button_2.setText(_translate("MainWindow", "Dual Wield"))
         self.item_type_box_2.setItemText(0, _translate("MainWindow", "Weapon"))
         self.item_type_box_2.setItemText(1, _translate("MainWindow", "Ammo"))
@@ -4274,7 +4283,7 @@ class Ui_MainWindow(object):
         self.skill_evasion_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Evasion</span></p></body></html>"))
         self.skill_special_defense_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">SP Defense</span></p></body></html>"))
         self.item_sp_label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#aaff7f;\">SP Cost</span></p></body></html>"))
-        self.item_pack_label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-style:italic; color:#ffffff;\">Import Pack</span></p></body></html>"))
+        self.skill_pack_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-style:italic; color:#ffffff;\">Import Pack</span></p></body></html>"))
         self.skill_power_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Power</span></p></body></html>"))
         self.skill_power_box.setSuffix(_translate("MainWindow", " %"))
         self.item_properties_label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:24pt; color:#ffffff;\">Properties</span></p></body></html>"))
