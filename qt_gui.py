@@ -3087,17 +3087,17 @@ class Ui_MainWindow(object):
         self.skill_properties_equip_label.setStyleSheet("")
         self.skill_properties_equip_label.setAlignment(QtCore.Qt.AlignCenter)
         self.skill_properties_equip_label.setObjectName("skill_properties_equip_label")
-        self.item_properties_misc_label_2 = QtWidgets.QLabel(self.skill_properties_frame)
-        self.item_properties_misc_label_2.setGeometry(QtCore.QRect(530, 250, 250, 40))
+        self.skill_properties_effects_label = QtWidgets.QLabel(self.skill_properties_frame)
+        self.skill_properties_effects_label.setGeometry(QtCore.QRect(310, 360, 350, 40))
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
         font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
-        self.item_properties_misc_label_2.setFont(font)
-        self.item_properties_misc_label_2.setStyleSheet("")
-        self.item_properties_misc_label_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.item_properties_misc_label_2.setObjectName("item_properties_misc_label_2")
+        self.skill_properties_effects_label.setFont(font)
+        self.skill_properties_effects_label.setStyleSheet("")
+        self.skill_properties_effects_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.skill_properties_effects_label.setObjectName("skill_properties_effects_label")
         self.skill_import_file_box = QtWidgets.QLineEdit(self.skill_properties_frame)
         self.skill_import_file_box.setGeometry(QtCore.QRect(540, 50, 240, 40))
         font = QtGui.QFont()
@@ -3114,105 +3114,6 @@ class Ui_MainWindow(object):
         self.skill_import_file_box.setMaxLength(16)
         self.skill_import_file_box.setAlignment(QtCore.Qt.AlignCenter)
         self.skill_import_file_box.setObjectName("skill_import_file_box")
-        self.item_toggle_dual_wield_button_2 = QtWidgets.QCheckBox(self.skill_properties_frame)
-        self.item_toggle_dual_wield_button_2.setGeometry(QtCore.QRect(540, 210, 250, 40))
-        font = QtGui.QFont()
-        font.setFamily("Maiandra GD")
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setItalic(False)
-        font.setWeight(75)
-        self.item_toggle_dual_wield_button_2.setFont(font)
-        self.item_toggle_dual_wield_button_2.setFocusPolicy(QtCore.Qt.ClickFocus)
-        self.item_toggle_dual_wield_button_2.setStyleSheet("QCheckBox {\n"
-"    color: white;\n"
-"}\n"
-"QCheckBox::indicator {\n"
-"    background: rgba(0,0,0,0);\n"
-"    border: 5px;\n"
-"    border-image: url(:/bg/pane_thin_yellow.png);\n"
-"    min-width: 20px;\n"
-"    min-height: 20px;\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked {\n"
-"    image: url(:/bg/checkmark.png);\n"
-"}\n"
-"")
-        self.item_toggle_dual_wield_button_2.setObjectName("item_toggle_dual_wield_button_2")
-        self.item_type_box_2 = QtWidgets.QComboBox(self.skill_properties_frame)
-        self.item_type_box_2.setGeometry(QtCore.QRect(570, 130, 170, 40))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.item_type_box_2.sizePolicy().hasHeightForWidth())
-        self.item_type_box_2.setSizePolicy(sizePolicy)
-        self.item_type_box_2.setMinimumSize(QtCore.QSize(170, 40))
-        self.item_type_box_2.setMaximumSize(QtCore.QSize(170, 40))
-        font = QtGui.QFont()
-        font.setFamily("Maiandra GD")
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setWeight(75)
-        self.item_type_box_2.setFont(font)
-        self.item_type_box_2.setFocusPolicy(QtCore.Qt.ClickFocus)
-        self.item_type_box_2.setStyleSheet("QComboBox {\n"
-"    color: white;\n"
-"    border: 0px;\n"
-"}\n"
-"QComboBox::down-arrow {\n"
-"    background: rgba(0,0,0,0);\n"
-"    max-width: 0px;\n"
-"}\n"
-"QComboBox::drop-down {\n"
-"    background: rgba(0,0,0,0);\n"
-"    border: 0px;\n"
-"    max-width: 0px;\n"
-"    color: white;\n"
-"}\n"
-"QComboBox::editable {\n"
-"    background: rgba(255,224,255,64);\n"
-"    border: 0px;\n"
-"    color: white;\n"
-"}\n"
-"QComboBox::editable:indicator {\n"
-"    background: rgba(255,224,255,0);\n"
-"    border: 0px;\n"
-"    margin: 0px;\n"
-"}\n"
-"\n"
-"QComboBox QAbstractItemView {\n"
-"    color: white;\n"
-"    background: rgba(255,224,255,96);\n"
-"    selection-background-color: rgba(255,224,255,128);\n"
-"    border: 0px;\n"
-"    outline: 0px;\n"
-"}")
-        self.item_type_box_2.setMaxCount(10)
-        self.item_type_box_2.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToMinimumContentsLength)
-        self.item_type_box_2.setFrame(False)
-        self.item_type_box_2.setObjectName("item_type_box_2")
-        self.item_type_box_2.addItem("")
-        self.item_type_box_2.addItem("")
-        self.item_type_box_2.addItem("")
-        self.item_type_box_2.addItem("")
-        self.item_type_box_2.addItem("")
-        self.item_type_box_2.addItem("")
-        self.item_type_box_2.addItem("")
-        self.item_type_box_2.addItem("")
-        self.item_type_box_2.addItem("")
-        self.item_type_box_2.addItem("")
-        self.item_properties_type_label_2 = QtWidgets.QLabel(self.skill_properties_frame)
-        self.item_properties_type_label_2.setGeometry(QtCore.QRect(540, 90, 240, 40))
-        font = QtGui.QFont()
-        font.setFamily("Maiandra GD")
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setWeight(75)
-        self.item_properties_type_label_2.setFont(font)
-        self.item_properties_type_label_2.setStyleSheet("")
-        self.item_properties_type_label_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.item_properties_type_label_2.setObjectName("item_properties_type_label_2")
         self.skill_properties_requirements_label = QtWidgets.QLabel(self.skill_properties_frame)
         self.skill_properties_requirements_label.setGeometry(QtCore.QRect(10, 50, 250, 40))
         font = QtGui.QFont()
@@ -3300,32 +3201,6 @@ class Ui_MainWindow(object):
         self.skill_name_box.setEchoMode(QtWidgets.QLineEdit.Normal)
         self.skill_name_box.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.skill_name_box.setObjectName("skill_name_box")
-        self.item_toggle_consumable_button_4 = QtWidgets.QCheckBox(self.skill_properties_frame)
-        self.item_toggle_consumable_button_4.setGeometry(QtCore.QRect(540, 180, 250, 30))
-        font = QtGui.QFont()
-        font.setFamily("Maiandra GD")
-        font.setPointSize(20)
-        font.setBold(True)
-        font.setItalic(False)
-        font.setWeight(75)
-        self.item_toggle_consumable_button_4.setFont(font)
-        self.item_toggle_consumable_button_4.setFocusPolicy(QtCore.Qt.ClickFocus)
-        self.item_toggle_consumable_button_4.setStyleSheet("QCheckBox {\n"
-"    color: white;\n"
-"}\n"
-"QCheckBox::indicator {\n"
-"    background: rgba(0,0,0,0);\n"
-"    border: 5px;\n"
-"    border-image: url(:/bg/pane_thin_yellow.png);\n"
-"    min-width: 20px;\n"
-"    min-height: 20px;\n"
-"}\n"
-"\n"
-"QCheckBox::indicator:checked {\n"
-"    image: url(:/bg/checkmark.png);\n"
-"}\n"
-"")
-        self.item_toggle_consumable_button_4.setObjectName("item_toggle_consumable_button_4")
         self.skill_properties_customization_label = QtWidgets.QLabel(self.skill_properties_frame)
         self.skill_properties_customization_label.setGeometry(QtCore.QRect(310, 50, 220, 40))
         font = QtGui.QFont()
@@ -3379,10 +3254,10 @@ class Ui_MainWindow(object):
         self.skill_special_attack_box.setReadOnly(False)
         self.skill_special_attack_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_special_attack_box.setPrefix("")
-        self.skill_special_attack_box.setMinimum(1)
+        self.skill_special_attack_box.setMinimum(-9999)
         self.skill_special_attack_box.setMaximum(9999)
         self.skill_special_attack_box.setSingleStep(1)
-        self.skill_special_attack_box.setProperty("value", 1)
+        self.skill_special_attack_box.setProperty("value", 0)
         self.skill_special_attack_box.setObjectName("skill_special_attack_box")
         self.skill_accuracy_label = QtWidgets.QLabel(self.skill_properties_frame)
         self.skill_accuracy_label.setGeometry(QtCore.QRect(10, 410, 150, 40))
@@ -3431,10 +3306,10 @@ class Ui_MainWindow(object):
         self.skill_critical_box.setReadOnly(False)
         self.skill_critical_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_critical_box.setPrefix("")
-        self.skill_critical_box.setMinimum(1)
+        self.skill_critical_box.setMinimum(-9999)
         self.skill_critical_box.setMaximum(9999)
         self.skill_critical_box.setSingleStep(1)
-        self.skill_critical_box.setProperty("value", 1)
+        self.skill_critical_box.setProperty("value", 0)
         self.skill_critical_box.setObjectName("skill_critical_box")
         self.skill_attack_label = QtWidgets.QLabel(self.skill_properties_frame)
         self.skill_attack_label.setGeometry(QtCore.QRect(10, 250, 150, 40))
@@ -3469,10 +3344,10 @@ class Ui_MainWindow(object):
         self.skill_defense_box.setReadOnly(False)
         self.skill_defense_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_defense_box.setPrefix("")
-        self.skill_defense_box.setMinimum(1)
+        self.skill_defense_box.setMinimum(-9999)
         self.skill_defense_box.setMaximum(9999)
         self.skill_defense_box.setSingleStep(1)
-        self.skill_defense_box.setProperty("value", 1)
+        self.skill_defense_box.setProperty("value", 0)
         self.skill_defense_box.setObjectName("skill_defense_box")
         self.skill_blessing_label = QtWidgets.QLabel(self.skill_properties_frame)
         self.skill_blessing_label.setGeometry(QtCore.QRect(10, 530, 150, 40))
@@ -3508,10 +3383,10 @@ class Ui_MainWindow(object):
         self.skill_evasion_box.setReadOnly(False)
         self.skill_evasion_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_evasion_box.setPrefix("")
-        self.skill_evasion_box.setMinimum(1)
+        self.skill_evasion_box.setMinimum(-9999)
         self.skill_evasion_box.setMaximum(9999)
         self.skill_evasion_box.setSingleStep(1)
-        self.skill_evasion_box.setProperty("value", 1)
+        self.skill_evasion_box.setProperty("value", 0)
         self.skill_evasion_box.setObjectName("skill_evasion_box")
         self.skill_accuracy_box = QtWidgets.QSpinBox(self.skill_properties_frame)
         self.skill_accuracy_box.setGeometry(QtCore.QRect(160, 410, 120, 40))
@@ -3533,10 +3408,10 @@ class Ui_MainWindow(object):
         self.skill_accuracy_box.setReadOnly(False)
         self.skill_accuracy_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_accuracy_box.setPrefix("")
-        self.skill_accuracy_box.setMinimum(1)
+        self.skill_accuracy_box.setMinimum(-9999)
         self.skill_accuracy_box.setMaximum(9999)
         self.skill_accuracy_box.setSingleStep(1)
-        self.skill_accuracy_box.setProperty("value", 1)
+        self.skill_accuracy_box.setProperty("value", 0)
         self.skill_accuracy_box.setObjectName("skill_accuracy_box")
         self.skill_critical_label = QtWidgets.QLabel(self.skill_properties_frame)
         self.skill_critical_label.setGeometry(QtCore.QRect(10, 490, 150, 40))
@@ -3598,10 +3473,10 @@ class Ui_MainWindow(object):
         self.skill_special_defense_box.setReadOnly(False)
         self.skill_special_defense_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_special_defense_box.setPrefix("")
-        self.skill_special_defense_box.setMinimum(1)
+        self.skill_special_defense_box.setMinimum(-9999)
         self.skill_special_defense_box.setMaximum(9999)
         self.skill_special_defense_box.setSingleStep(1)
-        self.skill_special_defense_box.setProperty("value", 1)
+        self.skill_special_defense_box.setProperty("value", 0)
         self.skill_special_defense_box.setObjectName("skill_special_defense_box")
         self.skill_blessing_box = QtWidgets.QSpinBox(self.skill_properties_frame)
         self.skill_blessing_box.setGeometry(QtCore.QRect(160, 530, 120, 40))
@@ -3624,10 +3499,10 @@ class Ui_MainWindow(object):
         self.skill_blessing_box.setReadOnly(False)
         self.skill_blessing_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_blessing_box.setPrefix("")
-        self.skill_blessing_box.setMinimum(1)
+        self.skill_blessing_box.setMinimum(-9999)
         self.skill_blessing_box.setMaximum(9999)
         self.skill_blessing_box.setSingleStep(1)
-        self.skill_blessing_box.setProperty("value", 1)
+        self.skill_blessing_box.setProperty("value", 0)
         self.skill_blessing_box.setObjectName("skill_blessing_box")
         self.skill_special_defense_label = QtWidgets.QLabel(self.skill_properties_frame)
         self.skill_special_defense_label.setGeometry(QtCore.QRect(10, 370, 150, 40))
@@ -3662,10 +3537,10 @@ class Ui_MainWindow(object):
         self.skill_attack_box.setReadOnly(False)
         self.skill_attack_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
         self.skill_attack_box.setPrefix("")
-        self.skill_attack_box.setMinimum(1)
+        self.skill_attack_box.setMinimum(-9999)
         self.skill_attack_box.setMaximum(9999)
         self.skill_attack_box.setSingleStep(1)
-        self.skill_attack_box.setProperty("value", 1)
+        self.skill_attack_box.setProperty("value", 0)
         self.skill_attack_box.setObjectName("skill_attack_box")
         self.item_sp_label_2 = QtWidgets.QLabel(self.skill_properties_frame)
         self.item_sp_label_2.setGeometry(QtCore.QRect(10, 170, 100, 40))
@@ -3730,6 +3605,50 @@ class Ui_MainWindow(object):
         self.skill_power_box.setSingleStep(1)
         self.skill_power_box.setProperty("value", 100)
         self.skill_power_box.setObjectName("skill_power_box")
+        self.skill_effect_list = QtWidgets.QListWidget(self.skill_properties_frame)
+        self.skill_effect_list.setGeometry(QtCore.QRect(310, 410, 350, 200))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.skill_effect_list.sizePolicy().hasHeightForWidth())
+        self.skill_effect_list.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.skill_effect_list.setFont(font)
+        self.skill_effect_list.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.skill_effect_list.setStyleSheet("QListWidget {\n"
+"    border: 5px;\n"
+"    border-image: url(:/bg/pane_thin_yellow.png);\n"
+"    outline: 0px;\n"
+"}\n"
+"QListWidget::item {\n"
+"    color: rgba(255,255,255,128);\n"
+"    background: rgba(0,0,0,0);\n"
+"}\n"
+"QListWidget::item:selected {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,64);\n"
+"    image: url(:/bg/checkmark.png);\n"
+"    image-position: left;\n"
+"}\n"
+"QListWidget::item:focus {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,128);\n"
+"}\n"
+"QListWidget::item:!selected:!focus:hover {\n"
+"    color: white;\n"
+"}")
+        self.skill_effect_list.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.skill_effect_list.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.skill_effect_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.skill_effect_list.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
+        self.skill_effect_list.setTextElideMode(QtCore.Qt.ElideMiddle)
+        self.skill_effect_list.setUniformItemSizes(True)
+        self.skill_effect_list.setBatchSize(15)
+        self.skill_effect_list.setObjectName("skill_effect_list")
         self.item_properties_label_2 = QtWidgets.QLabel(self.skill_tab)
         self.item_properties_label_2.setGeometry(QtCore.QRect(370, 0, 800, 40))
         font = QtGui.QFont()
@@ -3970,6 +3889,1198 @@ class Ui_MainWindow(object):
         self.effect_copy_button.setCheckable(False)
         self.effect_copy_button.setFlat(True)
         self.effect_copy_button.setObjectName("effect_copy_button")
+        self.item_properties_label_3 = QtWidgets.QLabel(self.effect_tab)
+        self.item_properties_label_3.setGeometry(QtCore.QRect(370, 0, 800, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.item_properties_label_3.setFont(font)
+        self.item_properties_label_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.item_properties_label_3.setObjectName("item_properties_label_3")
+        self.effect_properties_frame = QtWidgets.QFrame(self.effect_tab)
+        self.effect_properties_frame.setGeometry(QtCore.QRect(370, 40, 800, 975))
+        self.effect_properties_frame.setStyleSheet("#effect_properties_frame {\n"
+"border: 5px;\n"
+"border-image: url(:/bg/pane_thin_yellow.png);\n"
+"}")
+        self.effect_properties_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.effect_properties_frame.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.effect_properties_frame.setObjectName("effect_properties_frame")
+        self.effect_sp_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_sp_box.setGeometry(QtCore.QRect(100, 130, 180, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_sp_box.setFont(font)
+        self.effect_sp_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_sp_box.setStyleSheet("QSpinBox {\n"
+"border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: rgb(170,255,128);\n"
+"}")
+        self.effect_sp_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_sp_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_sp_box.setProperty("showGroupSeparator", False)
+        self.effect_sp_box.setPrefix("")
+        self.effect_sp_box.setMinimum(-999999)
+        self.effect_sp_box.setMaximum(999999)
+        self.effect_sp_box.setProperty("value", 0)
+        self.effect_sp_box.setObjectName("effect_sp_box")
+        self.skill_properties_equip_label_2 = QtWidgets.QLabel(self.effect_properties_frame)
+        self.skill_properties_equip_label_2.setGeometry(QtCore.QRect(10, 50, 270, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.skill_properties_equip_label_2.setFont(font)
+        self.skill_properties_equip_label_2.setStyleSheet("")
+        self.skill_properties_equip_label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.skill_properties_equip_label_2.setObjectName("skill_properties_equip_label_2")
+        self.skill_properties_effects_label_2 = QtWidgets.QLabel(self.effect_properties_frame)
+        self.skill_properties_effects_label_2.setGeometry(QtCore.QRect(340, 500, 350, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.skill_properties_effects_label_2.setFont(font)
+        self.skill_properties_effects_label_2.setStyleSheet("")
+        self.skill_properties_effects_label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.skill_properties_effects_label_2.setObjectName("skill_properties_effects_label_2")
+        self.effect_import_file_box = QtWidgets.QLineEdit(self.effect_properties_frame)
+        self.effect_import_file_box.setGeometry(QtCore.QRect(540, 50, 240, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_import_file_box.setFont(font)
+        self.effect_import_file_box.setStyleSheet("QLineEdit {\n"
+"    color: white;\n"
+"    border: 0px;\n"
+"    background: rgba(0,0,0,0);\n"
+"}")
+        self.effect_import_file_box.setMaxLength(16)
+        self.effect_import_file_box.setAlignment(QtCore.Qt.AlignCenter)
+        self.effect_import_file_box.setObjectName("effect_import_file_box")
+        self.effect_name_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_name_label.setGeometry(QtCore.QRect(10, 10, 80, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_name_label.setFont(font)
+        self.effect_name_label.setStyleSheet("")
+        self.effect_name_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_name_label.setObjectName("effect_name_label")
+        self.effect_name_box = QtWidgets.QLineEdit(self.effect_properties_frame)
+        self.effect_name_box.setGeometry(QtCore.QRect(100, 10, 430, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_name_box.setFont(font)
+        self.effect_name_box.setStyleSheet("QLineEdit {\n"
+"border: 0px;\n"
+"background-color:  rgba(255,255,255,0);\n"
+"color: rgb(255,255,225);\n"
+"}")
+        self.effect_name_box.setText("")
+        self.effect_name_box.setMaxLength(30)
+        self.effect_name_box.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.effect_name_box.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_name_box.setObjectName("effect_name_box")
+        self.effect_properties_customization_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_properties_customization_label.setGeometry(QtCore.QRect(530, 100, 250, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_properties_customization_label.setFont(font)
+        self.effect_properties_customization_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.effect_properties_customization_label.setObjectName("effect_properties_customization_label")
+        self.effect_special_attack_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_special_attack_box.setGeometry(QtCore.QRect(160, 250, 120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_special_attack_box.setFont(font)
+        self.effect_special_attack_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_special_attack_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_special_attack_box.setStyleSheet("border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: white;\n"
+"")
+        self.effect_special_attack_box.setWrapping(False)
+        self.effect_special_attack_box.setFrame(False)
+        self.effect_special_attack_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_special_attack_box.setReadOnly(False)
+        self.effect_special_attack_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_special_attack_box.setPrefix("")
+        self.effect_special_attack_box.setMinimum(-9999)
+        self.effect_special_attack_box.setMaximum(9999)
+        self.effect_special_attack_box.setSingleStep(1)
+        self.effect_special_attack_box.setProperty("value", 0)
+        self.effect_special_attack_box.setObjectName("effect_special_attack_box")
+        self.effect_accuracy_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_accuracy_label.setGeometry(QtCore.QRect(10, 330, 150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_accuracy_label.setFont(font)
+        self.effect_accuracy_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_accuracy_label.setStyleSheet("")
+        self.effect_accuracy_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_accuracy_label.setObjectName("effect_accuracy_label")
+        self.effect_special_attack_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_special_attack_label.setGeometry(QtCore.QRect(10, 250, 150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_special_attack_label.setFont(font)
+        self.effect_special_attack_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_special_attack_label.setStyleSheet("")
+        self.effect_special_attack_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_special_attack_label.setObjectName("effect_special_attack_label")
+        self.effect_critical_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_critical_box.setGeometry(QtCore.QRect(160, 410, 120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_critical_box.setFont(font)
+        self.effect_critical_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_critical_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_critical_box.setStyleSheet("border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: white;\n"
+"")
+        self.effect_critical_box.setWrapping(False)
+        self.effect_critical_box.setFrame(False)
+        self.effect_critical_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_critical_box.setReadOnly(False)
+        self.effect_critical_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_critical_box.setPrefix("")
+        self.effect_critical_box.setMinimum(-9999)
+        self.effect_critical_box.setMaximum(9999)
+        self.effect_critical_box.setSingleStep(1)
+        self.effect_critical_box.setProperty("value", 0)
+        self.effect_critical_box.setObjectName("effect_critical_box")
+        self.effect_attack_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_attack_label.setGeometry(QtCore.QRect(10, 170, 150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_attack_label.setFont(font)
+        self.effect_attack_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_attack_label.setStyleSheet("")
+        self.effect_attack_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_attack_label.setObjectName("effect_attack_label")
+        self.effect_defense_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_defense_box.setGeometry(QtCore.QRect(160, 210, 120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_defense_box.setFont(font)
+        self.effect_defense_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_defense_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_defense_box.setStyleSheet("border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: white;")
+        self.effect_defense_box.setWrapping(False)
+        self.effect_defense_box.setFrame(False)
+        self.effect_defense_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_defense_box.setReadOnly(False)
+        self.effect_defense_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_defense_box.setPrefix("")
+        self.effect_defense_box.setMinimum(-9999)
+        self.effect_defense_box.setMaximum(9999)
+        self.effect_defense_box.setSingleStep(1)
+        self.effect_defense_box.setProperty("value", 0)
+        self.effect_defense_box.setObjectName("effect_defense_box")
+        self.effect_blessing_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_blessing_label.setGeometry(QtCore.QRect(10, 450, 150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_blessing_label.setFont(font)
+        self.effect_blessing_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_blessing_label.setStyleSheet("")
+        self.effect_blessing_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_blessing_label.setObjectName("effect_blessing_label")
+        self.effect_evasion_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_evasion_box.setGeometry(QtCore.QRect(160, 370, 120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_evasion_box.setFont(font)
+        self.effect_evasion_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_evasion_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_evasion_box.setStyleSheet("border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: white;\n"
+"")
+        self.effect_evasion_box.setWrapping(False)
+        self.effect_evasion_box.setFrame(False)
+        self.effect_evasion_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_evasion_box.setReadOnly(False)
+        self.effect_evasion_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_evasion_box.setPrefix("")
+        self.effect_evasion_box.setMinimum(-9999)
+        self.effect_evasion_box.setMaximum(9999)
+        self.effect_evasion_box.setSingleStep(1)
+        self.effect_evasion_box.setProperty("value", 0)
+        self.effect_evasion_box.setObjectName("effect_evasion_box")
+        self.effect_accuracy_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_accuracy_box.setGeometry(QtCore.QRect(160, 330, 120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_accuracy_box.setFont(font)
+        self.effect_accuracy_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_accuracy_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_accuracy_box.setStyleSheet("border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: white;")
+        self.effect_accuracy_box.setWrapping(False)
+        self.effect_accuracy_box.setFrame(False)
+        self.effect_accuracy_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_accuracy_box.setReadOnly(False)
+        self.effect_accuracy_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_accuracy_box.setPrefix("")
+        self.effect_accuracy_box.setMinimum(-9999)
+        self.effect_accuracy_box.setMaximum(9999)
+        self.effect_accuracy_box.setSingleStep(1)
+        self.effect_accuracy_box.setProperty("value", 0)
+        self.effect_accuracy_box.setObjectName("effect_accuracy_box")
+        self.effect_critical_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_critical_label.setGeometry(QtCore.QRect(10, 410, 150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_critical_label.setFont(font)
+        self.effect_critical_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_critical_label.setStyleSheet("")
+        self.effect_critical_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_critical_label.setObjectName("effect_critical_label")
+        self.effect_defense_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_defense_label.setGeometry(QtCore.QRect(10, 210, 150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_defense_label.setFont(font)
+        self.effect_defense_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_defense_label.setStyleSheet("")
+        self.effect_defense_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_defense_label.setObjectName("effect_defense_label")
+        self.effect_evasion_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_evasion_label.setGeometry(QtCore.QRect(10, 370, 150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_evasion_label.setFont(font)
+        self.effect_evasion_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_evasion_label.setStyleSheet("")
+        self.effect_evasion_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_evasion_label.setObjectName("effect_evasion_label")
+        self.effect_special_defense_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_special_defense_box.setGeometry(QtCore.QRect(160, 290, 120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_special_defense_box.setFont(font)
+        self.effect_special_defense_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_special_defense_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_special_defense_box.setStyleSheet("border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: white;\n"
+"")
+        self.effect_special_defense_box.setWrapping(False)
+        self.effect_special_defense_box.setFrame(False)
+        self.effect_special_defense_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_special_defense_box.setReadOnly(False)
+        self.effect_special_defense_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_special_defense_box.setPrefix("")
+        self.effect_special_defense_box.setMinimum(-9999)
+        self.effect_special_defense_box.setMaximum(9999)
+        self.effect_special_defense_box.setSingleStep(1)
+        self.effect_special_defense_box.setProperty("value", 0)
+        self.effect_special_defense_box.setObjectName("effect_special_defense_box")
+        self.effect_blessing_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_blessing_box.setGeometry(QtCore.QRect(160, 450, 120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_blessing_box.setFont(font)
+        self.effect_blessing_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_blessing_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_blessing_box.setStyleSheet("border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: white;\n"
+"")
+        self.effect_blessing_box.setWrapping(False)
+        self.effect_blessing_box.setFrame(False)
+        self.effect_blessing_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_blessing_box.setReadOnly(False)
+        self.effect_blessing_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_blessing_box.setPrefix("")
+        self.effect_blessing_box.setMinimum(-9999)
+        self.effect_blessing_box.setMaximum(9999)
+        self.effect_blessing_box.setSingleStep(1)
+        self.effect_blessing_box.setProperty("value", 0)
+        self.effect_blessing_box.setObjectName("effect_blessing_box")
+        self.effect_special_defense_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_special_defense_label.setGeometry(QtCore.QRect(10, 290, 150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_special_defense_label.setFont(font)
+        self.effect_special_defense_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_special_defense_label.setStyleSheet("")
+        self.effect_special_defense_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_special_defense_label.setObjectName("effect_special_defense_label")
+        self.effect_attack_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_attack_box.setGeometry(QtCore.QRect(160, 170, 120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_attack_box.setFont(font)
+        self.effect_attack_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_attack_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_attack_box.setStyleSheet("border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: white;")
+        self.effect_attack_box.setWrapping(False)
+        self.effect_attack_box.setFrame(False)
+        self.effect_attack_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_attack_box.setReadOnly(False)
+        self.effect_attack_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_attack_box.setPrefix("")
+        self.effect_attack_box.setMinimum(-9999)
+        self.effect_attack_box.setMaximum(9999)
+        self.effect_attack_box.setSingleStep(1)
+        self.effect_attack_box.setProperty("value", 0)
+        self.effect_attack_box.setObjectName("effect_attack_box")
+        self.effect_sp_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_sp_label.setGeometry(QtCore.QRect(10, 130, 50, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_sp_label.setFont(font)
+        self.effect_sp_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_sp_label.setStyleSheet("")
+        self.effect_sp_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_sp_label.setObjectName("effect_sp_label")
+        self.effect_pack_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_pack_label.setGeometry(QtCore.QRect(540, 10, 240, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_pack_label.setFont(font)
+        self.effect_pack_label.setStyleSheet("")
+        self.effect_pack_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.effect_pack_label.setObjectName("effect_pack_label")
+        self.effect_power_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_power_label.setGeometry(QtCore.QRect(10, 490, 150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_power_label.setFont(font)
+        self.effect_power_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_power_label.setStyleSheet("")
+        self.effect_power_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_power_label.setObjectName("effect_power_label")
+        self.effect_power_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_power_box.setGeometry(QtCore.QRect(160, 490, 120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_power_box.setFont(font)
+        self.effect_power_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_power_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_power_box.setStyleSheet("border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: white;\n"
+"")
+        self.effect_power_box.setWrapping(False)
+        self.effect_power_box.setFrame(False)
+        self.effect_power_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_power_box.setReadOnly(False)
+        self.effect_power_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_power_box.setPrefix("")
+        self.effect_power_box.setMinimum(0)
+        self.effect_power_box.setMaximum(9999)
+        self.effect_power_box.setSingleStep(1)
+        self.effect_power_box.setProperty("value", 100)
+        self.effect_power_box.setObjectName("effect_power_box")
+        self.skill_effect_list_2 = QtWidgets.QListWidget(self.effect_properties_frame)
+        self.skill_effect_list_2.setGeometry(QtCore.QRect(340, 550, 350, 200))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.skill_effect_list_2.sizePolicy().hasHeightForWidth())
+        self.skill_effect_list_2.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(16)
+        font.setBold(True)
+        font.setWeight(75)
+        self.skill_effect_list_2.setFont(font)
+        self.skill_effect_list_2.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.skill_effect_list_2.setStyleSheet("QListWidget {\n"
+"    border: 5px;\n"
+"    border-image: url(:/bg/pane_thin_yellow.png);\n"
+"    outline: 0px;\n"
+"}\n"
+"QListWidget::item {\n"
+"    color: rgba(255,255,255,128);\n"
+"    background: rgba(0,0,0,0);\n"
+"}\n"
+"QListWidget::item:selected {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,64);\n"
+"    image: url(:/bg/checkmark.png);\n"
+"    image-position: left;\n"
+"}\n"
+"QListWidget::item:focus {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,128);\n"
+"}\n"
+"QListWidget::item:!selected:!focus:hover {\n"
+"    color: white;\n"
+"}")
+        self.skill_effect_list_2.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.skill_effect_list_2.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.skill_effect_list_2.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.skill_effect_list_2.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
+        self.skill_effect_list_2.setTextElideMode(QtCore.Qt.ElideMiddle)
+        self.skill_effect_list_2.setUniformItemSizes(True)
+        self.skill_effect_list_2.setBatchSize(15)
+        self.skill_effect_list_2.setObjectName("skill_effect_list_2")
+        self.effect_rounds_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_rounds_box.setGeometry(QtCore.QRect(650, 140, 100, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_rounds_box.setFont(font)
+        self.effect_rounds_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_rounds_box.setStyleSheet("QSpinBox {\n"
+"border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: white;\n"
+"}")
+        self.effect_rounds_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_rounds_box.setReadOnly(False)
+        self.effect_rounds_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_rounds_box.setProperty("showGroupSeparator", False)
+        self.effect_rounds_box.setPrefix("")
+        self.effect_rounds_box.setMinimum(0)
+        self.effect_rounds_box.setMaximum(999)
+        self.effect_rounds_box.setProperty("value", 0)
+        self.effect_rounds_box.setObjectName("effect_rounds_box")
+        self.effect_rounds_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_rounds_label.setGeometry(QtCore.QRect(530, 140, 120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_rounds_label.setFont(font)
+        self.effect_rounds_label.setStyleSheet("")
+        self.effect_rounds_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_rounds_label.setObjectName("effect_rounds_label")
+        self.effect_properties_chances_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_properties_chances_label.setGeometry(QtCore.QRect(290, 50, 220, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_properties_chances_label.setFont(font)
+        self.effect_properties_chances_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.effect_properties_chances_label.setObjectName("effect_properties_chances_label")
+        self.effect_chances_apply_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_chances_apply_label.setGeometry(QtCore.QRect(290, 90, 120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_chances_apply_label.setFont(font)
+        self.effect_chances_apply_label.setStyleSheet("")
+        self.effect_chances_apply_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_chances_apply_label.setObjectName("effect_chances_apply_label")
+        self.effect_chances_apply_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_chances_apply_box.setGeometry(QtCore.QRect(410, 90, 100, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_chances_apply_box.setFont(font)
+        self.effect_chances_apply_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_chances_apply_box.setStyleSheet("QSpinBox {\n"
+"border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: white;\n"
+"}")
+        self.effect_chances_apply_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_chances_apply_box.setReadOnly(False)
+        self.effect_chances_apply_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_chances_apply_box.setProperty("showGroupSeparator", False)
+        self.effect_chances_apply_box.setPrefix("")
+        self.effect_chances_apply_box.setMinimum(0)
+        self.effect_chances_apply_box.setMaximum(100)
+        self.effect_chances_apply_box.setProperty("value", 0)
+        self.effect_chances_apply_box.setObjectName("effect_chances_apply_box")
+        self.effect_chances_fade_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_chances_fade_label.setGeometry(QtCore.QRect(290, 130, 120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_chances_fade_label.setFont(font)
+        self.effect_chances_fade_label.setStyleSheet("")
+        self.effect_chances_fade_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_chances_fade_label.setObjectName("effect_chances_fade_label")
+        self.effect_chances_fade_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_chances_fade_box.setGeometry(QtCore.QRect(410, 130, 100, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_chances_fade_box.setFont(font)
+        self.effect_chances_fade_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_chances_fade_box.setStyleSheet("QSpinBox {\n"
+"border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: white;\n"
+"}")
+        self.effect_chances_fade_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_chances_fade_box.setReadOnly(False)
+        self.effect_chances_fade_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_chances_fade_box.setProperty("showGroupSeparator", False)
+        self.effect_chances_fade_box.setPrefix("")
+        self.effect_chances_fade_box.setMinimum(0)
+        self.effect_chances_fade_box.setMaximum(100)
+        self.effect_chances_fade_box.setProperty("value", 0)
+        self.effect_chances_fade_box.setObjectName("effect_chances_fade_box")
+        self.effect_chances_inflict_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_chances_inflict_label.setGeometry(QtCore.QRect(290, 170, 120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_chances_inflict_label.setFont(font)
+        self.effect_chances_inflict_label.setStyleSheet("")
+        self.effect_chances_inflict_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_chances_inflict_label.setObjectName("effect_chances_inflict_label")
+        self.effect_chances_inflict_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_chances_inflict_box.setGeometry(QtCore.QRect(410, 170, 100, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_chances_inflict_box.setFont(font)
+        self.effect_chances_inflict_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_chances_inflict_box.setStyleSheet("QSpinBox {\n"
+"border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: white;\n"
+"}")
+        self.effect_chances_inflict_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_chances_inflict_box.setReadOnly(False)
+        self.effect_chances_inflict_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_chances_inflict_box.setProperty("showGroupSeparator", False)
+        self.effect_chances_inflict_box.setPrefix("")
+        self.effect_chances_inflict_box.setMinimum(0)
+        self.effect_chances_inflict_box.setMaximum(100)
+        self.effect_chances_inflict_box.setProperty("value", 0)
+        self.effect_chances_inflict_box.setObjectName("effect_chances_inflict_box")
+        self.effect_effective_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_effective_label.setGeometry(QtCore.QRect(530, 180, 120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_effective_label.setFont(font)
+        self.effect_effective_label.setStyleSheet("")
+        self.effect_effective_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_effective_label.setObjectName("effect_effective_label")
+        self.item_type_box_2 = QtWidgets.QComboBox(self.effect_properties_frame)
+        self.item_type_box_2.setGeometry(QtCore.QRect(660, 180, 120, 40))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.item_type_box_2.sizePolicy().hasHeightForWidth())
+        self.item_type_box_2.setSizePolicy(sizePolicy)
+        self.item_type_box_2.setMinimumSize(QtCore.QSize(120, 40))
+        self.item_type_box_2.setMaximumSize(QtCore.QSize(120, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.item_type_box_2.setFont(font)
+        self.item_type_box_2.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.item_type_box_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.item_type_box_2.setStyleSheet("QComboBox {\n"
+"    color: white;\n"
+"    border: 0px;\n"
+"}\n"
+"QComboBox::down-arrow {\n"
+"    background: rgba(0,0,0,0);\n"
+"    max-width: 0px;\n"
+"}\n"
+"QComboBox::drop-down {\n"
+"    background: rgba(0,0,0,0);\n"
+"    border: 0px;\n"
+"    max-width: 0px;\n"
+"    color: white;\n"
+"}\n"
+"QComboBox::editable {\n"
+"    background: rgba(255,255,255,64);\n"
+"    border: 0px;\n"
+"    color: white;\n"
+"}\n"
+"QComboBox::editable:indicator {\n"
+"    background: rgba(255,255,255,0);\n"
+"    border: 0px;\n"
+"    margin: 0px;\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,0);\n"
+"    selection-background-color: rgba(255,255,255,128);\n"
+"    border: 0px;\n"
+"    outline: 0px;\n"
+"}")
+        self.item_type_box_2.setMaxCount(10)
+        self.item_type_box_2.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToMinimumContentsLength)
+        self.item_type_box_2.setFrame(False)
+        self.item_type_box_2.setObjectName("item_type_box_2")
+        self.item_type_box_2.addItem("")
+        self.item_type_box_2.addItem("")
+        self.item_type_box_2.addItem("")
+        self.item_type_box_2.addItem("")
+        self.item_type_box_2.addItem("")
+        self.item_toggle_stackable_button_2 = QtWidgets.QCheckBox(self.effect_properties_frame)
+        self.item_toggle_stackable_button_2.setGeometry(QtCore.QRect(530, 220, 250, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.item_toggle_stackable_button_2.setFont(font)
+        self.item_toggle_stackable_button_2.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.item_toggle_stackable_button_2.setStyleSheet("QCheckBox {\n"
+"    color: white;\n"
+"}\n"
+"QCheckBox::indicator {\n"
+"    background: rgba(0,0,0,0);\n"
+"    border: 5px;\n"
+"    border-image: url(:/bg/pane_thin_yellow.png);\n"
+"    min-width: 20px;\n"
+"    min-height: 20px;\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    image: url(:/bg/checkmark.png);\n"
+"}\n"
+"")
+        self.item_toggle_stackable_button_2.setObjectName("item_toggle_stackable_button_2")
+        self.skill_properties_equip_label_3 = QtWidgets.QLabel(self.effect_properties_frame)
+        self.skill_properties_equip_label_3.setGeometry(QtCore.QRect(290, 260, 500, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.skill_properties_equip_label_3.setFont(font)
+        self.skill_properties_equip_label_3.setStyleSheet("")
+        self.skill_properties_equip_label_3.setAlignment(QtCore.Qt.AlignCenter)
+        self.skill_properties_equip_label_3.setObjectName("skill_properties_equip_label_3")
+        self.effect_hp_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_hp_label.setGeometry(QtCore.QRect(10, 90, 50, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_hp_label.setFont(font)
+        self.effect_hp_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_hp_label.setStyleSheet("")
+        self.effect_hp_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_hp_label.setObjectName("effect_hp_label")
+        self.effect_hp_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_hp_box.setGeometry(QtCore.QRect(100, 90, 180, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_hp_box.setFont(font)
+        self.effect_hp_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_hp_box.setStyleSheet("QSpinBox {\n"
+"border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: rgb(255,170,128);\n"
+"}")
+        self.effect_hp_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_hp_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_hp_box.setProperty("showGroupSeparator", False)
+        self.effect_hp_box.setPrefix("")
+        self.effect_hp_box.setMinimum(-999999)
+        self.effect_hp_box.setMaximum(999999)
+        self.effect_hp_box.setProperty("value", 0)
+        self.effect_hp_box.setObjectName("effect_hp_box")
+        self.effect_sp_label_2 = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_sp_label_2.setGeometry(QtCore.QRect(290, 350, 50, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_sp_label_2.setFont(font)
+        self.effect_sp_label_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_sp_label_2.setStyleSheet("")
+        self.effect_sp_label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_sp_label_2.setObjectName("effect_sp_label_2")
+        self.effect_hp_label_2 = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_hp_label_2.setGeometry(QtCore.QRect(290, 310, 50, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_hp_label_2.setFont(font)
+        self.effect_hp_label_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_hp_label_2.setStyleSheet("")
+        self.effect_hp_label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_hp_label_2.setObjectName("effect_hp_label_2")
+        self.effect_xp_label = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_xp_label.setGeometry(QtCore.QRect(290, 390, 50, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_xp_label.setFont(font)
+        self.effect_xp_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_xp_label.setStyleSheet("")
+        self.effect_xp_label.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_xp_label.setObjectName("effect_xp_label")
+        self.effect_xp_label_2 = QtWidgets.QLabel(self.effect_properties_frame)
+        self.effect_xp_label_2.setGeometry(QtCore.QRect(290, 430, 70, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.effect_xp_label_2.setFont(font)
+        self.effect_xp_label_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_xp_label_2.setStyleSheet("")
+        self.effect_xp_label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.effect_xp_label_2.setObjectName("effect_xp_label_2")
+        self.effect_restore_hp_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_restore_hp_box.setGeometry(QtCore.QRect(370, 310, 180, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_restore_hp_box.setFont(font)
+        self.effect_restore_hp_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_restore_hp_box.setStyleSheet("QSpinBox {\n"
+"border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: rgb(255,170,128);\n"
+"}")
+        self.effect_restore_hp_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_restore_hp_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_restore_hp_box.setProperty("showGroupSeparator", False)
+        self.effect_restore_hp_box.setPrefix("")
+        self.effect_restore_hp_box.setMinimum(-999999)
+        self.effect_restore_hp_box.setMaximum(999999)
+        self.effect_restore_hp_box.setProperty("value", 0)
+        self.effect_restore_hp_box.setObjectName("effect_restore_hp_box")
+        self.effect_restore_sp_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_restore_sp_box.setGeometry(QtCore.QRect(370, 350, 180, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_restore_sp_box.setFont(font)
+        self.effect_restore_sp_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_restore_sp_box.setStyleSheet("QSpinBox {\n"
+"border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: rgb(170,255,128);\n"
+"}")
+        self.effect_restore_sp_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_restore_sp_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_restore_sp_box.setProperty("showGroupSeparator", False)
+        self.effect_restore_sp_box.setPrefix("")
+        self.effect_restore_sp_box.setMinimum(-999999)
+        self.effect_restore_sp_box.setMaximum(999999)
+        self.effect_restore_sp_box.setProperty("value", 0)
+        self.effect_restore_sp_box.setObjectName("effect_restore_sp_box")
+        self.effect_restore_xp_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_restore_xp_box.setGeometry(QtCore.QRect(370, 390, 180, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_restore_xp_box.setFont(font)
+        self.effect_restore_xp_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_restore_xp_box.setStyleSheet("QSpinBox {\n"
+"border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: rgb(170,255,255);\n"
+"}")
+        self.effect_restore_xp_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_restore_xp_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_restore_xp_box.setProperty("showGroupSeparator", False)
+        self.effect_restore_xp_box.setPrefix("")
+        self.effect_restore_xp_box.setMinimum(-999999)
+        self.effect_restore_xp_box.setMaximum(999999)
+        self.effect_restore_xp_box.setProperty("value", 0)
+        self.effect_restore_xp_box.setObjectName("effect_restore_xp_box")
+        self.effect_restore_food_box = QtWidgets.QSpinBox(self.effect_properties_frame)
+        self.effect_restore_food_box.setGeometry(QtCore.QRect(370, 430, 180, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_restore_food_box.setFont(font)
+        self.effect_restore_food_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_restore_food_box.setStyleSheet("QSpinBox {\n"
+"border: 0px;\n"
+"background-color: rgba(255,255,255,0);\n"
+"color: rgb(255,255,127);\n"
+"}")
+        self.effect_restore_food_box.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.effect_restore_food_box.setButtonSymbols(QtWidgets.QAbstractSpinBox.NoButtons)
+        self.effect_restore_food_box.setProperty("showGroupSeparator", False)
+        self.effect_restore_food_box.setPrefix("")
+        self.effect_restore_food_box.setMinimum(-999)
+        self.effect_restore_food_box.setMaximum(999)
+        self.effect_restore_food_box.setProperty("value", 0)
+        self.effect_restore_food_box.setObjectName("effect_restore_food_box")
+        self.effect_restore_hp_type_box = QtWidgets.QComboBox(self.effect_properties_frame)
+        self.effect_restore_hp_type_box.setGeometry(QtCore.QRect(600, 310, 150, 40))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.effect_restore_hp_type_box.sizePolicy().hasHeightForWidth())
+        self.effect_restore_hp_type_box.setSizePolicy(sizePolicy)
+        self.effect_restore_hp_type_box.setMinimumSize(QtCore.QSize(150, 40))
+        self.effect_restore_hp_type_box.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_restore_hp_type_box.setFont(font)
+        self.effect_restore_hp_type_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_restore_hp_type_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_restore_hp_type_box.setStyleSheet("QComboBox {\n"
+"    color: white;\n"
+"    border: 0px;\n"
+"}\n"
+"QComboBox::down-arrow {\n"
+"    background: rgba(0,0,0,0);\n"
+"    max-width: 0px;\n"
+"}\n"
+"QComboBox::drop-down {\n"
+"    background: rgba(0,0,0,0);\n"
+"    border: 0px;\n"
+"    max-width: 0px;\n"
+"    color: white;\n"
+"}\n"
+"QComboBox::editable {\n"
+"    background: rgba(255,255,255,64);\n"
+"    border: 0px;\n"
+"    color: white;\n"
+"}\n"
+"QComboBox::editable:indicator {\n"
+"    background: rgba(255,255,255,0);\n"
+"    border: 0px;\n"
+"    margin: 0px;\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,0);\n"
+"    selection-background-color: rgba(255,255,255,128);\n"
+"    border: 0px;\n"
+"    outline: 0px;\n"
+"}")
+        self.effect_restore_hp_type_box.setMaxCount(10)
+        self.effect_restore_hp_type_box.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToMinimumContentsLength)
+        self.effect_restore_hp_type_box.setFrame(False)
+        self.effect_restore_hp_type_box.setObjectName("effect_restore_hp_type_box")
+        self.effect_restore_hp_type_box.addItem("")
+        self.effect_restore_hp_type_box.addItem("")
+        self.effect_restore_hp_type_box.addItem("")
+        self.effect_restore_hp_type_box.addItem("")
+        self.effect_restore_sp_type_box = QtWidgets.QComboBox(self.effect_properties_frame)
+        self.effect_restore_sp_type_box.setGeometry(QtCore.QRect(600, 350, 150, 40))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.effect_restore_sp_type_box.sizePolicy().hasHeightForWidth())
+        self.effect_restore_sp_type_box.setSizePolicy(sizePolicy)
+        self.effect_restore_sp_type_box.setMinimumSize(QtCore.QSize(150, 40))
+        self.effect_restore_sp_type_box.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_restore_sp_type_box.setFont(font)
+        self.effect_restore_sp_type_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_restore_sp_type_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_restore_sp_type_box.setStyleSheet("QComboBox {\n"
+"    color: white;\n"
+"    border: 0px;\n"
+"}\n"
+"QComboBox::down-arrow {\n"
+"    background: rgba(0,0,0,0);\n"
+"    max-width: 0px;\n"
+"}\n"
+"QComboBox::drop-down {\n"
+"    background: rgba(0,0,0,0);\n"
+"    border: 0px;\n"
+"    max-width: 0px;\n"
+"    color: white;\n"
+"}\n"
+"QComboBox::editable {\n"
+"    background: rgba(255,255,255,64);\n"
+"    border: 0px;\n"
+"    color: white;\n"
+"}\n"
+"QComboBox::editable:indicator {\n"
+"    background: rgba(255,255,255,0);\n"
+"    border: 0px;\n"
+"    margin: 0px;\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,0);\n"
+"    selection-background-color: rgba(255,255,255,128);\n"
+"    border: 0px;\n"
+"    outline: 0px;\n"
+"}")
+        self.effect_restore_sp_type_box.setMaxCount(10)
+        self.effect_restore_sp_type_box.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToMinimumContentsLength)
+        self.effect_restore_sp_type_box.setFrame(False)
+        self.effect_restore_sp_type_box.setObjectName("effect_restore_sp_type_box")
+        self.effect_restore_sp_type_box.addItem("")
+        self.effect_restore_sp_type_box.addItem("")
+        self.effect_restore_sp_type_box.addItem("")
+        self.effect_restore_sp_type_box.addItem("")
+        self.effect_restore_xp_type_box = QtWidgets.QComboBox(self.effect_properties_frame)
+        self.effect_restore_xp_type_box.setGeometry(QtCore.QRect(600, 390, 150, 40))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.effect_restore_xp_type_box.sizePolicy().hasHeightForWidth())
+        self.effect_restore_xp_type_box.setSizePolicy(sizePolicy)
+        self.effect_restore_xp_type_box.setMinimumSize(QtCore.QSize(150, 40))
+        self.effect_restore_xp_type_box.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_restore_xp_type_box.setFont(font)
+        self.effect_restore_xp_type_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_restore_xp_type_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_restore_xp_type_box.setStyleSheet("QComboBox {\n"
+"    color: white;\n"
+"    border: 0px;\n"
+"}\n"
+"QComboBox::down-arrow {\n"
+"    background: rgba(0,0,0,0);\n"
+"    max-width: 0px;\n"
+"}\n"
+"QComboBox::drop-down {\n"
+"    background: rgba(0,0,0,0);\n"
+"    border: 0px;\n"
+"    max-width: 0px;\n"
+"    color: white;\n"
+"}\n"
+"QComboBox::editable {\n"
+"    background: rgba(255,255,255,64);\n"
+"    border: 0px;\n"
+"    color: white;\n"
+"}\n"
+"QComboBox::editable:indicator {\n"
+"    background: rgba(255,255,255,0);\n"
+"    border: 0px;\n"
+"    margin: 0px;\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,0);\n"
+"    selection-background-color: rgba(255,255,255,128);\n"
+"    border: 0px;\n"
+"    outline: 0px;\n"
+"}")
+        self.effect_restore_xp_type_box.setMaxCount(10)
+        self.effect_restore_xp_type_box.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToMinimumContentsLength)
+        self.effect_restore_xp_type_box.setFrame(False)
+        self.effect_restore_xp_type_box.setObjectName("effect_restore_xp_type_box")
+        self.effect_restore_xp_type_box.addItem("")
+        self.effect_restore_xp_type_box.addItem("")
+        self.effect_restore_xp_type_box.addItem("")
+        self.effect_restore_xp_type_box.addItem("")
+        self.effect_restore_food_type_box = QtWidgets.QComboBox(self.effect_properties_frame)
+        self.effect_restore_food_type_box.setGeometry(QtCore.QRect(600, 430, 150, 40))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.effect_restore_food_type_box.sizePolicy().hasHeightForWidth())
+        self.effect_restore_food_type_box.setSizePolicy(sizePolicy)
+        self.effect_restore_food_type_box.setMinimumSize(QtCore.QSize(150, 40))
+        self.effect_restore_food_type_box.setMaximumSize(QtCore.QSize(150, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.effect_restore_food_type_box.setFont(font)
+        self.effect_restore_food_type_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.effect_restore_food_type_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.effect_restore_food_type_box.setStyleSheet("QComboBox {\n"
+"    color: white;\n"
+"    border: 0px;\n"
+"}\n"
+"QComboBox::down-arrow {\n"
+"    background: rgba(0,0,0,0);\n"
+"    max-width: 0px;\n"
+"}\n"
+"QComboBox::drop-down {\n"
+"    background: rgba(0,0,0,0);\n"
+"    border: 0px;\n"
+"    max-width: 0px;\n"
+"    color: white;\n"
+"}\n"
+"QComboBox::editable {\n"
+"    background: rgba(255,255,255,64);\n"
+"    border: 0px;\n"
+"    color: white;\n"
+"}\n"
+"QComboBox::editable:indicator {\n"
+"    background: rgba(255,255,255,0);\n"
+"    border: 0px;\n"
+"    margin: 0px;\n"
+"}\n"
+"\n"
+"QComboBox QAbstractItemView {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,0);\n"
+"    selection-background-color: rgba(255,255,255,128);\n"
+"    border: 0px;\n"
+"    outline: 0px;\n"
+"}")
+        self.effect_restore_food_type_box.setMaxCount(10)
+        self.effect_restore_food_type_box.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToMinimumContentsLength)
+        self.effect_restore_food_type_box.setFrame(False)
+        self.effect_restore_food_type_box.setObjectName("effect_restore_food_type_box")
+        self.effect_restore_food_type_box.addItem("")
+        self.effect_restore_food_type_box.addItem("")
+        self.effect_restore_food_type_box.addItem("")
+        self.effect_restore_food_type_box.addItem("")
         self.qc_tabs.addTab(self.effect_tab, "")
         self.battle_tab = QtWidgets.QWidget()
         self.battle_tab.setStyleSheet("#battle_tab {\n"
@@ -3977,8 +5088,88 @@ class Ui_MainWindow(object):
 "border: 0px;\n"
 "}")
         self.battle_tab.setObjectName("battle_tab")
+        self.battle_spectator_players_label = QtWidgets.QLabel(self.battle_tab)
+        self.battle_spectator_players_label.setGeometry(QtCore.QRect(10, 0, 340, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.battle_spectator_players_label.setFont(font)
+        self.battle_spectator_players_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.battle_spectator_players_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.battle_spectator_players_label.setObjectName("battle_spectator_players_label")
+        self.battle_spectator_player_list = QtWidgets.QListWidget(self.battle_tab)
+        self.battle_spectator_player_list.setGeometry(QtCore.QRect(10, 90, 340, 300))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.battle_spectator_player_list.sizePolicy().hasHeightForWidth())
+        self.battle_spectator_player_list.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.battle_spectator_player_list.setFont(font)
+        self.battle_spectator_player_list.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.battle_spectator_player_list.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.battle_spectator_player_list.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.battle_spectator_player_list.setStyleSheet("QListWidget {\n"
+"    border: 5px;\n"
+"    border-image: url(:/bg/pane_thin_yellow.png);\n"
+"    outline: 0px;\n"
+"}\n"
+"QListWidget::item {\n"
+"    color: rgba(255,255,255,128);\n"
+"    background: rgba(0,0,0,0);\n"
+"}\n"
+"QListWidget::item:selected {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,64);\n"
+"    image: url(:/bg/checkmark.png);\n"
+"    image-position: left;\n"
+"}\n"
+"QListWidget::item:focus {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,128);\n"
+"}\n"
+"QListWidget::item:!selected:!focus:hover {\n"
+"    color: white;\n"
+"}")
+        self.battle_spectator_player_list.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.battle_spectator_player_list.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.battle_spectator_player_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.battle_spectator_player_list.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
+        self.battle_spectator_player_list.setTextElideMode(QtCore.Qt.ElideMiddle)
+        self.battle_spectator_player_list.setFlow(QtWidgets.QListView.TopToBottom)
+        self.battle_spectator_player_list.setUniformItemSizes(True)
+        self.battle_spectator_player_list.setBatchSize(15)
+        self.battle_spectator_player_list.setObjectName("battle_spectator_player_list")
+        self.battle_player_search_box = QtWidgets.QLineEdit(self.battle_tab)
+        self.battle_player_search_box.setGeometry(QtCore.QRect(10, 40, 340, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.battle_player_search_box.setFont(font)
+        self.battle_player_search_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.battle_player_search_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.battle_player_search_box.setStyleSheet("QLineEdit {\n"
+"border: 5px;\n"
+"background-color:  rgba(255,255,255,0);\n"
+"border-image: url(:/bg/pane_thin_yellow.png);\n"
+"color: rgb(255,255,255);\n"
+"}")
+        self.battle_player_search_box.setText("")
+        self.battle_player_search_box.setMaxLength(22)
+        self.battle_player_search_box.setAlignment(QtCore.Qt.AlignCenter)
+        self.battle_player_search_box.setDragEnabled(False)
+        self.battle_player_search_box.setObjectName("battle_player_search_box")
         self.battle_player_list = QtWidgets.QListWidget(self.battle_tab)
-        self.battle_player_list.setGeometry(QtCore.QRect(10, 10, 200, 250))
+        self.battle_player_list.setGeometry(QtCore.QRect(360, 90, 330, 300))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -3986,41 +5177,194 @@ class Ui_MainWindow(object):
         self.battle_player_list.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Maiandra GD")
-        font.setPointSize(14)
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
         self.battle_player_list.setFont(font)
+        self.battle_player_list.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.battle_player_list.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
         self.battle_player_list.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.battle_player_list.setStyleSheet("#player_list {\n"
+        self.battle_player_list.setStyleSheet("QListWidget {\n"
 "    border: 5px;\n"
 "    border-image: url(:/bg/pane_thin_yellow.png);\n"
 "    outline: 0px;\n"
 "}\n"
-"#player_list::item {\n"
-"    font-size: 18px;\n"
-"    font: bold \"Maiandra GD\";\n"
-"    color: white;\n"
+"QListWidget::item {\n"
+"    color: rgba(255,255,255,128);\n"
 "    background: rgba(0,0,0,0);\n"
 "}\n"
-"#player_list::item:selected {\n"
-"    color: rgb(255,224,64);\n"
+"QListWidget::item:selected {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,64);\n"
 "    image: url(:/bg/checkmark.png);\n"
 "    image-position: left;\n"
 "}\n"
-"#player_list::item:focus {\n"
-"    color: rgb(255,224,64);\n"
-"    background: rgba(255,224,64,192);\n"
+"QListWidget::item:focus {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,128);\n"
 "}\n"
-"#player_list::item:!selected:!focus:hover {\n"
-"    color: rgb(255,224,128)\n"
+"QListWidget::item:!selected:!focus:hover {\n"
+"    color: white;\n"
 "}")
         self.battle_player_list.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.battle_player_list.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.battle_player_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.battle_player_list.setSelectionMode(QtWidgets.QAbstractItemView.MultiSelection)
+        self.battle_player_list.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
         self.battle_player_list.setTextElideMode(QtCore.Qt.ElideMiddle)
         self.battle_player_list.setFlow(QtWidgets.QListView.TopToBottom)
         self.battle_player_list.setUniformItemSizes(True)
         self.battle_player_list.setBatchSize(15)
         self.battle_player_list.setObjectName("battle_player_list")
+        self.battle_players_label = QtWidgets.QLabel(self.battle_tab)
+        self.battle_players_label.setGeometry(QtCore.QRect(360, 0, 330, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.battle_players_label.setFont(font)
+        self.battle_players_label.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.battle_players_label.setAlignment(QtCore.Qt.AlignCenter)
+        self.battle_players_label.setObjectName("battle_players_label")
+        self.battle_spectator_players_label_2 = QtWidgets.QLabel(self.battle_tab)
+        self.battle_spectator_players_label_2.setGeometry(QtCore.QRect(700, 0, 330, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.battle_spectator_players_label_2.setFont(font)
+        self.battle_spectator_players_label_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.battle_spectator_players_label_2.setStyleSheet("")
+        self.battle_spectator_players_label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.battle_spectator_players_label_2.setObjectName("battle_spectator_players_label_2")
+        self.battle_enemy_list = QtWidgets.QListWidget(self.battle_tab)
+        self.battle_enemy_list.setGeometry(QtCore.QRect(700, 90, 330, 300))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.battle_enemy_list.sizePolicy().hasHeightForWidth())
+        self.battle_enemy_list.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.battle_enemy_list.setFont(font)
+        self.battle_enemy_list.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.battle_enemy_list.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.battle_enemy_list.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.battle_enemy_list.setStyleSheet("QListWidget {\n"
+"    border: 5px;\n"
+"    border-image: url(:/bg/pane_thin_yellow.png);\n"
+"    outline: 0px;\n"
+"}\n"
+"QListWidget::item {\n"
+"    color: rgba(255,255,255,128);\n"
+"    background: rgba(0,0,0,0);\n"
+"}\n"
+"QListWidget::item:selected {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,64);\n"
+"    image: url(:/bg/checkmark.png);\n"
+"    image-position: left;\n"
+"}\n"
+"QListWidget::item:focus {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,128);\n"
+"}\n"
+"QListWidget::item:!selected:!focus:hover {\n"
+"    color: white;\n"
+"}")
+        self.battle_enemy_list.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.battle_enemy_list.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.battle_enemy_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.battle_enemy_list.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
+        self.battle_enemy_list.setTextElideMode(QtCore.Qt.ElideMiddle)
+        self.battle_enemy_list.setFlow(QtWidgets.QListView.TopToBottom)
+        self.battle_enemy_list.setUniformItemSizes(True)
+        self.battle_enemy_list.setBatchSize(15)
+        self.battle_enemy_list.setObjectName("battle_enemy_list")
+        self.battle_enemy_search_box = QtWidgets.QLineEdit(self.battle_tab)
+        self.battle_enemy_search_box.setGeometry(QtCore.QRect(1040, 40, 340, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setItalic(False)
+        font.setWeight(75)
+        self.battle_enemy_search_box.setFont(font)
+        self.battle_enemy_search_box.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.battle_enemy_search_box.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.battle_enemy_search_box.setStyleSheet("QLineEdit {\n"
+"border: 5px;\n"
+"background-color:  rgba(255,255,255,0);\n"
+"border-image: url(:/bg/pane_thin_yellow.png);\n"
+"color: rgb(255,255,255);\n"
+"}")
+        self.battle_enemy_search_box.setText("")
+        self.battle_enemy_search_box.setMaxLength(22)
+        self.battle_enemy_search_box.setAlignment(QtCore.Qt.AlignCenter)
+        self.battle_enemy_search_box.setDragEnabled(False)
+        self.battle_enemy_search_box.setObjectName("battle_enemy_search_box")
+        self.battle_spectator_enemy_list = QtWidgets.QListWidget(self.battle_tab)
+        self.battle_spectator_enemy_list.setGeometry(QtCore.QRect(1040, 90, 340, 300))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.battle_spectator_enemy_list.sizePolicy().hasHeightForWidth())
+        self.battle_spectator_enemy_list.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.battle_spectator_enemy_list.setFont(font)
+        self.battle_spectator_enemy_list.setFocusPolicy(QtCore.Qt.ClickFocus)
+        self.battle_spectator_enemy_list.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.battle_spectator_enemy_list.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.battle_spectator_enemy_list.setStyleSheet("QListWidget {\n"
+"    border: 5px;\n"
+"    border-image: url(:/bg/pane_thin_yellow.png);\n"
+"    outline: 0px;\n"
+"}\n"
+"QListWidget::item {\n"
+"    color: rgba(255,255,255,128);\n"
+"    background: rgba(0,0,0,0);\n"
+"}\n"
+"QListWidget::item:selected {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,64);\n"
+"    image: url(:/bg/checkmark.png);\n"
+"    image-position: left;\n"
+"}\n"
+"QListWidget::item:focus {\n"
+"    color: white;\n"
+"    background: rgba(255,255,255,128);\n"
+"}\n"
+"QListWidget::item:!selected:!focus:hover {\n"
+"    color: white;\n"
+"}")
+        self.battle_spectator_enemy_list.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.battle_spectator_enemy_list.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.battle_spectator_enemy_list.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.battle_spectator_enemy_list.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
+        self.battle_spectator_enemy_list.setTextElideMode(QtCore.Qt.ElideMiddle)
+        self.battle_spectator_enemy_list.setFlow(QtWidgets.QListView.TopToBottom)
+        self.battle_spectator_enemy_list.setUniformItemSizes(True)
+        self.battle_spectator_enemy_list.setBatchSize(15)
+        self.battle_spectator_enemy_list.setObjectName("battle_spectator_enemy_list")
+        self.battle_players_label_2 = QtWidgets.QLabel(self.battle_tab)
+        self.battle_players_label_2.setGeometry(QtCore.QRect(1040, 0, 340, 40))
+        font = QtGui.QFont()
+        font.setFamily("Maiandra GD")
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setWeight(75)
+        self.battle_players_label_2.setFont(font)
+        self.battle_players_label_2.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.battle_players_label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.battle_players_label_2.setObjectName("battle_players_label_2")
         self.qc_tabs.addTab(self.battle_tab, "")
         self.quest_tab = QtWidgets.QWidget()
         self.quest_tab.setStyleSheet("#quest_tab { \n"
@@ -4120,7 +5464,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralWidget)
 
         self.retranslateUi(MainWindow)
-        self.qc_tabs.setCurrentIndex(1)
+        self.qc_tabs.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -4254,23 +5598,10 @@ class Ui_MainWindow(object):
         self.skill_list.setSortingEnabled(True)
         self.skill_search_box.setPlaceholderText(_translate("MainWindow", "Search For Skill"))
         self.skill_properties_equip_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-style:italic; color:#ffffff;\">Usage Bonuses</span></p></body></html>"))
-        self.item_properties_misc_label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:20pt; font-style:italic; color:#ffffff;\">Miscellaneous</span></p></body></html>"))
+        self.skill_properties_effects_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:20pt; font-style:italic; color:#ffffff;\">Casted Effects</span></p></body></html>"))
         self.skill_import_file_box.setPlaceholderText(_translate("MainWindow", "default standard"))
-        self.item_toggle_dual_wield_button_2.setText(_translate("MainWindow", "Dual Wield"))
-        self.item_type_box_2.setItemText(0, _translate("MainWindow", "Weapon"))
-        self.item_type_box_2.setItemText(1, _translate("MainWindow", "Ammo"))
-        self.item_type_box_2.setItemText(2, _translate("MainWindow", "Head"))
-        self.item_type_box_2.setItemText(3, _translate("MainWindow", "Chest"))
-        self.item_type_box_2.setItemText(4, _translate("MainWindow", "Back"))
-        self.item_type_box_2.setItemText(5, _translate("MainWindow", "Hands"))
-        self.item_type_box_2.setItemText(6, _translate("MainWindow", "Legs"))
-        self.item_type_box_2.setItemText(7, _translate("MainWindow", "Feet"))
-        self.item_type_box_2.setItemText(8, _translate("MainWindow", "Accessory"))
-        self.item_type_box_2.setItemText(9, _translate("MainWindow", "Item"))
-        self.item_properties_type_label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-style:italic; color:#ffffff;\">Type</span></p></body></html>"))
         self.skill_properties_requirements_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-style:italic; color:#ffffff;\">Requirements</span></p></body></html>"))
         self.skill_name_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Name</span></p></body></html>"))
-        self.item_toggle_consumable_button_4.setText(_translate("MainWindow", "Uses Ammo"))
         self.skill_properties_customization_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:20pt; font-style:italic; color:#ffffff;\">Customization</span></p></body></html>"))
         self.skill_level_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Level</span></p></body></html>"))
         self.skill_max_level_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Max Level</span></p></body></html>"))
@@ -4286,6 +5617,7 @@ class Ui_MainWindow(object):
         self.skill_pack_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-style:italic; color:#ffffff;\">Import Pack</span></p></body></html>"))
         self.skill_power_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Power</span></p></body></html>"))
         self.skill_power_box.setSuffix(_translate("MainWindow", " %"))
+        self.skill_effect_list.setSortingEnabled(True)
         self.item_properties_label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:24pt; color:#ffffff;\">Properties</span></p></body></html>"))
         self.skill_add_button.setToolTip(_translate("MainWindow", "Add a player"))
         self.skill_add_button.setText(_translate("MainWindow", "Add"))
@@ -4303,7 +5635,73 @@ class Ui_MainWindow(object):
         self.effect_list.setSortingEnabled(True)
         self.effect_copy_button.setToolTip(_translate("MainWindow", "Duplicate a player"))
         self.effect_copy_button.setText(_translate("MainWindow", "Copy"))
+        self.item_properties_label_3.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:24pt; color:#ffffff;\">Properties</span></p></body></html>"))
+        self.skill_properties_equip_label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-style:italic; color:#ffffff;\">Stat Bonuses</span></p></body></html>"))
+        self.skill_properties_effects_label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:20pt; font-style:italic; color:#ffffff;\">Casted Effects</span></p></body></html>"))
+        self.effect_import_file_box.setPlaceholderText(_translate("MainWindow", "default standard"))
+        self.effect_name_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Name</span></p></body></html>"))
+        self.effect_properties_customization_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:20pt; font-style:italic; color:#ffffff;\">Customization</span></p></body></html>"))
+        self.effect_accuracy_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Accuracy</span></p></body></html>"))
+        self.effect_special_attack_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">SP Attack</span></p></body></html>"))
+        self.effect_attack_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Attack</span></p></body></html>"))
+        self.effect_blessing_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Blessing</span></p></body></html>"))
+        self.effect_critical_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Critical</span></p></body></html>"))
+        self.effect_defense_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Defense</span></p></body></html>"))
+        self.effect_evasion_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Evasion</span></p></body></html>"))
+        self.effect_special_defense_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">SP Defense</span></p></body></html>"))
+        self.effect_sp_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#aaff7f;\">SP</span></p></body></html>"))
+        self.effect_pack_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-style:italic; color:#ffffff;\">Import Pack</span></p></body></html>"))
+        self.effect_power_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Power</span></p></body></html>"))
+        self.effect_power_box.setSuffix(_translate("MainWindow", " %"))
+        self.skill_effect_list_2.setSortingEnabled(True)
+        self.effect_rounds_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Rounds</span></p></body></html>"))
+        self.effect_properties_chances_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:20pt; font-style:italic; color:#ffffff;\">Chances</span></p></body></html>"))
+        self.effect_chances_apply_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Apply</span></p></body></html>"))
+        self.effect_chances_apply_box.setSuffix(_translate("MainWindow", " %"))
+        self.effect_chances_fade_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Fade</span></p></body></html>"))
+        self.effect_chances_fade_box.setSuffix(_translate("MainWindow", " %"))
+        self.effect_chances_inflict_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Inflict</span></p></body></html>"))
+        self.effect_chances_inflict_box.setSuffix(_translate("MainWindow", " %"))
+        self.effect_effective_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffffff;\">Effective</span></p></body></html>"))
+        self.item_type_box_2.setItemText(0, _translate("MainWindow", "On Hit"))
+        self.item_type_box_2.setItemText(1, _translate("MainWindow", "On Kill"))
+        self.item_type_box_2.setItemText(2, _translate("MainWindow", "On Hurt"))
+        self.item_type_box_2.setItemText(3, _translate("MainWindow", "On Death"))
+        self.item_type_box_2.setItemText(4, _translate("MainWindow", "Always"))
+        self.item_toggle_stackable_button_2.setText(_translate("MainWindow", "Stackable"))
+        self.skill_properties_equip_label_3.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-style:italic; color:#ffffff;\">Restore</span></p></body></html>"))
+        self.effect_hp_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffaa7f;\">HP</span></p></body></html>"))
+        self.effect_sp_label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#aaff7f;\">SP</span></p></body></html>"))
+        self.effect_hp_label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffaa7f;\">HP</span></p></body></html>"))
+        self.effect_xp_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#aaffff;\">XP</span></p></body></html>"))
+        self.effect_xp_label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ffff7f;\">Food</span></p></body></html>"))
+        self.effect_restore_hp_type_box.setItemText(0, _translate("MainWindow", "Fixed"))
+        self.effect_restore_hp_type_box.setItemText(1, _translate("MainWindow", "Percent"))
+        self.effect_restore_hp_type_box.setItemText(2, _translate("MainWindow", "Lost"))
+        self.effect_restore_hp_type_box.setItemText(3, _translate("MainWindow", "Max"))
+        self.effect_restore_sp_type_box.setItemText(0, _translate("MainWindow", "Fixed"))
+        self.effect_restore_sp_type_box.setItemText(1, _translate("MainWindow", "Percent"))
+        self.effect_restore_sp_type_box.setItemText(2, _translate("MainWindow", "Lost"))
+        self.effect_restore_sp_type_box.setItemText(3, _translate("MainWindow", "Max"))
+        self.effect_restore_xp_type_box.setItemText(0, _translate("MainWindow", "Fixed"))
+        self.effect_restore_xp_type_box.setItemText(1, _translate("MainWindow", "Percent"))
+        self.effect_restore_xp_type_box.setItemText(2, _translate("MainWindow", "Lost"))
+        self.effect_restore_xp_type_box.setItemText(3, _translate("MainWindow", "Max"))
+        self.effect_restore_food_type_box.setItemText(0, _translate("MainWindow", "Fixed"))
+        self.effect_restore_food_type_box.setItemText(1, _translate("MainWindow", "Percent"))
+        self.effect_restore_food_type_box.setItemText(2, _translate("MainWindow", "Lost"))
+        self.effect_restore_food_type_box.setItemText(3, _translate("MainWindow", "Max"))
         self.qc_tabs.setTabText(self.qc_tabs.indexOf(self.effect_tab), _translate("MainWindow", "Effect"))
+        self.battle_spectator_players_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:24pt; color:#ffffff;\">Players Offline</span></p></body></html>"))
+        self.battle_spectator_player_list.setSortingEnabled(True)
+        self.battle_player_search_box.setPlaceholderText(_translate("MainWindow", "Search For Player"))
+        self.battle_player_list.setSortingEnabled(True)
+        self.battle_players_label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:24pt; color:#ffffff;\">Players Battling</span></p></body></html>"))
+        self.battle_spectator_players_label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:24pt; color:#ffffff;\">Enemies Battling</span></p></body></html>"))
+        self.battle_enemy_list.setSortingEnabled(True)
+        self.battle_enemy_search_box.setPlaceholderText(_translate("MainWindow", "Search For Player"))
+        self.battle_spectator_enemy_list.setSortingEnabled(True)
+        self.battle_players_label_2.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:24pt; color:#ffffff;\">Enemies Offline</span></p></body></html>"))
         self.qc_tabs.setTabText(self.qc_tabs.indexOf(self.battle_tab), _translate("MainWindow", "Battle"))
         self.qc_tabs.setTabText(self.qc_tabs.indexOf(self.quest_tab), _translate("MainWindow", "Quest"))
         self.qc_tabs.setTabText(self.qc_tabs.indexOf(self.shop_tab), _translate("MainWindow", "Shop"))

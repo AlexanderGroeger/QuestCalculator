@@ -1,6 +1,6 @@
 import random as rand
 import entity as en
-effects = []
+effects = {}
 class Effect:
     def __init__(self,name = 'NoEffect', import_file = 'standard', parent = None, type = 'Unknown', elements = {},
                 effective = 'Always', rounds = 0, chances = None, stack = None,
@@ -13,9 +13,9 @@ class Effect:
         self.effective = str(effective) # OnHit, OnAttack, OnStep, Always
         self.rounds = rounds
         self.chances = {
-            'on': 1, # Chance of effect coming on
-            'off': 0, # Chance of effect going away
-            'inflict': 1 # Chance of effect being applied
+            'apply': 100, # Chance of effect coming on
+            'fade': 0, # Chance of effect going away
+            'inflict': 100 # Chance of effect being applied
         }
         if chances:
             for n, v in chances.items():
@@ -36,6 +36,7 @@ class Effect:
             ###
             'crit': 0, # Critical Chance
             'bless': 0, # Blessing
+            'pow': 100
         }
         if stats:
             for n, v in stats.iteritems():
@@ -68,7 +69,7 @@ class Effect:
                         self.restoration[n][m] = x
                 else:
                     self.restoration[n] = v
-        effects.append(self)
+        effects[GetNewId()] = self
 
     def Apply(self):
         # Decrement rounds in necessary
@@ -95,3 +96,11 @@ class Effect:
             effects.remove(self)
         self.parent.effects.remove(self)
         del self
+
+def GetNewId():
+    ids = effects.keys()
+    if ids == []:
+        return '0'
+    else:
+        ids = [str(a) for a in range(len(ids)+1) if str(a) not in ids]
+        return ids[0]

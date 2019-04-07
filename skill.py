@@ -22,7 +22,7 @@ class Skill:
             'crit': 0, # Critical Chance
             'bless': 0, # Blessing
             ###
-            'pow': 0
+            'pow': 100
         }
         if stats:
             for n, v in stats.items():
@@ -78,9 +78,7 @@ class Skill:
 
 def GetNewId():
     ids = skills.keys()
-    print(ids)
     if ids == []:
-        print(0)
         return '0'
     else:
         ids = [str(a) for a in range(len(ids)+1) if str(a) not in ids]

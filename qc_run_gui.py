@@ -53,6 +53,9 @@ delete_item_confirmation = False
 last_selected_skill = None
 delete_skill_confirmation = False
 
+last_selected_effect = None
+delete_effect_confirmation = False
+
 save_file = None
 
 def OutputPrint(msg):
@@ -643,7 +646,7 @@ def UpdateSkillGui(skill_list_item = None):
     ui.skill_power_box.setValue(last_selected_skill.stats['pow'])
 
 def AddSkillToList(skl):
-    global last_selected_item
+    global last_selected_skill
     if isinstance(skl,skill.Skill):
         last_selected_skill = skl
         new_list_skill = QtWidgets.QListWidgetItem()
@@ -664,6 +667,17 @@ def ChangeSkillName(object):
     if ui.skill_list.currentItem():
         ui.skill_list.currentItem().setText(last_selected_skill.name)
 
+def ChangeSkillLevel(val,max):
+    global last_selected_skill
+    if not last_selected_skill:
+        return None
+    last_selected_skill.requirements['lvl'][max] = val
+
+def ChangeSkillSPCost(object):
+    global last_selected_skill
+    if not last_selected_skill:
+        return None
+    last_selected_skill.spcost = int(object)
 
 def MakeSkill():
     new_skill = skill.Skill()
@@ -753,6 +767,142 @@ def SkillCopyButtonPressed():
     else:
         CopySkill()
 
+
+def UpdateEffectGui(effect_list_item = None):
+    global last_selected_effect
+    if effect_list_item:
+        last_selected_effect = effect_list_item.data(DATACHANNEL)
+    if not last_selected_effect:
+        return None
+
+    ui.effect_name_box.setText(last_selected_effect.name)
+    ui.effect_import_file_box.setText(last_selected_effect.import_file)
+    ui.effect_hp_box.setValue(last_selected_effect.stats['hp'])
+    ui.effect_sp_box.setValue(last_selected_effect.stats['sp'])
+    ui.effect_attack_box.setValue(last_selected_effect.stats['atk'])
+    ui.effect_defense_box.setValue(last_selected_effect.stats['dfn'])
+    ui.effect_special_attack_box.setValue(last_selected_effect.stats['spatk'])
+    ui.effect_special_defense_box.setValue(last_selected_effect.stats['spdfn'])
+    ui.effect_accuracy_box.setValue(last_selected_effect.stats['acc'])
+    ui.effect_evasion_box.setValue(last_selected_effect.stats['eva'])
+    ui.effect_critical_box.setValue(last_selected_effect.stats['crit'])
+    ui.effect_blessing_box.setValue(last_selected_effect.stats['bless'])
+    ui.effect_power_box.setValue(last_selected_effect.stats['pow'])
+    ui.effect_chances_apply_box.setValue(last_selected_effect.chances['apply'])
+    ui.effect_chances_fade_box.setValue(last_selected_effect.chances['fade'])
+    ui.effect_chances_inflict_box.setValue(last_selected_effect.chances['inflict'])
+    ui.effect_rounds_box.setValue(last_selected_effect.rounds)
+
+def AddEffectToList(eff):
+    global last_selected_effect
+    if isinstance(eff,effect.Effect):
+        last_selected_effect = eff
+        new_list_effect = QtWidgets.QListWidgetItem()
+        new_list_effect.setData(DATACHANNEL,eff)
+        new_list_effect.setText(eff.name)
+        new_list_effect.setTextAlignment(4)
+        ui.effect_list.clearSelection()
+        ui.effect_list.clearFocus()
+        ui.effect_list.addItem(new_list_effect)
+        ui.effect_list.setCurrentItem(new_list_effect)
+        UpdateEffectGui(new_list_effect)
+
+def ChangeEffectName(object):
+    global last_selected_effect
+    if not last_selected_effect:
+        return None
+    last_selected_effect.name = object
+    if ui.effect_list.currentItem():
+        ui.effect_list.currentItem().setText(last_selected_effect.name)
+
+def MakeEffect():
+    new_effect = effect.Effect()
+    OutputPrint("Created new effect")
+    AddEffectToList(new_effect)
+
+def CopyEffect():
+    new_effect = None
+    new_effect = ui.effect_list.currentItem()
+    if new_effect:
+        new_effect = copy.deepcopy(new_effect.data(DATACHANNEL))
+        effect.effects[effect.GetNewId()] = new_effect
+        OutputPrint("Copied " + new_effect.name + " to effect list")
+    else:
+        return None
+    AddEffectToList(new_effect)
+
+def ToggleEffectDeleteMode():
+    global delete_effect_confirmation
+    if delete_effect_confirmation:
+        ui.effect_add_button.setText("Add")
+        ui.effect_copy_button.setText("Copy")
+        ui.effect_delete_button.setText("Delete")
+    else:
+        ui.effect_add_button.setText("Yes")
+        ui.effect_copy_button.setText("No")
+        ui.effect_delete_button.setText("Del?")
+    delete_effect_confirmation = not delete_effect_confirmation
+
+def DeleteEffect():
+    # Update gui buttons
+    ToggleEffectDeleteMode()
+
+    # Retireve the effect in the list
+    old_effect = ui.effect_list.currentItem()
+    if old_effect:
+        # Get the effect data that is being pointed to
+        old_effect = old_effect.data(DATACHANNEL)
+        OutputPrint("Deleting " + old_effect.name + " from memory")
+        # Find the id of the effect
+        effect_id = None
+        for key, value in effect.effects.iteritems():
+            if value is old_effect:
+                effect_id = key
+                break
+        # if we can delete the effect then do so
+        if effect_id in effect.effects.keys():
+            del effect.effects[effect_id]
+            OutputPrint("Deleted " + old_effect.name + " from memory")
+        else:
+            OutputPrint("Can't delete " + old_effect.name + " from memory")
+    else:
+        return None
+
+    # Now we need to destroy the effect from the GUI
+    row = ui.effect_list.currentRow()
+    if row is None:
+        OutputPrint("Can't delete " + old_effect.name + " from effect list")
+        return None
+    destroyed_effect = ui.effect_list.takeItem(row)
+    del destroyed_effect
+
+    if row > 0:
+        # Put the focus on the previous effect
+        ui.effect_list.setCurrentRow(row-1)
+
+        # Update the last selected effect and the stats GUI
+        old_effect = ui.effect_list.item(ui.effect_list.currentRow())
+        global last_selected_effect
+        if old_effect:
+            last_selected_effect = old_effect.data(DATACHANNEL)
+        else:
+            last_selected_effect = None
+        UpdateEffectGui()
+
+def EffectAddButtonPressed():
+    global delete_effect_confirmation
+    if delete_effect_confirmation:
+        DeleteEffect()
+    else:
+        MakeEffect()
+
+def EffectCopyButtonPressed():
+    global delete_effect_confirmation
+    if delete_effect_confirmation:
+        ToggleEffectDeleteMode()
+    else:
+        CopyEffect()
+
 def LoadFile(fn):
     MainWindow.hide()
     global save_file
@@ -768,6 +918,8 @@ def LoadFile(fn):
         AddItemToList(item)
     for id, skill in manage.data['skills'].iteritems():
         AddSkillToList(skill)
+    for id, effect in manage.data['effects'].iteritems():
+        AddEffectToList(effect)
     MainWindow.show()
     # UpdatePlayerGui(ui.player_list.currentItem())
 def Shutdown():
@@ -790,14 +942,12 @@ ui.file_select_button3.clicked.connect(lambda: LoadFile(3))
 ui.player_add_button.clicked.connect(lambda: EntityAddButtonPressed(PLAYER))
 ui.player_copy_button.clicked.connect(lambda: EntityCopyButtonPressed(PLAYER))
 ui.player_delete_button.clicked.connect(lambda: ToggleEntityDeleteMode(PLAYER))
-ui.player_list.itemPressed.connect(UpdateEntityGui)
 ui.player_list.selectionModel().currentChanged.connect(UpdateEntityGui)
 
 ''' Enemy List Buttons '''
 ui.enemy_add_button.clicked.connect(lambda: EntityAddButtonPressed(ENEMY))
 ui.enemy_copy_button.clicked.connect(lambda: EntityCopyButtonPressed(ENEMY))
 ui.enemy_delete_button.clicked.connect(lambda: ToggleEntityDeleteMode(ENEMY))
-ui.enemy_list.itemPressed.connect(UpdateEntityGui)
 ui.enemy_list.selectionModel().currentChanged.connect(UpdateEntityGui)
 
 ''' Entity Box Value Change Events '''
@@ -821,7 +971,6 @@ ui.entity_stats_change_type_box.currentIndexChanged.connect(UpdateEntityChangeSt
 ui.item_add_button.clicked.connect(ItemAddButtonPressed)
 ui.item_copy_button.clicked.connect(ItemCopyButtonPressed)
 ui.item_delete_button.clicked.connect(ToggleItemDeleteMode)
-ui.item_list.itemPressed.connect(UpdateItemGui)
 ui.item_list.selectionModel().currentChanged.connect(UpdateItemGui)
 
 ''' Item Box Value Change Events '''
@@ -853,6 +1002,23 @@ ui.skill_delete_button.clicked.connect(ToggleSkillDeleteMode)
 
 ''' Skill Box Value Change Events '''
 ui.skill_name_box.textChanged.connect(ChangeSkillName)
+ui.skill_level_box.valueChanged.connect(lambda: ChangeSkillLevel(ui.skill_level_box.value(),False))
+ui.skill_max_level_box.valueChanged.connect(lambda: ChangeSkillLevel(ui.skill_max_level_box.value(),True))
+ui.skill_sp_box.valueChanged.connect(ChangeSkillSPCost)
+ui.skill_list.selectionModel().currentChanged.connect(UpdateSkillGui)
+
+'''
+    EFFECT TAB
+'''
+
+''' Effect List Buttons '''
+ui.effect_add_button.clicked.connect(EffectAddButtonPressed)
+ui.effect_copy_button.clicked.connect(EffectCopyButtonPressed)
+ui.effect_delete_button.clicked.connect(ToggleEffectDeleteMode)
+
+''' Effect Box Value Change Events '''
+ui.effect_name_box.textChanged.connect(ChangeEffectName)
+ui.effect_list.selectionModel().currentChanged.connect(UpdateEffectGui)
 
 
 def PlaySelectSound():

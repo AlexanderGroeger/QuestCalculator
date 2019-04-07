@@ -189,9 +189,7 @@ def GetEntityById(id):
 
 def GetNewId():
     ids = entities.keys()
-    print(ids)
     if ids == []:
-        print(0)
         return '0'
     else:
         ids = [str(a) for a in range(len(ids)+1) if str(a) not in ids]
