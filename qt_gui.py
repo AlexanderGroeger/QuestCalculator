@@ -1187,7 +1187,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -1212,7 +1212,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -1237,7 +1237,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -1452,7 +1452,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -1478,7 +1478,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -1642,7 +1642,7 @@ class Ui_MainWindow(object):
 "    size: 0;\n"
 "}\n"
 "QComboBox::drop-down {\n"
-"    background: rgba(0,0,0,0);\n"
+"    background: rgba(255,255,255,0);\n"
 "    border: 0px;\n"
 "    size: 0;\n"
 "    color: white;\n"
@@ -1651,6 +1651,9 @@ class Ui_MainWindow(object):
 "    background: rgba(255,255,255,128);\n"
 "    border: 0px;\n"
 "    color: white;\n"
+"}\n"
+"QComboBox:!editable:on, QComboBox::drop-down:editable:on {\n"
+"    background: rgba(255,255,255,64);\n"
 "}\n"
 "QComboBox::editable:indicator {\n"
 "    background: rgba(255,255,255,0);\n"
@@ -1703,7 +1706,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -1729,7 +1732,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -1755,7 +1758,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -2885,7 +2888,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -2909,7 +2912,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -2934,7 +2937,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -3676,7 +3679,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -3701,7 +3704,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -3726,7 +3729,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -3788,7 +3791,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -3813,7 +3816,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -3882,7 +3885,7 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "color: white;\n"
 "}\n"
-"QPushButton:checked {\n"
+"QPushButton::pressed {\n"
 "color: rgb(224,224,224);\n"
 "    border-image: url(:/bg/pane_thin_dark_yellow.png);\n"
 "}")
@@ -5464,7 +5467,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralWidget)
 
         self.retranslateUi(MainWindow)
-        self.qc_tabs.setCurrentIndex(3)
+        self.qc_tabs.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

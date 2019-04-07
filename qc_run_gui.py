@@ -18,8 +18,8 @@ import generator
 
 from pygame import mixer
 mixer.init()
-mixer.music.load('.\\QCGUI\\JourneysUntold.mid')
-mixer.music.play(99)
+# mixer.music.load('.\\QCGUI\\JourneysUntold.mid')
+# mixer.music.play(99)
 
 SELECT_SOUND = mixer.Sound('.\\QCGUI\\Click.wav')
 
@@ -477,8 +477,13 @@ def UpdateItemGui(item_list_item = None):
     ui.item_critical_box.setValue(last_selected_item.stats['crit'])
     ui.item_blessing_box.setValue(last_selected_item.stats['bless'])
 
-def SortItemList(object):
-    print(5)
+def SearchItemList(object):
+    print('not working yet')
+    # for row in range(ui.item_list.model().rowCount()):
+    #     if str(object) in str(ui.item_list.model().index(row,0).data(DATACHANNEL).name):
+    #         ui.item_list.setRowHidden(row,False)
+    #     else:
+    #         ui.item_list.setRowHidden(row,True)
 
 def ChangeItemName(object):
     global last_selected_item
@@ -975,7 +980,7 @@ ui.item_list.selectionModel().currentChanged.connect(UpdateItemGui)
 
 ''' Item Box Value Change Events '''
 ui.item_name_box.textChanged.connect(ChangeItemName)
-ui.item_search_box.textChanged.connect(SortItemList)
+ui.item_search_box.textChanged.connect(SearchItemList)
 ui.item_level_box.valueChanged.connect(ChangeItemLevel)
 ui.item_max_level_box.valueChanged.connect(ChangeItemMaxLevel)
 ui.item_hp_box.valueChanged.connect(lambda: ChangeItemStat(ui.item_hp_box.value(),'hp'))
