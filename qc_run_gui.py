@@ -117,7 +117,7 @@ def ChangeEntityXP(object):
     global last_selected_entity
     if not last_selected_entity:
         return None
-    last_selected_entity.GiveExp(object)
+    last_selected_entity.GiveExp(max(0,object-last_selected_entity.data['xp']))
     ui.entity_exp_bar.setValue(int(last_selected_entity.data['xp']))
     ui.entity_exp_bar.setMaximum(entity.GetExpNeededForLevel(int(last_selected_entity.data['lvl'])))
     ui.entity_level_box.setValue(int(last_selected_entity.data['lvl']))
@@ -140,7 +140,7 @@ def ChangeEntityHP(object):
     global last_selected_entity
     if not last_selected_entity:
         return None
-    # object = max(min(int(last_selected_entity.data['hp']),int(last_selected_entity.stats['hp'])),0)
+    object = max(min(int(object),int(last_selected_entity.stats['hp'])),0)
     last_selected_entity.data['hp'] = object
     ui.entity_hp_bar.setValue(object)
     ui.entity_hp_bar.setMaximum(int(last_selected_entity.stats['hp']))
@@ -149,7 +149,7 @@ def ChangeEntitySP(object):
     global last_selected_entity
     if not last_selected_entity:
         return None
-    # object = max(min( int(object), int(last_selected_entity.stats['sp']) ),0)
+    object = max(min( int(object), int(last_selected_entity.stats['sp']) ),0)
     last_selected_entity.data['sp'] = object
     ui.entity_sp_bar.setValue(object)
     ui.entity_sp_bar.setMaximum(int(last_selected_entity.stats['sp']))
@@ -158,10 +158,10 @@ def ChangeEntityFood(object):
     global last_selected_entity
     if not last_selected_entity:
         return None
-    # object = max(min(int(last_selected_entity.data['food']),100),0)
+    object = max(min(int(object),100),0)
     last_selected_entity.data['food'] = object
     ui.entity_sp_bar.setValue(object)
-    # ui.entity_sp_bar.setMaximum(100)
+    ui.entity_sp_bar.setMaximum(100)
 
 def ChangeEntityStrength(object):
     global last_selected_entity
@@ -375,11 +375,20 @@ def EntityCopyButtonPressed(team):
 
 def UpdateEntityChangeStatsBox(type):
     global entity_stats_change_type
-    # If type is Fixed, then no suffix
-    if type == 0:
-        ui.entity_stats_change_box.setSuffix("")
+    global entity_stats_check_boxes
+    if type > 1:
+        for stat in ['gold','jewels','strength','dexterity','constitution','intelligence','integrity']:
+            entity_stats_check_boxes[stat].setChecked(False)
+            entity_stats_check_boxes[stat].setCheckable(False)
+
     else:
-        ui.entity_stats_change_box.setSuffix(" %")
+        for stat in ['gold','jewels','strength','dexterity','constitution','intelligence','integrity']:
+            entity_stats_check_boxes[stat].setCheckable(True)
+        # If type is Fixed, then no suffix
+        if type == 0:
+            ui.entity_stats_change_box.setSuffix("")
+        else:
+            ui.entity_stats_change_box.setSuffix(" %")
     entity_stats_change_type = type
 
 def EntityChangeStats(type):
@@ -414,6 +423,14 @@ def EntityChangeStats(type):
                         # Add Percentage of max value
                         elif entity_stats_change_type == 3:
                             entity_stats_functions[stat](int(stat_val+(100)*(gui_val/100.0)))
+                    # Xp is special
+                    elif stat == 'xp':
+                        # Add Percentage of missing from max value
+                        if entity_stats_change_type == 2:
+                            entity_stats_functions[stat](int(stat_val+(entity.GetExpNeededForLevel(last_selected_entity.data['lvl'])-stat_val)*(gui_val/100.0)))
+                        # Add Percentage of max value
+                        elif entity_stats_change_type == 3:
+                            entity_stats_functions[stat](int(stat_val+(entity.GetExpNeededForLevel(last_selected_entity.data['lvl']))*(gui_val/100.0)))
                     else:
                         # Add Percentage of missing from max value
                         if entity_stats_change_type == 2:
@@ -444,6 +461,14 @@ def EntityChangeStats(type):
                         # Set Percentage of max value
                         elif entity_stats_change_type == 3:
                             entity_stats_functions[stat](int((100)*(gui_val/100.0)))
+                    # Xp is special
+                    elif stat == 'xp':
+                        # Set Percentage of missing from max value
+                        if entity_stats_change_type == 2:
+                            entity_stats_functions[stat](int(entity.GetExpNeededForLevel(last_selected_entity.data['lvl'])-(entity.GetExpNeededForLevel(last_selected_entity.data['lvl'])-stat_val)*(gui_val/100.0)))
+                        # Set Percentage of max value
+                        elif entity_stats_change_type == 3:
+                            entity_stats_functions[stat](int((entity.GetExpNeededForLevel(last_selected_entity.data['lvl']))*(gui_val/100.0)))
                     else:
                         # Set Percentage of missing from max value
                         if entity_stats_change_type == 2:

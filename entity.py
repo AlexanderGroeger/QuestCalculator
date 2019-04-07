@@ -121,8 +121,9 @@ class Entity:
     def GiveExp(self, newxp = 0):
         lvl = self.data['lvl']
         curxp = self.data['xp']
-        while curxp + newxp >= int(5*((lvl+1)/2+2)**2+5*lvl):
-            newxp -= int(5*((lvl+1)/2+2)**2+5*lvl)
+        needxp = GetExpNeededForLevel(lvl)
+        while curxp + newxp >= needxp:
+            newxp -= needxp
             lvl += 1
         self.data['lvl'] = int(min(max(0,lvl),999))
         self.data['xp'] = int(max(0,curxp+newxp))
